@@ -1,0 +1,8 @@
+name: Forlev 2016
+type: theme
+description: Theme for forlev.dk.
+core: 8.x
+regions:
+  header: Header
+  content: Content
+  footer: Footer

@@ -1,0 +1,45 @@
+.site--header {
+  background: url('../images/topbg.png') no-repeat center center;
+  background-size: cover;
+
+  .faded {
+    padding: 20px 0;
+  }
+
+  .logo {
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: 200px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    // Is hiding of text still done this way?
+    overflow: hidden;
+    text-indent: -999em;
+
+    // This float is combined with the .site--header--menu 30px padding top and
+    // the containing .faded's 20px padding making up for the alignment. Could
+    // be refactored.
+    float: left;
+  }
+
+  .site--header--menu {
+    padding-top: 30px;
+    text-align: right;
+  }
+}
+
+// Refactor candidates below here.
+
+
+
+
+
+
+.faded {
+  background-color: $faded-black;
+}
+
+// All links in header should be white!
+.site--header a {
+  color: #fff;
+}

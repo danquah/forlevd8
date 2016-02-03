@@ -1,1 +1,23 @@
-@import "component/site--header--circle";
+
+
+ul.site--header--quick_links {
+
+  li {
+    text-align: center;
+    @include span-columns(3);
+
+    span {
+      display: block;
+    }
+  }
+}
+
+
+.circle {
+  background-position: center center;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, .5);
+}

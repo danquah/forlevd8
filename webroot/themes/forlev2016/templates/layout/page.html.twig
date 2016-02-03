@@ -6,26 +6,60 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
+  <header role="banner" class="site--header">
+    <div class="faded">
+      <div class="outer-width-wrapper">
     <a href="" class="logo">
       Forlev
     </a>
 
+    {% if page.primary_menu %}
     {{ page.primary_menu }}
+    {% else %}
+      <ul class="links site--header--menu menu horizontal-menu">
+        <li class="_"><a href="/node/add">Om Centeret</a></li>
+        <li class="_"><a href="/node/add">Kurser</a></li>
+        <li class="_"><a href="/node/add">Sommerlejre</a></li>
+        <li class="_"><a href="/node/add">Aktiviteter</a></li>
+        <li class="_"><a href="/node/add">Billeder</a></li>
+        <li class="_"><a href="/node/add">Lej Forlev Spejdercenter</a></li>
+      </ul>
+    {% endif %}
+    </div>
+    </div>
+    <div class="outer-width-wrapper">
+    {% if is_front %}
+    {% if page.quicklins %}
+    {{ page.quicklinks }}
+    {% else %}
+      {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
 
+        <ul class="links site--header--quick_links menu">
+          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>
+          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>
+          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>
+          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>
+        </ul>
+
+    {% endif %}
+    {% else %}
+    {{ page.breadcrumb }}
+    {% endif %}
+      </div>
+    {#
+    not using the region header so far... Perhaps it's the D8 way. We will soon know.
     {{ page.header }}
+    #}
   </header>
 
 
-  {{ page.secondary_menu }}
+  {#{{ page.secondary_menu }}#}
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
+  {#{{ page.highlighted }}#}
 
   {{ page.help }}
 
-  <main role="main">
+  <main role="main" class="outer-width-wrapper">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">

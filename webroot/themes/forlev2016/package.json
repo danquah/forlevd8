@@ -11,6 +11,7 @@
     "grunt-sass": "^1.1.0",
     "grunt-contrib-watch": "^0.6.0",
     "node-bourbon": "^4.0.0",
+    "node-neat": "latest",
     "node-sass": "^3.4.2"
   }
 }

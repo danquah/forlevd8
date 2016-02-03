@@ -13,13 +13,13 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'sass',
-          src: ['*.scss', '**/*.scss'],
+          src: '*.scss',
           dest: 'css',
           ext: '.css',
           extDot: 'last'
         }],
         options: {
-          includePaths: require('node-bourbon').includePaths
+          includePaths: require('node-neat').includePaths
         }
       }
     },
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         }
       },
       scss: {
-        files: ['sass/*.scss'],
+        files: ['sass/*.scss', 'sass/**/*.scss'],
         tasks: ['sass']
       },
 

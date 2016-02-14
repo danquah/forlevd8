@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 8zQm0UvFx63AQ9LWthhmhcBZZKGB5HSlTlzcy6DnNok
 id: frontpage
 label: Frontpage
 use_admin_theme: null

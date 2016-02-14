@@ -24,6 +24,7 @@ dependencies:
   - file
   - forlev_base
   - forlev_base_config
+  - forlev_frontpage
   - forlev_quicklinks
   - help
   - history

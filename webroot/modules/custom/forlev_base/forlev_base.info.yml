@@ -1,0 +1,5 @@
+name: Forlev Base
+type: module
+description: Base functionallity
+core: 8.x
+package: Forlev

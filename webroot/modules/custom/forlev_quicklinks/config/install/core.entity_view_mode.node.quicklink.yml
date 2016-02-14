@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: EkRfiypnAMOXoYn6LI8YiNl1vDcriG1dprIEWnGnc2U
+id: node.quicklink
+label: Quicklink
+targetEntityType: node
+cache: true

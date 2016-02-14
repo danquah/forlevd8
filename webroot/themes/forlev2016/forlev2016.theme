@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\entityqueue\Entity\EntityQueue;
+
+function forlev2016_preprocess_page(&$variables) {
+  $view = \Drupal\views\Views::getView('forlev_quicklinks');
+
+  if (!empty($view)) {
+    $output = $view->preview('forlev_quicklink_block');
+
+    $variables['quicklinks_block'] = $output;
+  }
+}
+
+function forlev2016_preprocess_views_view_unformatted(&$variables) {
+  $bla = 123;
+}
+
+function forlev2016_preprocess_views_view_fields__frontpage_quicklink_block(&$variables) {
+  $bla = 123;
+  $variables['url'] = $variables['row']->_entity->url();
+
+}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: frontpage
+label: Frontpage
+use_admin_theme: null
+path: /frontpage
+access_logic: and
+access_conditions: {  }

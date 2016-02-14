@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sJb-tdOYSRBnpzgOLIGTqyEZc5nPdpGIwB0dwlQbqKE
+name: circle_image
+label: circle_image
+effects:
+  5d7f15e8-d3e0-4b66-a535-535413597abe:
+    uuid: 5d7f15e8-d3e0-4b66-a535-535413597abe
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200

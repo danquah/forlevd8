@@ -1,0 +1,10 @@
+name: 'Forlev Quicklinks'
+type: module
+core: 8.x
+dependencies:
+  - forlev_base_config
+  - forlev_quicklinks
+  - image
+  - user
+  - views
+package: Forlev

@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.quicklink
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - image.style.circle_image
+    - node.type.article
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: NIZQXIU64ssJ1gxOV_iIE2-ku_9QdrEHZjF3w0Ex9aI
+id: node.article.quicklink
+targetEntityType: node
+bundle: article
+mode: quicklink
+content:
+  field_image:
+    type: image
+    weight: 0
+    settings:
+      image_style: circle_image
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  body: true
+  comment: true
+  field_tags: true
+  links: true

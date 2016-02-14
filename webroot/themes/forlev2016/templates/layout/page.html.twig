@@ -29,23 +29,24 @@
     </div>
     <div class="outer-width-wrapper">
     {% if is_front %}
-    {% if page.quicklins %}
-    {{ page.quicklinks }}
-    {% else %}
-      {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
+      {% if quicklinks_block %}
+        {{ quicklinks_block  }}
+      {% else %}
+        {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
 
-        <ul class="links site--header--quick_links menu">
-          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>
-          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>
-          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>
-          <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>
-        </ul>
+          <ul class="links site--header--quick_links menu">
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>
+          </ul>
 
-    {% endif %}
+      {% endif %}
     {% else %}
     {{ page.breadcrumb }}
     {% endif %}
       </div>
+    {{ page.header }}
     {#
     not using the region header so far... Perhaps it's the D8 way. We will soon know.
     {{ page.header }}

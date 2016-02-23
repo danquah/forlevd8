@@ -1,9 +1,0 @@
-name: Frontpage
-type: module
-core: 8.x
-dependencies:
-  - entityqueue
-  - forlev_frontpage
-  - node
-  - page_manager
-package: Forlev

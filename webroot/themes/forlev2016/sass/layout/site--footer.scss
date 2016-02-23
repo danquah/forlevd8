@@ -1,0 +1,16 @@
+@include stickyFooter('.sticky-footer', 380px);
+
+
+
+
+
+
+.layout-container > footer {
+  background-image: url('../images/footerbg.jpg');
+  background-size: cover;
+  background-position: center center;
+
+  div {
+    text-align: right;
+  }
+}

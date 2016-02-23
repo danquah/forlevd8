@@ -3,3 +3,52 @@
 $faded-black: rgba(0, 0, 0, .5);
 
 $standard-font-size: 12px;
+
+
+@mixin stickyFooter($selector, $height) {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin: 0 0 $height; /* bottom = footer height */
+  }
+  #{$selector} {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $height;
+  }
+}
+
+/**
+ * This mixin only address the technical part of collapsing and hiding the menu
+ * items as you get below 700px.
+ */
+@mixin burgerMenu($menu, $checkbox, $query : max-width 700px) {
+
+
+  // Ensure that checkbox is always hidden.
+  input##{$checkbox} {
+    display: none;
+  }
+
+  // Only show label for checkbox on small devices.
+  label[for=#{$checkbox}] {
+    display: none;
+    @include media($query) {
+      display: block;
+    }
+  }
+
+  // Ensure that menu only is shown when label is clicked.
+  @include media($query) {
+    .#{$menu} {
+      display: none;
+    }
+    input##{$checkbox}:checked ~ .#{$menu} {
+      display: block;
+    }
+  }
+}

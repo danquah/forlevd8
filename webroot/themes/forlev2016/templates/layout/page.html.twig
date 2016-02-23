@@ -16,6 +16,8 @@
     {% if page.primary_menu %}
     {{ page.primary_menu }}
     {% else %}
+      <label for="burger-menu-handle">Open close</label>
+      <input type="checkbox" id="burger-menu-handle" />
       <ul class="links site--header--menu menu horizontal-menu">
         <li class="_"><a href="/node/add">Om Centeret</a></li>
         <li class="_"><a href="/node/add">Kurser</a></li>
@@ -82,8 +84,10 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer class="sticky-footer" role="contentinfo">
+      <div class="outer-width-wrapper">
       {{ page.footer }}
+      </div>
     </footer>
   {% endif %}
 

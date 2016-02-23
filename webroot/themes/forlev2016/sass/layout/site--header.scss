@@ -22,10 +22,13 @@
     float: left;
   }
 
+  // Actual topmenu specific styles.
   .site--header--menu {
     padding-top: 30px;
     text-align: right;
   }
+  // Fallback to burger menu.
+  @include burgerMenu('site--header--menu', 'burger-menu-handle');
 }
 
 // Refactor candidates below here.

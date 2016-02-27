@@ -12,9 +12,8 @@
     <a href="{{ front_page }}" class="logo">
       Forlev
     </a>
-
-    {% if page.primary_menu %}
-    {{ page.primary_menu }}
+    {% if page.header.mainnavigation %}
+    {{ page.header.mainnavigation }}
     {% else %}
       <label for="burger-menu-handle">Open close</label>
       <input type="checkbox" id="burger-menu-handle" />
@@ -48,11 +47,6 @@
     {{ page.breadcrumb }}
     {% endif %}
       </div>
-    {{ page.header }}
-    {#
-    not using the region header so far... Perhaps it's the D8 way. We will soon know.
-    {{ page.header }}
-    #}
   </header>
 
 

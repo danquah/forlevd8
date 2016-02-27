@@ -74,9 +74,7 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ xdebug_break() }}
-
-<a href="{{ url }}" rel="bookmark">
+<a href="{{ destination_url }}" rel="bookmark">
   {{ content.field_image }}
   {{ label }}
 </a>

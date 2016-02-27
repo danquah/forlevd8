@@ -24,12 +24,6 @@ use Drupal\page_manager\PageVariantInterface;
  *   label = @Translation("Page"),
  *   handlers = {
  *     "access" = "Drupal\page_manager\Entity\PageAccess",
- *     "list_builder" = "Drupal\page_manager\Entity\PageListBuilder",
- *     "form" = {
- *       "add" = "Drupal\page_manager\Form\PageAddForm",
- *       "edit" = "Drupal\page_manager\Form\PageEditForm",
- *       "delete" = "Drupal\page_manager\Form\PageDeleteForm",
- *     }
  *   },
  *   admin_permission = "administer pages",
  *   entity_keys = {
@@ -44,15 +38,8 @@ use Drupal\page_manager\PageVariantInterface;
  *     "path",
  *     "access_logic",
  *     "access_conditions",
+ *     "parameters",
  *   },
- *   links = {
- *     "collection" = "/admin/structure/page_manager",
- *     "add-form" = "/admin/structure/page_manager/add",
- *     "edit-form" = "/admin/structure/page_manager/manage/{page}",
- *     "delete-form" = "/admin/structure/page_manager/manage/{page}/delete",
- *     "enable" = "/admin/structure/page_manager/manage/{page}/enable",
- *     "disable" = "/admin/structure/page_manager/manage/{page}/disable"
- *   }
  * )
  */
 class Page extends ConfigEntityBase implements PageInterface {
@@ -121,6 +108,19 @@ class Page extends ConfigEntityBase implements PageInterface {
   protected $use_admin_theme;
 
   /**
+   * Parameter context configuration.
+   *
+   * An associative array keyed by parameter name, which contains associative
+   * arrays with the following keys:
+   * - machine_name: Machine-readable context name.
+   * - label: Human-readable context name.
+   * - type: Context type.
+   *
+   * @var array[]
+   */
+  protected $parameters = [];
+
+  /**
    * {@inheritdoc}
    */
   public function getPath() {
@@ -132,13 +132,6 @@ class Page extends ConfigEntityBase implements PageInterface {
    */
   public function usesAdminTheme() {
     return isset($this->use_admin_theme) ? $this->use_admin_theme : strpos($this->getPath(), '/admin/') === 0;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function postCreate(EntityStorageInterface $storage) {
-    parent::postCreate($storage);
   }
 
   /**
@@ -224,6 +217,76 @@ class Page extends ConfigEntityBase implements PageInterface {
    */
   public function getAccessLogic() {
     return $this->access_logic;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getParameters() {
+    return $this->parameters;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getParameter($name) {
+    if (!isset($this->parameters[$name])) {
+      $this->setParameter($name, '');
+    }
+    return $this->parameters[$name];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setParameter($name, $type, $label = '') {
+    $this->parameters[$name] = [
+      'machine_name' => $name,
+      'type' => $type,
+      'label' => $label,
+    ];
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function removeParameter($name) {
+    unset($this->parameters[$name]);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getParameterNames() {
+    if (preg_match_all('|\{(\w+)\}|', $this->getPath(), $matches)) {
+      return $matches[1];
+    }
+    return [];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function preSave(EntityStorageInterface $storage) {
+    parent::preSave($storage);
+
+    $this->filterParameters();
+  }
+
+  /**
+   * Filters the parameters to remove any without a valid type.
+   *
+   * @return $this
+   */
+  protected function filterParameters() {
+    foreach ($this->getParameters() as $name => $parameter) {
+      if (empty($parameter['type'])) {
+        $this->removeParameter($name);
+      }
+    }
+    return $this;
   }
 
   /**

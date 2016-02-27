@@ -18,8 +18,11 @@ class StaticContextTest extends WebTestBase {
 
   /**
    * {@inheritdoc}
+   *
+   * @todo Remove dependency on the UI module or move to the UI module tests,
+   *   in https://www.drupal.org/node/2659638.
    */
-  public static $modules = ['page_manager', 'node'];
+  public static $modules = ['page_manager', 'page_manager_ui', 'node'];
 
   /**
    * {@inheritdoc}

@@ -72,7 +72,7 @@ class EntitySubqueue extends ContentEntityBase implements EntitySubqueueInterfac
       return parent::access($operation, $account, $return_as_object);
     }
 
-    return \Drupal::entityManager()
+    return \Drupal::entityTypeManager()
       ->getAccessControlHandler($this->entityTypeId)
       ->access($this, $operation, $account, $return_as_object);
   }
@@ -244,7 +244,7 @@ class EntitySubqueue extends ContentEntityBase implements EntitySubqueueInterfac
     // parent queue (i.e. bundle).
     if ($queue = EntityQueue::load($bundle)) {
       $fields['items'] = clone $base_field_definitions['items'];
-      $fields['items']->setSetting('target_type', $queue->getTargetEntityTypeId());
+      $fields['items']->setSettings($queue->getEntitySettings());
       return $fields;
     }
     return [];

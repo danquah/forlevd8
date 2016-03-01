@@ -1,0 +1,12 @@
+uuid: 124f13d5-204a-4647-962d-45ad0356aaea
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RLRLYAVk4nndZ5iAvNwGwVKtjAQCbA9ajJPyHsyZneg
+id: node_view
+label: 'Node view'
+use_admin_theme: false
+path: '/node/{node}'
+access_logic: and
+access_conditions: {  }

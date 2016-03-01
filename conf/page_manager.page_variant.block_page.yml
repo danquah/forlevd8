@@ -1,0 +1,40 @@
+uuid: e880cc11-5395-4450-9f02-2edebbb33f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.frontpage
+  module:
+    - ctools
+_core:
+  default_config_hash: QYK0AXSt9EXoIh6Cf0mxGFqGHpB1wO3UJIvAUn8DZZU
+id: block_page
+label: Frontpage
+variant: block_display
+variant_settings:
+  blocks:
+    652e673e-5873-4436-8e19-25b3929768c3:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: full
+      region: bottom
+      weight: 0
+      uuid: 652e673e-5873-4436-8e19-25b3929768c3
+      context_mapping:
+        entity: frontpage
+  id: block_display
+  label: null
+  uuid: b655bf9f-ddb8-4eb2-b000-cbb8b66da0c7
+  weight: 0
+  page_title: ''
+page: frontpage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context:
+  frontpage:
+    label: frontpage
+    type: 'entity:node'
+    value: a54618f7-0756-4a7e-8c04-4f332e539d69

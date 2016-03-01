@@ -1,0 +1,8 @@
+uuid: d8197c43-e1c6-4525-9200-b0bdf0338919
+langcode: en
+status: true
+dependencies: {  }
+id: quick
+label: 'Frontpage Quicklinks'
+description: ''
+locked: false

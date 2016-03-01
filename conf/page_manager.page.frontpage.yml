@@ -1,0 +1,12 @@
+uuid: d689674d-e1b3-41a4-8f08-8bb1d2352487
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4eL5yhz70vJnyqAE-Fr1A5Y6ghmmFbQfghaVs1RJoX8
+id: frontpage
+label: Frontpage
+use_admin_theme: null
+path: /frontpage
+access_logic: and
+access_conditions: {  }

@@ -1,0 +1,20 @@
+uuid: df413d33-81bc-4db1-a28d-7c3be4726c5a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forlev2016
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: forlev2016_page_title
+theme: forlev2016
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

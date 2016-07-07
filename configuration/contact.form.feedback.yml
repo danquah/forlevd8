@@ -1,0 +1,12 @@
+uuid: 21fc5ba5-a307-4da3-af42-9b0585f19891
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Website feedback'
+recipients:
+  - admin@forlev.dk
+reply: ''
+weight: 0

@@ -1,0 +1,25 @@
+uuid: 38bc7fff-0e81-4f86-872a-60f6ad25b276
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forlev2016
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: forlev2016_branding
+theme: forlev2016
+region: header
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

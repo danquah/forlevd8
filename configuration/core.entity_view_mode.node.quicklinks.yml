@@ -1,0 +1,10 @@
+uuid: 819b237a-76cd-4783-ace9-f42cdbec6b93
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.quicklinks
+label: Quicklinks
+targetEntityType: node
+cache: true

@@ -1,0 +1,24 @@
+uuid: f14580d3-728c-422d-8703-03df22b930df
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: uq8pWd5qWzqNfd01qQ3vpUif6g58CkaSUZfBHXcv5-0
+id: frontpage_quicklinks
+label: 'Frontpage Quicklinks'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      quicklink: quicklink
+    sort:
+      field: _none
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false

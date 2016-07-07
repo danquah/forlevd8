@@ -1,0 +1,22 @@
+uuid: 5dbc2039-6bf4-4844-8ce1-53b2536c3248
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forlev2016
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: forlev2016_local_tasks
+theme: forlev2016
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

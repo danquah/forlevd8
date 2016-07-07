@@ -1,0 +1,21 @@
+uuid: ffad4afc-552e-4863-9888-83c5486ca56e
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.frontpage
+id: frontpage
+label: Frontpage
+variant: block_display
+variant_settings:
+  blocks: {  }
+  id: block_display
+  label: null
+  uuid: b4a0bdcf-cd62-4d8a-8bea-2a80bcac8bca
+  weight: 0
+  page_title: Forlev.dk
+page: frontpage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

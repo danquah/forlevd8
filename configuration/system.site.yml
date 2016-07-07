@@ -1,0 +1,14 @@
+uuid: d2629ac6-0624-4dc2-ba34-5519f0ac18b6
+name: Forlev.dk
+mail: admin@forlev.dk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /frontpage
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

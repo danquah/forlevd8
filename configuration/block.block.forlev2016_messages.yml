@@ -1,0 +1,22 @@
+uuid: 31653747-297c-45ed-a38b-23624670d72e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forlev2016
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: forlev2016_messages
+theme: forlev2016
+region: header
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

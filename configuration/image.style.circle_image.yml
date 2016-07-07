@@ -1,0 +1,18 @@
+uuid: abb1cf08-9c23-4725-b600-0c1e144e8cca
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: JltX4kYsI8Wi2s-XnbF0AQukDzYoqyNAc_vYyD_awo0
+name: circle_image
+label: circle_image
+effects:
+  26ca4c4d-7581-4bae-8200-f2847a5227b7:
+    uuid: 26ca4c4d-7581-4bae-8200-f2847a5227b7
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: '200'
+      height: '200'

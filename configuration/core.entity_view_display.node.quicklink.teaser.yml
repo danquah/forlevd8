@@ -1,0 +1,19 @@
+uuid: 0148ed20-9dd9-4d7b-b2de-26513fefe25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.quicklink
+  module:
+    - user
+id: node.quicklink.teaser
+targetEntityType: node
+bundle: quicklink
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_destination: true
+  field_image: true

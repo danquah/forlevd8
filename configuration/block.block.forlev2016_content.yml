@@ -1,0 +1,22 @@
+uuid: e6d272cd-3da8-4f9a-bee4-9120da35b7e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forlev2016
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: forlev2016_content
+theme: forlev2016
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

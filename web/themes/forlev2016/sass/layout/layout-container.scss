@@ -1,0 +1,8 @@
+.layout-container {
+//  @include outer-container();
+}
+
+$max-width: 960px;
+.outer-width-wrapper {
+  @include outer-container();
+}

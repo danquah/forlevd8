@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Forlev2016 page template.
+ */
+#}
+<div class="layout-container">
+
+  <header role="banner" class="site--header">
+    <div class="faded">
+      <div class="outer-width-wrapper">
+    <a href="{{ front_page }}" class="logo">
+      Forlev
+    </a>
+    {% if page.header.forlev2016_main_menu %}
+      {{ page.header.forlev2016_main_menu }}
+    {% else %}
+      <label for="burger-menu-handle">Open close</label>
+      <input type="checkbox" id="burger-menu-handle" />
+      <ul class="links site--header--menu menu horizontal-menu">
+        <li class="_"><a href="/node/add">Om Centeret</a></li>
+        <li class="_"><a href="/node/add">Kurser</a></li>
+        <li class="_"><a href="/node/add">Sommerlejre</a></li>
+        <li class="_"><a href="/node/add">Aktiviteter</a></li>
+        <li class="_"><a href="/node/add">Billeder</a></li>
+        <li class="_"><a href="/node/add">Lej Forlev Spejdercenter</a></li>
+      </ul>
+    {% endif %}
+    </div>
+    </div>
+    <div class="outer-width-wrapper">
+    {% if is_front %}
+      {{ xdebug_break() }}
+        {% if page.header.quicklinks_block %}
+        {{ page.header.quicklinks_block  }}
+      {% else %}
+        {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
+
+          <ul class="links site--header--quick_links menu">
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>
+            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>
+          </ul>
+
+      {% endif %}
+    {% else %}
+    {{ page.breadcrumb }}
+    {% endif %}
+      </div>
+    {{ page.header.breadcrumbs }}
+    {{ page.header.forlevcirclebreadcrumb }}
+
+  </header>
+
+  {{ page.help }}
+
+  <main role="main" class="outer-width-wrapper">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+  {% if page.footer %}
+    <footer class="sticky-footer" role="contentinfo">
+      <div class="outer-width-wrapper">
+      {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

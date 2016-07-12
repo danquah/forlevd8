@@ -1,0 +1,23 @@
+uuid: 3292a51d-0f7d-4608-9d36-56ae6575310d
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+  theme:
+    - forlev2016
+id: entityviewcontent
+theme: forlev2016
+region: '-1'
+weight: null
+provider: null
+plugin: 'entity_view:node'
+settings:
+  id: 'entity_view:node'
+  label: 'Entity view (Content)'
+  provider: ctools
+  label_display: visible
+  view_mode: default
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

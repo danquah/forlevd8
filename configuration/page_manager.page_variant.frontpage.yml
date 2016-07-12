@@ -4,11 +4,24 @@ status: true
 dependencies:
   config:
     - page_manager.page.frontpage
+  module:
+    - ctools
 id: frontpage
 label: Frontpage
 variant: block_display
 variant_settings:
-  blocks: {  }
+  blocks:
+    5fd5bdd7-c0d7-4d81-97dc-decc6974b22e:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: full
+      region: top
+      weight: 0
+      uuid: 5fd5bdd7-c0d7-4d81-97dc-decc6974b22e
+      context_mapping:
+        entity: forside
   id: block_display
   label: null
   uuid: b4a0bdcf-cd62-4d8a-8bea-2a80bcac8bca
@@ -18,4 +31,8 @@ page: frontpage
 weight: 0
 selection_criteria: {  }
 selection_logic: and
-static_context: {  }
+static_context:
+  forside:
+    label: Forside
+    type: 'entity:node'
+    value: 1950cef7-199a-4cbf-9c63-dc505ca7c79d

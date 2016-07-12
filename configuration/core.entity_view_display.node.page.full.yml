@@ -1,8 +1,9 @@
-uuid: d8ad62fd-378c-480b-9780-ffdcd9279532
+uuid: bb155f8d-2197-4dac-968c-96aceb8f9b82
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.page.field_image
     - field.field.node.page.field_paragraphs
     - image.style.large
@@ -11,10 +12,10 @@ dependencies:
     - entity_reference_revisions
     - image
     - user
-id: node.page.default
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   field_image:
     weight: 1

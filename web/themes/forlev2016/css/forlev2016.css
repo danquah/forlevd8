@@ -20,8 +20,8 @@ img {
 }
 
 body {
-  font-size: 18px;
-  line-height: 1.1111111111em;
+  font-size: 12px;
+  line-height: 1.6666666667em;
   font-family: Arial, sans-serif;
 }
 
@@ -39,7 +39,7 @@ ul.horizontal-menu {
 
 .horizontal-menu ul li,
 ul.horizontal-menu li {
-  font-size: 18px;
+  font-size: 12px;
   display: inline-block;
 }
 

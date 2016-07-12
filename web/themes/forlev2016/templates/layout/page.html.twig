@@ -12,20 +12,11 @@
     <a href="{{ front_page }}" class="logo">
       Forlev
     </a>
-    {% if page.header.forlev2016_main_menu %}
-      {{ page.header.forlev2016_main_menu }}
-    {% else %}
+        {{ xdebug_break() }}
+
       <label for="burger-menu-handle">Open close</label>
       <input type="checkbox" id="burger-menu-handle" />
-      <ul class="links site--header--menu menu horizontal-menu">
-        <li class="_"><a href="/node/add">Om Centeret</a></li>
-        <li class="_"><a href="/node/add">Kurser</a></li>
-        <li class="_"><a href="/node/add">Sommerlejre</a></li>
-        <li class="_"><a href="/node/add">Aktiviteter</a></li>
-        <li class="_"><a href="/node/add">Billeder</a></li>
-        <li class="_"><a href="/node/add">Lej Forlev Spejdercenter</a></li>
-      </ul>
-    {% endif %}
+      {{ page.header.forlev2016_main_menu }}
     </div>
     </div>
     <div class="outer-width-wrapper">
@@ -36,7 +27,7 @@
       {% else %}
         {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
 
-          <ul class="links site--header--quick_links menu">
+          <ul class="links site--header--quick-links menu">
             <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>
             <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>
             <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>

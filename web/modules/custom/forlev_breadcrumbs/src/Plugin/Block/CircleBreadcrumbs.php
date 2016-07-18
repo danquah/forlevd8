@@ -2,6 +2,7 @@
 namespace Drupal\forlev_breadcrumbs\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\system\Plugin\Block\SystemBreadcrumbBlock;
 
 /**
  * Provides my custom block.
@@ -12,13 +13,13 @@ use Drupal\Core\Block\BlockBase;
  *   category = @Translation("Blocks")
  * )
  */
-class CircleBreadcrumbs extends BlockBase {
+class CircleBreadcrumbs extends SystemBreadcrumbBlock {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-    return array('#markup' => 'hello world');
+    return $this->breadcrumbManager->build($this->routeMatch)->toRenderable();
   }
 
 }

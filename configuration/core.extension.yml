@@ -24,6 +24,7 @@ module:
   filter: 0
   focal_point: 0
   forlev_base: 0
+  forlev_breadcrumbs: 0
   help: 0
   history: 0
   image: 0

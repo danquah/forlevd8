@@ -1,0 +1,24 @@
+uuid: 64049371-e753-4e0d-9440-428df6aabd64
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - forlev2016
+id: mainnavigation
+theme: forlev2016
+region: header
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+visibility: {  }

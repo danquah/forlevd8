@@ -1,0 +1,20 @@
+uuid: a2fc5de7-ed65-46d9-90fb-636629731694
+langcode: en
+status: true
+dependencies:
+  module:
+    - forlev_breadcrumbs
+  theme:
+    - forlev2016
+id: forlevcirclebreadcrumb
+theme: forlev2016
+region: header
+weight: -5
+provider: null
+plugin: forlev_breadcrumbs_block
+settings:
+  id: forlev_breadcrumbs_block
+  label: 'Forlev circle breadcrumb'
+  provider: forlev_breadcrumbs
+  label_display: '0'
+visibility: {  }

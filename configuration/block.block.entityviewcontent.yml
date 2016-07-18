@@ -9,7 +9,7 @@ dependencies:
 id: entityviewcontent
 theme: forlev2016
 region: '-1'
-weight: null
+weight: -6
 provider: null
 plugin: 'entity_view:node'
 settings:

@@ -36,7 +36,7 @@
 
       {% endif %}
     {% else %}
-      {{ page.header.forlev2016_breadcrumbs }}
+      {{ page.header | without('forlev2016_main_menu', 'quicklinks_block') }}
     {% endif %}
       </div>
   </header>

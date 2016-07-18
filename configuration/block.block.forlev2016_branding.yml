@@ -1,6 +1,6 @@
 uuid: 38bc7fff-0e81-4f86-872a-60f6ad25b276
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: forlev2016_branding
 theme: forlev2016
-region: header
-weight: -3
+region: '-1'
+weight: -1
 provider: null
 plugin: system_branding_block
 settings:

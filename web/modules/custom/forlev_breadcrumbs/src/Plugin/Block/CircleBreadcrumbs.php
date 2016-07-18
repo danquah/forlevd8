@@ -2,11 +2,14 @@
 namespace Drupal\forlev_breadcrumbs\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Link;
 use Drupal\Core\Menu\MenuActiveTrailInterface;
 use Drupal\Core\Menu\MenuLinkManagerInterface;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\menu_link_content\Plugin\Menu\MenuLinkContent;
 use Drupal\system\Plugin\Block\SystemBreadcrumbBlock;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -46,16 +49,21 @@ class CircleBreadcrumbs extends BlockBase implements ContainerFactoryPluginInter
    * {@inheritdoc}
    */
   public function build() {
-    $menu_tree_parameters = new MenuTreeParameters();
-    $menu_tree_parameters->minDepth = 1;
-    $menu_tree_parameters->maxDepth = 4;
+    $items = [];
+    $current_id = $this->active->getActiveLink('main')->getPluginId();
+    while(!empty($current_id)) {
+      $current_link = $this->linkManager->createInstance($current_id);
 
-    $tree = $this->linkTree->load('main', $menu_tree_parameters);
-    $ra = empty($tree) ? '' : $this->linkTree->build($tree);
-    if (isset($ra['#theme'])) {
-      $ra['#theme'] = 'menu__circlebreadcrumbs';
+      /** @var MenuLinkContent $current_link */
+      $link = new Link($current_link->getTitle(), $current_link->getUrlObject());
+      $items[] = $link;
+      $current_id = $current_link->getParent();
     }
-    return $ra;
+
+    $breadcrumbs = new Breadcrumb();
+    $breadcrumbs->setLinks(array_reverse($items));
+
+    return $breadcrumbs->toRenderable();
   }
 
   /**

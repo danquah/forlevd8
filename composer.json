@@ -34,7 +34,8 @@
         "drupal/paragraphs": "^8",
         "drupal/pathauto": "^8",
         "drupal/token": "^8",
-        "drupal/coder": "^8"
+        "drupal/coder": "^8",
+        "drupal/menu_breadcrumb": "8.*"
     },
     "require-dev": {
        "behat/mink": "~1.7",

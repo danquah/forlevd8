@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9797ef84b89e152ab3bfe42930fc42ed",
-    "content-hash": "8e38b3313267b7acbffb4867026c964d",
+    "hash": "f7f85c74c2c4b57f49fa3140a8280687",
+    "content-hash": "7a0170e056ca070b70f8b547610d92b8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1349,6 +1349,37 @@
             "description": "Linkit",
             "homepage": "http://drupal.org/project/linkit",
             "time": "2016-02-09 20:50:33"
+        },
+        {
+            "name": "drupal/menu_breadcrumb",
+            "version": "8.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_breadcrumb",
+                "reference": "0052d4f87a2b746bc5f7316e16916f5c77ee3fd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Allows you to use the menu the current page belongs to for the breadcrumb.",
+            "homepage": "https://www.drupal.org/project/menu_breadcrumb",
+            "time": "2016-06-10 06:41:32"
         },
         {
             "name": "drupal/page_manager",

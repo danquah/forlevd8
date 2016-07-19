@@ -1,17 +1,15 @@
-uuid: 57564025-4029-4eb7-8c1a-4b194f68a933
+uuid: 8c424561-3022-4e9c-965f-c32493453e10
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
     - forlev2016
-_core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: forlev2016_breadcrumbs
+id: breadcrumbs
 theme: forlev2016
-region: '-1'
-weight: -8
+region: header
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,4 +17,9 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

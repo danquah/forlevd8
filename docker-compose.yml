@@ -45,3 +45,4 @@ services:
     volumes_from:
       - web
     working_dir: /var/www/web
+    command: version

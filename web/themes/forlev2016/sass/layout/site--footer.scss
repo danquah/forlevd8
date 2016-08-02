@@ -1,10 +1,5 @@
 @include stickyFooter('.sticky-footer', 380px);
 
-
-
-
-
-
 .layout-container > footer {
   background-image: url('../images/footerbg.jpg');
   background-size: cover;
@@ -12,5 +7,17 @@
 
   div {
     text-align: right;
+  }
+}
+
+.region-footer {
+  font-size: em(14, $base-font-size);
+
+  color: white;
+  a, a:visited {
+    color: yellow;
+  }
+  .block-content .menu {
+    float: right;
   }
 }

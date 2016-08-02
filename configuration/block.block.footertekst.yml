@@ -1,0 +1,25 @@
+uuid: 70c300b2-feb9-4c8b-bb86-6d7faf81aecd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:654a5ea6-0540-4e7b-a022-fd52559eb2cd'
+  module:
+    - block_content
+  theme:
+    - forlev2016
+id: footertekst
+theme: forlev2016
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:654a5ea6-0540-4e7b-a022-fd52559eb2cd'
+settings:
+  id: 'block_content:654a5ea6-0540-4e7b-a022-fd52559eb2cd'
+  label: 'Footer Tekst'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

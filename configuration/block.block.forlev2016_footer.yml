@@ -1,6 +1,6 @@
 uuid: 31fb840e-1b9b-440b-9a03-afc7241d09cd
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: forlev2016_footer
 theme: forlev2016
-region: footer
-weight: -6
+region: '-1'
+weight: 1
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

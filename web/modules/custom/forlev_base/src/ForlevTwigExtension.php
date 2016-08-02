@@ -40,6 +40,7 @@ class ForlevTwigExtension extends TwigExtension {
    */
   protected function breakPoint($twig_context) {
     if (TRUE) {
+      // Place breakpoint on the next line.
       return;
     }
   }

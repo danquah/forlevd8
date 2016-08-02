@@ -149,15 +149,6 @@ ul.site--header--quick-links li span {
 }
 
 @media screen and (max-width: 700px) {
-  .site--header label[for=burger-menu-handle] {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .site--header .site--header--menu {
-    display: none;
-  }
   .site--header input#burger-menu-handle:checked ~ .site--header--menu {
     display: block;
   }
@@ -197,6 +188,19 @@ body {
 
 .layout-container > footer div {
   text-align: right;
+}
+
+.region-footer {
+  font-size: 0.875em;
+  color: white;
+}
+
+.region-footer a, .region-footer a:visited {
+  color: yellow;
+}
+
+.region-footer .block-content .menu {
+  float: right;
 }
 
 /*# sourceMappingURL=forlev2016.css.map */

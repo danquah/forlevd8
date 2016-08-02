@@ -11,7 +11,7 @@ _core:
 id: forlev2016_breadcrumbs
 theme: forlev2016
 region: '-1'
-weight: -8
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:

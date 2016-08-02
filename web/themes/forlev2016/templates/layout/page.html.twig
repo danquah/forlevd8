@@ -16,9 +16,10 @@
 
       <label for="burger-menu-handle">Open close</label>
       <input type="checkbox" id="burger-menu-handle" />
-      {{ page.header.forlev2016_main_menu }}
+      {{ page.header.mainnavigation }}
     </div>
     </div>
+
     <div class="outer-width-wrapper">
     {% if is_front %}
       {{ xdebug_break() }}
@@ -27,18 +28,19 @@
       {% else %}
         {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
 
-          <ul class="links site--header--quick-links menu">
-            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>
-            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>
-            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>
-            <li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>
-          </ul>
+          {#<ul class="links site--header--quick-links menu">#}
+            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>#}
+            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>#}
+            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>#}
+            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>#}
+          {#</ul>#}
 
       {% endif %}
     {% else %}
-      {{ page.header | without('forlev2016_main_menu', 'quicklinks_block') }}
+      {{ page.header | without('mainnavigation', 'quicklinks_block') }}
     {% endif %}
       </div>
+
   </header>
 
   {{ page.help }}

@@ -81,10 +81,12 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+{{ xdebug_break() }}
 <article{{ attributes.addClass(classes) }}>
   {% if not is_front %}
     {{ title_prefix }}
-    {% if not page %}
+    {# Quite a hack - page-manager does not give us a is_front #}
+    {% if not node.id == 1 %}
       <h2{{ title_attributes }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>

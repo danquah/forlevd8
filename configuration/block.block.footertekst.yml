@@ -1,9 +1,9 @@
-uuid: 70c300b2-feb9-4c8b-bb86-6d7faf81aecd
+uuid: 183cb060-8431-469f-b9fb-07d6bab59b50
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:654a5ea6-0540-4e7b-a022-fd52559eb2cd'
+    - 'block_content:basic:39079d67-40fd-49e4-aac5-ca279c8830eb'
   module:
     - block_content
   theme:
@@ -11,12 +11,12 @@ dependencies:
 id: footertekst
 theme: forlev2016
 region: footer
-weight: -9
+weight: -10
 provider: null
-plugin: 'block_content:654a5ea6-0540-4e7b-a022-fd52559eb2cd'
+plugin: 'block_content:39079d67-40fd-49e4-aac5-ca279c8830eb'
 settings:
-  id: 'block_content:654a5ea6-0540-4e7b-a022-fd52559eb2cd'
-  label: 'Footer Tekst'
+  id: 'block_content:39079d67-40fd-49e4-aac5-ca279c8830eb'
+  label: 'Footer tekst'
   provider: block_content
   label_display: '0'
   status: true

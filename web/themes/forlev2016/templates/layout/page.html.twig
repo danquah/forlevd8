@@ -9,15 +9,13 @@
   <header role="banner" class="site--header">
     <div class="faded">
       <div class="outer-width-wrapper">
-    <a href="{{ front_page }}" class="logo">
-      Forlev
-    </a>
+        <a href="{{ front_page }}" class="logo">Forlev</a>
         {{ xdebug_break() }}
-
-      <label for="burger-menu-handle">Open close</label>
-      <input type="checkbox" id="burger-menu-handle" />
-      {{ page.header.mainnavigation }}
-    </div>
+        <label for="burger-menu-handle">Open close</label>
+        <input type="checkbox" id="burger-menu-handle" />
+        {{ page.header.mainnavigation }}
+        {{ page.header.breadcrumbs }}
+      </div>
     </div>
 
     <div class="outer-width-wrapper">
@@ -37,7 +35,7 @@
 
       {% endif %}
     {% else %}
-      {{ page.header | without('mainnavigation', 'quicklinks_block') }}
+      {{ page.header | without('mainnavigation', 'quicklinks_block', 'breadcrumbs') }}
     {% endif %}
       </div>
 

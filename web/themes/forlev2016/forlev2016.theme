@@ -1,14 +1,9 @@
 <?php
 
+use Drupal\Core\Url;
 use Drupal\entityqueue\Entity\EntityQueue;
 
 function forlev2016_preprocess_page(&$variables) {
-  $view = \Drupal\views\Views::getView('forlev_quicklinks');
-
-  if (!empty($view)) {
-    $output = $view->preview('default');
-    $variables['quicklinks_block'] = $output;
-  }
 }
 
 /**
@@ -23,7 +18,9 @@ function forlev2016_preprocess_node(&$variables) {
     $node = $variables['node'];
 
     if ($node->getType() == 'quicklink') {
-      $variables['destination_url'] = $node->field_destination->entity->url();
+      /** @var Url $url */
+      $url = $node->field_link->first()->getUrl();
+      $variables['destination_url'] = $url->toString();
     }
   }
 }

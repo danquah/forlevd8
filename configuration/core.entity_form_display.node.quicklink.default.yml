@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.quicklink.field_destination
     - field.field.node.quicklink.field_image
+    - field.field.node.quicklink.field_link
     - image.style.thumbnail
     - node.type.quicklink
   module:
     - image
+    - link
     - path
 id: node.quicklink.default
 targetEntityType: node
@@ -20,14 +21,6 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-  field_destination:
-    weight: 31
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
   field_image:
     weight: 32
     settings:
@@ -35,6 +28,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_link:
+    weight: 33
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   path:
     type: path
     weight: 30

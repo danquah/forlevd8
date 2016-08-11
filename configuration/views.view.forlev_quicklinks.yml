@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.quicklink
     - entityqueue.entity_queue.frontpage_quicklinks
   module:
+    - null
     - entityqueue
     - node
     - user
@@ -54,19 +54,16 @@ display:
         options:
           offset: 0
       style:
-        type: html_list
+        type: default
         options:
           row_class: ''
           default_row_class: true
           uses_fields: false
-          type: ul
-          wrapper_class: item-list
-          class: 'links site--header--quick_links menu'
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: quicklink
+          view_mode: default
       fields:
         title:
           id: title
@@ -156,17 +153,26 @@ display:
           limit_queue: frontpage_quicklinks
           entity_type: node
           plugin_id: entity_queue
-        field_destination:
-          id: field_destination
-          table: node__field_destination
-          field: field_destination
-          relationship: none
-          group_type: group
-          admin_label: 'field_destination: Content'
-          required: true
-          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  quicklinks_block:
+    display_plugin: block
+    id: quicklinks_block
+    display_title: Quicklinks
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      allow:
+        items_per_page: false
     cache_metadata:
       max-age: -1
       contexts:

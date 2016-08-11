@@ -1,0 +1,24 @@
+uuid: 08ea828a-d46c-49f3-9136-736ec5c803e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.forlev_quicklinks
+  module:
+    - views
+  theme:
+    - forlev2016
+id: quicklinks
+theme: forlev2016
+region: header
+weight: -10
+provider: null
+plugin: 'views_block:forlev_quicklinks-quicklinks_block'
+settings:
+  id: 'views_block:forlev_quicklinks-quicklinks_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

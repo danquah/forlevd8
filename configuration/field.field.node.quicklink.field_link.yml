@@ -1,0 +1,23 @@
+uuid: a221317e-8b40-4ced-b744-566b7018c6bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.quicklink
+  module:
+    - link
+id: node.quicklink.field_link
+field_name: field_link
+entity_type: node
+bundle: quicklink
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,10 +1,12 @@
 
 $tablet: new-breakpoint(max-width 768px, 4);
 
-ul.site--header--quick-links {
+ul.site--header--quick_links {
 
   li {
+    margin: 20px 0;
     text-align: center;
+    @include omega(4n);
     @include span-columns(3);
     @include media($tablet) {
       @include omega(2n);

@@ -74,6 +74,7 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+{{ xdebug_break("quicklink") }}
 <a href="{{ destination_url }}" rel="bookmark">
   {{ content.field_image }}
   {{ label }}

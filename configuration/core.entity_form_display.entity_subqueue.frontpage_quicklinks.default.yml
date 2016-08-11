@@ -1,0 +1,27 @@
+uuid: 716d79d2-c223-4bf1-b14d-2cbe53263225
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.frontpage_quicklinks
+id: entity_subqueue.frontpage_quicklinks.default
+targetEntityType: entity_subqueue
+bundle: frontpage_quicklinks
+mode: default
+content:
+  items:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

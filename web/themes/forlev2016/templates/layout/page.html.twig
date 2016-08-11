@@ -20,9 +20,9 @@
 
     <div class="outer-width-wrapper">
     {% if is_front %}
-      {{ xdebug_break() }}
-        {% if page.header.quicklinks_block %}
-        {{ page.header.quicklinks_block  }}
+      {{ xdebug_break("muggi") }}
+        {% if page.header.quicklinks %}
+        {{ page.header.quicklinks  }}
       {% else %}
         {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
 

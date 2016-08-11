@@ -31,14 +31,14 @@ class ForlevTwigExtension extends TwigExtension {
   /**
    * Prepare to do breakpoint.
    */
-  public function doBreak($context) {
-    $this->breakPoint(1 === func_num_args() ? $context : func_get_arg(1));
+  public function doBreak($context, ...$args) {
+    $this->breakPoint($context, $args);
   }
 
   /**
    * Do break.
    */
-  protected function breakPoint($twig_context) {
+  protected function breakPoint($twig_context, $args) {
     if (TRUE) {
       // Place breakpoint on the next line.
       return;

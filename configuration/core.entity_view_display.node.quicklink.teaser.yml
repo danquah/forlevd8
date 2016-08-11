@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.quicklink.field_image
+    - field.field.node.quicklink.field_link
     - node.type.quicklink
   module:
     - user
@@ -15,5 +17,5 @@ content:
   links:
     weight: 100
 hidden:
-  field_destination: true
   field_image: true
+  field_link: true

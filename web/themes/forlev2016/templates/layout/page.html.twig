@@ -10,7 +10,6 @@
     <div class="faded">
       <div class="outer-width-wrapper">
         <a href="{{ front_page }}" class="logo">Forlev</a>
-        {{ xdebug_break() }}
         <label for="burger-menu-handle">Open close</label>
         <input type="checkbox" id="burger-menu-handle" />
         {{ page.header.mainnavigation }}
@@ -20,7 +19,6 @@
 
     <div class="outer-width-wrapper">
     {% if is_front %}
-      {{ xdebug_break("muggi") }}
         {% if page.header.quicklinks %}
         {{ page.header.quicklinks  }}
       {% else %}

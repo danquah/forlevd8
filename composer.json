@@ -74,6 +74,14 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/config-override-warning-2408549-29.patch",
+                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/2457999-63.patch"
+            }
         }
+
     }
 }
+

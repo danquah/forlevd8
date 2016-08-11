@@ -5,7 +5,6 @@ dependencies:
   config:
     - entityqueue.entity_queue.frontpage_quicklinks
   module:
-    - null
     - entityqueue
     - node
     - user

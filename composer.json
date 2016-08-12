@@ -25,7 +25,7 @@
         "drupal/admin_toolbar": "^8",
         "drupal/ctools": "^8",
         "drupal/entity_reference_revisions": "^8",
-        "drupal/entityqueue": "^8",
+        "drupal/entityqueue": "8.x-1.x-dev",
         "drupal/focal_point": "^8",
         "drupal/layout_plugin": "^8",
         "drupal/linkit": "^8",
@@ -35,7 +35,8 @@
         "drupal/pathauto": "^8",
         "drupal/token": "^8",
         "drupal/menu_breadcrumb": "8.*",
-        "drupal/redirect": "^8"
+        "drupal/redirect": "^8",
+        "drupal/plugin": "^8"
     },
     "require-dev": {
        "behat/mink": "~1.7",
@@ -84,4 +85,3 @@
 
     }
 }
-

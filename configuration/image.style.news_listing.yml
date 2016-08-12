@@ -1,0 +1,16 @@
+uuid: dcbdddfa-f94d-4024-b5c4-7de74339a3ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: news_listing
+label: 'News listing (200x175)'
+effects:
+  8dcae946-1706-401a-9e09-900fd3ebc6ff:
+    uuid: 8dcae946-1706-401a-9e09-900fd3ebc6ff
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: '200'
+      height: '175'

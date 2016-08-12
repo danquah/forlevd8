@@ -1,0 +1,46 @@
+a.news-item {
+  & .node__content:hover {
+    background: #eeeeee;
+  }
+
+  text-decoration: none;
+}
+
+.news-item {
+  img {
+    width: auto;
+
+    float:left;
+    margin: 0 15px 0 0;
+    box-sizing: border-box;
+    border-radius: 5%;
+    border: 5px solid rgba(200, 200, 200, .5);
+  }
+
+  // Move the headline and date-field close together.
+  h2 {
+    margin-bottom: 10px;
+    color: $red;
+  }
+  .date-field {
+    margin-top: 0;
+  }
+
+  // The list is wrapped in an a-tag, we don't want everything underlined.
+
+  p {
+    // Make the elements (date and summary) a bit more compact.
+    //margin-bottom: 26px;
+
+  }
+
+  .node__content {
+    color: black;
+    padding: 10px;
+    overflow: auto;
+    margin: 0;
+
+  }
+}
+
+

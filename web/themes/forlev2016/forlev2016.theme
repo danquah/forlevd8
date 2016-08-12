@@ -17,7 +17,7 @@ function forlev2016_preprocess_node(&$variables) {
      */
     $node = $variables['node'];
 
-    if ($node->getType() == 'quicklink') {
+    if (in_array($node->getType(), ['quicklink', 'news'])) {
       /** @var Url $url */
       $url = $node->field_link->first()->getUrl();
       $variables['destination_url'] = $url->toString();

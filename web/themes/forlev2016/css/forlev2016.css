@@ -35,6 +35,39 @@ ul.menu a, ul.menu a:visited {
   color: white;
 }
 
+a.news-item {
+  text-decoration: none;
+}
+
+a.news-item .node__content:hover {
+  background: #eeeeee;
+}
+
+.news-item img {
+  width: auto;
+  float: left;
+  margin: 0 15px 0 0;
+  box-sizing: border-box;
+  border-radius: 5%;
+  border: 5px solid rgba(200, 200, 200, 0.5);
+}
+
+.news-item h2 {
+  margin-bottom: 10px;
+  color: #ec1b26;
+}
+
+.news-item .date-field {
+  margin-top: 0;
+}
+
+.news-item .node__content {
+  color: black;
+  padding: 10px;
+  overflow: auto;
+  margin: 0;
+}
+
 .horizontal-menu ul,
 ul.horizontal-menu {
   font-size: 0;

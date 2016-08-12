@@ -1,0 +1,30 @@
+uuid: e94a90bd-5c9e-45ae-ab98-5f450099e8a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - system
+    - views
+  theme:
+    - forlev2016
+id: views_block__news_news_block
+theme: forlev2016
+region: content
+weight: null
+provider: null
+plugin: 'views_block:news-news_block'
+settings:
+  id: 'views_block:news-news_block'
+  label: 'Seneste nyt'
+  provider: views
+  label_display: visible
+  views_label: 'Seneste nyt'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

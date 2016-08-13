@@ -12,7 +12,7 @@ dependencies:
 id: views_block__news_news_block
 theme: forlev2016
 region: content
-weight: null
+weight: -11
 provider: null
 plugin: 'views_block:news-news_block'
 settings:

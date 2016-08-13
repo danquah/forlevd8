@@ -9,7 +9,7 @@ _core:
 id: forlev2016_local_actions
 theme: forlev2016
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: local_actions_block
 settings:

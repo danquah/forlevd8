@@ -1,0 +1,20 @@
+uuid: 5342721a-7c49-4024-a080-b445e100e5c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - forlev2016
+id: horizontalmenu
+theme: forlev2016
+region: header
+weight: -11
+provider: null
+plugin: responsive_menu_horizontal_menu
+settings:
+  id: responsive_menu_horizontal_menu
+  label: 'Horizontal menu'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

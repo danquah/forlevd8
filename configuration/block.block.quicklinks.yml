@@ -11,7 +11,7 @@ dependencies:
 id: quicklinks
 theme: forlev2016
 region: header
-weight: -10
+weight: -12
 provider: null
 plugin: 'views_block:forlev_quicklinks-quicklinks_block'
 settings:

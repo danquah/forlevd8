@@ -1,0 +1,20 @@
+uuid: fd1a3484-56ee-4e77-9862-7c5bd25e6a8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - forlev2016
+id: responsivemenumobileicon
+theme: forlev2016
+region: header
+weight: -9
+provider: null
+plugin: responsive_menu_toggle
+settings:
+  id: responsive_menu_toggle
+  label: 'Responsive menu mobile icon'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

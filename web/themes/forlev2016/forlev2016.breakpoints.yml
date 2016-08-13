@@ -1,0 +1,13 @@
+forlev2016.desktop:
+  label: desktop
+  mediaQuery: '(min-width: 960px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+forlev2016.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x

@@ -3,9 +3,6 @@
 use Drupal\Core\Url;
 use Drupal\entityqueue\Entity\EntityQueue;
 
-function forlev2016_preprocess_page(&$variables) {
-}
-
 /**
  * Add a destination-link to variables.
  * @param $variables

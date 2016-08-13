@@ -5,7 +5,7 @@ $red: rgb(236, 27, 38);
 
 $base-font-size: 16px;
 
-@mixin stickyFooter($selector, $height) {
+@mixin footer($selector, $height) {
   html {
     position: relative;
     min-height: 100%;

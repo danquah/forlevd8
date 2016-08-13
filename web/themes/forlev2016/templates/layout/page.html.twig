@@ -10,38 +10,33 @@
     <div class="faded">
       <div class="outer-width-wrapper">
         <a href="{{ front_page }}" class="logo">Forlev</a>
-        <label for="burger-menu-handle">Open close</label>
-        <input type="checkbox" id="burger-menu-handle" />
-        {{ page.header.mainnavigation }}
-        {{ page.header.breadcrumbs }}
+        {{ xdebug_break() }}
+        {{ page.header.responsivemenumobileicon }}
+        {{ page.header.horizontalmenu }}
       </div>
     </div>
 
     <div class="outer-width-wrapper">
     {% if is_front %}
-        {% if page.header.quicklinks %}
-        {{ page.header.quicklinks  }}
-      {% else %}
+      {# Display quicklinks in header if we're on the frontpage #}
         {# Class horizontal-menu is set here on a wrapper class with the only point to prove the css works either way #}
 
-          {#<ul class="links site--header--quick-links menu">#}
-            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>#}
-            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>#}
-            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>#}
-            {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>#}
-          {#</ul>#}
-
-      {% endif %}
-    {% else %}
-      {{ page.header | without('mainnavigation', 'quicklinks_block', 'breadcrumbs') }}
+        {#<ul class="links site--header--quick-links menu">#}
+        {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-1.png');"></i><span>Tag på seniorkursus</span></a></li>#}
+        {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-2.png');"></i><span>Tag på patruljekursus</span></a></li>#}
+        {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-3.png');"></i><span>Tag på sommerlejr</span></a></li>#}
+        {#<li class="_"><a href="/node/add"><i class="circle" style="background-image:url('themes/forlev2016/images/circle-4.png');"></i><span>Tag på Mikro/Mini/Junior lejr</span></a></li>#}
+        {#</ul>#}
+      {{ page.header.quicklinks }}
     {% endif %}
+      {{ page.header.breadcrumbs }}
       </div>
 
   </header>
 
   {{ page.help }}
 
-  <main role="main" class="outer-width-wrapper">
+  <main role="main" class="outer-width-wrapper main-content">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
@@ -63,7 +58,7 @@
   </main>
 
   {% if page.footer %}
-    <footer class="sticky-footer" role="contentinfo">
+    <footer class="footer" role="contentinfo">
       <div class="outer-width-wrapper">
       {{ page.footer }}
       </div>

@@ -5,12 +5,24 @@ ul.horizontal-menu {
   font-size: 0;
   margin: 0;
 
+  &:first-child {
+    margin-left: 200px;
+  }
+
   li {
     font-size: 16px;
     display: inline-block;
     & + li {
-      margin-left: 30px;
+      // margin-left: 14px;
+    }
+  }
+
+  ul.sub-nav {
+    li {
+      margin-left: 10px;
     }
   }
 
 }
+
+

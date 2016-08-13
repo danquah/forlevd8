@@ -2,6 +2,12 @@
 //  @include outer-container();
 }
 
+.layout-content {
+  @include media(min-width 600px) {
+    margin: 15px;
+  }
+}
+
 $max-width: 960px;
 .outer-width-wrapper {
   @include outer-container();

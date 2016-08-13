@@ -1,4 +1,4 @@
-@include stickyFooter('.sticky-footer', 280px);
+@include footer('.footer', 280px);
 
 .layout-container > footer {
   background-image: url('../images/footerbg.jpg');

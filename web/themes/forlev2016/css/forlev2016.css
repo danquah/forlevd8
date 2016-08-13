@@ -26,10 +26,16 @@ body {
 }
 
 .breadcrumb {
-  padding-top: 0.5em;
+  padding-top: 1em;
+  margin-left: 15px;
+  clear: both;
 }
 
-ul.menu a, ul.menu a:visited {
+.breadcrumb a {
+  text-decoration: none;
+}
+
+ul.horizontal-menu a, ul.horizontal-menu a:visited {
   text-decoration: none;
   font-weight: bold;
   color: white;
@@ -74,15 +80,20 @@ ul.horizontal-menu {
   margin: 0;
 }
 
+.horizontal-menu ul:first-child,
+ul.horizontal-menu:first-child {
+  margin-left: 200px;
+}
+
 .horizontal-menu ul li,
 ul.horizontal-menu li {
   font-size: 16px;
   display: inline-block;
 }
 
-.horizontal-menu ul li + li,
-ul.horizontal-menu li + li {
-  margin-left: 30px;
+.horizontal-menu ul ul.sub-nav li,
+ul.horizontal-menu ul.sub-nav li {
+  margin-left: 10px;
 }
 
 ul.site--header--quick_links li {
@@ -149,6 +160,12 @@ ul.site--header--quick_links li span {
   border: 5px solid rgba(255, 255, 255, 0.5);
 }
 
+@media screen and (min-width: 600px) {
+  .layout-content {
+    margin: 15px;
+  }
+}
+
 .outer-width-wrapper {
   max-width: 960px;
   margin-left: auto;
@@ -171,6 +188,7 @@ ul.site--header--quick_links li span {
 }
 
 .site--header .logo {
+  margin-left: 15px;
   background: url("../images/logo.png") no-repeat center center;
   background-size: 200px;
   display: block;
@@ -218,7 +236,7 @@ body {
   /* bottom = footer height */
 }
 
-.sticky-footer {
+.footer {
   position: absolute;
   left: 0;
   bottom: 0;

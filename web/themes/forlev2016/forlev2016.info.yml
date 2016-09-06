@@ -10,3 +10,7 @@ regions:
 
 libraries:
   - forlev2016/base
+
+libraries-override:
+  responsive_menu/responsive_menu.styling:
+    forlev2016/forlev2016.responsive_menu.styling

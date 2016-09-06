@@ -3,4 +3,9 @@ base:
   css:
     theme:
       css/forlev2016.css : {}
-      css/responsive_menu.css : {}
+
+forlev2016.responsive_menu.styling:
+  version: 1.x
+  css:
+    theme:
+      css/responsive_menu.css: {}

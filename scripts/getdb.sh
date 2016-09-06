@@ -6,7 +6,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 TMPDIR=$(mktemp -d)
 FILE_NAME=100-forlevdk_$(date --iso-8601=seconds).sql.gz
-DESTINATION="${SCRIPT_DIR}/../docker/db/initdb.d/${FILE_NAME}"
+DESTINATION_DIR="${SCRIPT_DIR}/../docker/db/initdb.d"
+DESTINATION="${DESTINATION_DIR}/${FILE_NAME}"
 TARGET_HOST="ny.flab.dk"
 DOCROOT="/home/hostroot/sites/danquah/forlevdk/forlevd8/web"
 
@@ -21,11 +22,22 @@ trap cleanup EXIT
 
 cd "${TMPDIR}"
 
-/usr/bin/env scp -q ${TARGET_HOST}:/tmp/${FILE_NAME} ${DESTINATION}
+TMP_DESTINATION="${TMPDIR}/${FILE_NAME}"
 
-if [ ! -s ${DESTINATION} ]; then
+/usr/bin/env scp -q ${TARGET_HOST}:/tmp/${FILE_NAME} "${TMP_DESTINATION}"
+
+if [ ! -s "${TMP_DESTINATION}" ]; then
     >&2 echo "forlev.dk: Database dump could not be fetched or file empty."
     exit 1
 fi
 
+files=("${DESTINATION_DIR}"/100*)
+if [ -e "${files[0]}" ];
+then
+    echo "Moving existing dumps to /tmp"
+    mv -vf "${DESTINATION_DIR}"/100* /tmp
+fi
+
+mv "${TMP_DESTINATION}" "${DESTINATION}"
+echo ""
 echo "${FILE_NAME} written to docker/db/initdb.d/"

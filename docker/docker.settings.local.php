@@ -33,3 +33,4 @@ $settings['rebuild_access'] = TRUE;
 /**
  * Site specific development settings.
  */
+$config['stage_file_proxy.settings']['origin'] = 'http://ny.forlev.dk';

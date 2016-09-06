@@ -35,7 +35,9 @@ html.mm-opened .mm-page {
 
 .horizontal-menu > li {
   display: inline-block;
-  position: relative;
+  // Overridden - we want the li's to take up as much horizontal space as the
+  // parent ul - so we kick the intermediate lis position back to static.
+  //position: relative;
 }
 
 .horizontal-menu > li > a:hover,
@@ -57,7 +59,7 @@ html.mm-opened .mm-page {
   padding-top: 0.3em;
   padding-right: 1em;
   padding-bottom: 0.35em;
-  padding-left: 1em;
+  padding-left: 0.2em;
 }
 
 .horizontal-menu > li ul {
@@ -73,6 +75,11 @@ html.mm-opened .mm-page {
   box-sizing: border-box;
   width: 13.75em;
   list-style: none;
+
+  margin-right: 10px;
+
+  // Add a seperating border between the top-menu and the sub-menu.
+  border-top: 1px solid white;
 }
 
 .horizontal-menu li.sfHover > ul,
@@ -80,10 +87,28 @@ html.mm-opened .mm-page {
   display: block;
 }
 
+// Let the links in the sub-menu have a hover-state.
+ul.sub-nav a:hover {
+  text-decoration: underline;
+}
+
+
 .horizontal-menu li li {
   position: relative;
   float: left;
-  width: 100%;
+  // Overridden - we want the lis to be juxtaposed so no forced width.
+  //width: 100%;
+}
+
+// Prefix the menu-item with a red dot.
+.horizontal-menu li li:before {
+  content: "• ";
+  color: #e44;
+
+  // Poor-mans vertical centering.
+  position: absolute;
+  font-size: 1.5em;
+  padding-top: 0.2em;
 }
 
 .horizontal-menu > li > li:hover > ul,
@@ -228,3 +253,13 @@ port */
 .mm-page {
   position: static;
 }
+
+// Max out the size of the sub-menu, but keep it below around 960 - logo-width.
+.menu.sub-nav {
+  max-width: 730px;
+  width: 100%;
+
+  // The sub-menu needs a background in case it is displayed on top of the page.
+  background-color: rgba(0, 0, 0, 0.3);
+}
+

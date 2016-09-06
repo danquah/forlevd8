@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .responsive-menu-block-wrapper {
   display: none;
 }
@@ -35,13 +36,7 @@ html.mm-opened .mm-page {
 
 .horizontal-menu > li {
   display: inline-block;
-  position: relative;
 }
-
-.horizontal-menu > li > a:hover,
-.horizontal-menu > li.active-trail > a {
-}
-
 
 .horizontal-menu > li ul ul {
   left: 13.75em;
@@ -57,7 +52,7 @@ html.mm-opened .mm-page {
   padding-top: 0.3em;
   padding-right: 1em;
   padding-bottom: 0.35em;
-  padding-left: 1em;
+  padding-left: 0.2em;
 }
 
 .horizontal-menu > li ul {
@@ -73,6 +68,8 @@ html.mm-opened .mm-page {
   box-sizing: border-box;
   width: 13.75em;
   list-style: none;
+  margin-right: 10px;
+  border-top: 1px solid white;
 }
 
 .horizontal-menu li.sfHover > ul,
@@ -80,10 +77,21 @@ html.mm-opened .mm-page {
   display: block;
 }
 
+ul.sub-nav a:hover {
+  text-decoration: underline;
+}
+
 .horizontal-menu li li {
   position: relative;
   float: left;
-  width: 100%;
+}
+
+.horizontal-menu li li:before {
+  content: "• ";
+  color: #e44;
+  position: absolute;
+  font-size: 1.5em;
+  padding-top: 0.2em;
 }
 
 .horizontal-menu > li > li:hover > ul,
@@ -92,13 +100,13 @@ html.mm-opened .mm-page {
 }
 
 .horizontal-menu > li li > a {
-    display: block;
-    position: relative;
-    padding-top: 0.25em;
-    padding-right: 1em;
-    padding-bottom: 0.25em;
-    padding-left: 1em;
-    text-transform: none;
+  display: block;
+  position: relative;
+  padding-top: 0.25em;
+  padding-right: 1em;
+  padding-bottom: 0.25em;
+  padding-left: 1em;
+  text-transform: none;
 }
 
 .off-canvas-wrapper {
@@ -197,12 +205,14 @@ html.mm-opening .responsive-menu-toggle-icon:after {
 }
 
 #mm-blocker {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
+
 .mm-opening #mm-blocker {
   background: rgba(0, 0, 0, 0.2);
   transition: background 1s ease 0.3s;
 }
+
 .mm-opening #page {
   border-left: 1px solid #ccc;
 }
@@ -223,8 +233,16 @@ ul.menu.mm-listview a.is-active {
   border: none;
 }
 
- /*Required in order for the sticky-footer to stick to the bottom of the view
- port */
+/*Required in order for the sticky-footer to stick to the bottom of the view
+port */
 .mm-page {
   position: static;
 }
+
+.menu.sub-nav {
+  max-width: 730px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=responsive_menu.css.map */

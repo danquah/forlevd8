@@ -3,15 +3,18 @@
 @import "bourbon";
 @import "neat";
 
+@import "mixins/breakpoints.mixins";
+
 // Base imports.
 @import "base/general-resets";
 @import "base/typography";
 
 // Component imports.
 @import "component/breadcrumb";
+@import "component/horizontal-menu";
+@import "component/inline-image";
 @import "component/menu";
 @import "component/news-list";
-@import "component/horizontal-menu";
 @import "component/site--header--circle";
 
 // Layout imports.

@@ -3,7 +3,7 @@
 }
 
 .layout-content {
-  @include media(min-width 600px) {
+  @include media-xsmall {
     margin: 15px;
   }
 }

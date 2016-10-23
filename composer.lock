@@ -808,16 +808,16 @@
         },
         {
             "name": "drupal-composer/drupal-scaffold",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-scaffold.git",
-                "reference": "0899167ed08be48e5137a701436fe4919820d6bf"
+                "reference": "617fa3a2466795b148e3255651591682f2325ede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/0899167ed08be48e5137a701436fe4919820d6bf",
-                "reference": "0899167ed08be48e5137a701436fe4919820d6bf",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/617fa3a2466795b148e3255651591682f2325ede",
+                "reference": "617fa3a2466795b148e3255651591682f2325ede",
                 "shasum": ""
             },
             "require": {
@@ -845,20 +845,20 @@
                 "GPL-2.0+"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
-            "time": "2016-05-25 21:59:48"
+            "time": "2016-08-29 16:56:02"
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "8.1.16",
+            "version": "8.1.17",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/admin_toolbar.git",
-                "reference": "53a3c9fbb3709d5629b0992df63ffb1f43c94d2d"
+                "reference": "195f503ee4350c8be74b9515c21e264384a2fcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.16.zip",
-                "reference": "53a3c9fbb3709d5629b0992df63ffb1f43c94d2d",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.17.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -889,7 +889,7 @@
             ],
             "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
             "homepage": "http://drupal.org/project/admin_toolbar",
-            "time": "2016-07-28 09:57:05"
+            "time": "2016-08-19 14:05:31"
         },
         {
             "name": "drupal/console",
@@ -1196,16 +1196,16 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "8.3.0-alpha26",
+            "version": "8.3.0-alpha27",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/ctools",
-                "reference": "c14a5eee970c3d0aab02e88f6c6a4d18091439b8"
+                "reference": "231e2649678d58901368a9e5681f36865ce84e73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha26.zip",
-                "reference": "c14a5eee970c3d0aab02e88f6c6a4d18091439b8",
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha27.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1232,7 +1232,7 @@
             ],
             "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
             "homepage": "https://www.drupal.org/project/ctools",
-            "time": "2016-05-06 18:51:13"
+            "time": "2016-08-20 19:59:03"
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -1271,7 +1271,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entityqueue",
-                "reference": "1e33d7d90bea473718f8b17f358923e19c833cd5"
+                "reference": "0359af5f0a229b61b46b2944d09c06739a52da5c"
             },
             "require": {
                 "drupal/core": "8.*"
@@ -1288,20 +1288,20 @@
             ],
             "description": "Allows users to collect entities in arbitrarily ordered lists.",
             "homepage": "https://www.drupal.org/project/entityqueue",
-            "time": "2016-08-10 15:58:24"
+            "time": "2016-10-19 15:54:22"
         },
         {
             "name": "drupal/focal_point",
-            "version": "8.1.0-beta2",
+            "version": "8.1.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/focal_point",
-                "reference": "c329a0e3af711ff2865b809e8b547b9406595085"
+                "reference": "5f122a98c854c6f70f2683a3f5583a769dcde85a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.0-beta2.zip",
-                "reference": "c329a0e3af711ff2865b809e8b547b9406595085",
+                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.0-beta3.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1321,32 +1321,30 @@
             ],
             "description": "Allows users to specify the focal point of an image for use during cropping.",
             "homepage": "https://www.drupal.org/project/focal_point",
-            "time": "2016-08-08 20:53:53"
+            "time": "2016-09-01 01:51:27"
         },
         {
             "name": "drupal/layout_plugin",
-            "version": "8.1.0-alpha22",
+            "version": "8.1.0-alpha23",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/layout_plugin",
-                "reference": "90be55a68dd33d3564c26fab77573b62f6cda77e"
+                "reference": "a0a5ee04d162b90b690a09d1db29d541e9d2773c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha22.zip",
-                "reference": "90be55a68dd33d3564c26fab77573b62f6cda77e",
+                "url": "https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha23.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/core": "8.*"
             },
             "replace": {
-                "drupal/block_page_layout": "self.version",
                 "drupal/layout_plugin_example": "self.version"
             },
             "suggest": {
-                "drupal/core": "Required by drupal/block_page_layout, drupal/layout_plugin_example",
-                "drupal/page_manager": "Required by drupal/block_page_layout"
+                "drupal/core": "Required by drupal/layout_plugin_example"
             },
             "type": "drupal-module",
             "extra": {
@@ -1369,13 +1367,13 @@
                     "name": "Fredrik Lassen"
                 }
             ],
-            "description": "A registry for layout plugins.",
+            "description": "Provides a way for modules or themes to register layouts.",
             "homepage": "https://www.drupal.org/project/layout_plugin",
             "keywords": [
                 "layout",
                 "php"
             ],
-            "time": "2016-01-11 16:56:15"
+            "time": "2016-10-03 18:36:43"
         },
         {
             "name": "drupal/linkit",
@@ -1418,16 +1416,16 @@
         },
         {
             "name": "drupal/menu_breadcrumb",
-            "version": "8.1.0-alpha1",
+            "version": "8.1.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/menu_breadcrumb",
-                "reference": "0052d4f87a2b746bc5f7316e16916f5c77ee3fd5"
+                "reference": "0e6f683bb247ff926eef279383b849be187db6d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.0-alpha1.zip",
-                "reference": "0052d4f87a2b746bc5f7316e16916f5c77ee3fd5",
+                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.0-beta2.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1443,28 +1441,29 @@
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "Allows you to use the menu the current page belongs to for the breadcrumb.",
+            "description": "Create breadcrumbs from nested menu titles and/or taxonomy membership.",
             "homepage": "https://www.drupal.org/project/menu_breadcrumb",
-            "time": "2016-06-10 06:41:32"
+            "time": "2016-10-17 13:38:28"
         },
         {
             "name": "drupal/page_manager",
-            "version": "8.1.0-alpha23",
+            "version": "8.1.0-alpha24",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/page_manager",
-                "reference": "fed1710d1b366bb3417b197270c6d73caeae4fa1"
+                "reference": "e17581138de8047ffa4b740a6d9074f854aa80c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/page_manager-8.x-1.0-alpha23.zip",
-                "reference": "fed1710d1b366bb3417b197270c6d73caeae4fa1",
+                "url": "https://ftp.drupal.org/files/projects/page_manager-8.x-1.0-alpha24.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/block": "8.*",
                 "drupal/core": "8.*",
-                "drupal/ctools": "~8.3.0-alpha21"
+                "drupal/ctools": "~8.3.0-alpha21",
+                "drupal/system": ">=8.0.5"
             },
             "replace": {
                 "drupal/page_manager_ui": "self.version"
@@ -1491,26 +1490,26 @@
             ],
             "description": "Provides a way to place blocks on a custom page.",
             "homepage": "https://www.drupal.org/project/page_manager",
-            "time": "2016-02-16 19:47:59"
+            "time": "2016-08-20 19:15:40"
         },
         {
             "name": "drupal/panels",
-            "version": "8.3.0-beta4",
+            "version": "8.3.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/panels",
-                "reference": "a463015692bd82a9446982f9ab044894dfdecdea"
+                "reference": "9de5382bf248af198391a22be27d770f94396dbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/panels-8.x-3.0-beta4.zip",
-                "reference": "a463015692bd82a9446982f9ab044894dfdecdea",
+                "url": "https://ftp.drupal.org/files/projects/panels-8.x-3.0-beta5.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/core": "8.*",
-                "drupal/ctools": ">=8.3.0-alpha21",
-                "drupal/layout_plugin": "8.*"
+                "drupal/ctools": ">=8.3.0-alpha26",
+                "drupal/layout_plugin": ">=8.1.0-alpha22"
             },
             "replace": {
                 "drupal/panels_ipe": "self.version"
@@ -1529,9 +1528,23 @@
             "license": [
                 "GPL-2.0+"
             ],
+            "authors": [
+                {
+                    "name": "Jakob Perry",
+                    "homepage": "https://www.drupal.org/u/japerry"
+                },
+                {
+                    "name": "Samuel Mortenson",
+                    "homepage": "https://www.drupal.org/u/samuel.mortenson"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/74958/committers"
+                }
+            ],
             "description": "Core Panels display functions; provides no external UI, at least one other Panels module should be enabled.",
             "homepage": "https://www.drupal.org/project/panels",
-            "time": "2016-02-16 20:51:34"
+            "time": "2016-10-01 12:22:55"
         },
         {
             "name": "drupal/paragraphs",
@@ -1584,23 +1597,22 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "8.1.0-alpha3",
+            "version": "8.1.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/pathauto",
-                "reference": "c4952e15e2906ff2040bc01f5e8f37d23950269e"
+                "reference": "05a0bc51694b70efb697b3c8b175f2884bff7b34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-alpha3.zip",
-                "reference": "c4952e15e2906ff2040bc01f5e8f37d23950269e",
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-beta1.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/core": "8.*",
-                "drupal/ctools": "~8.3.0-alpha21",
-                "drupal/path": "8.*",
-                "drupal/token": "~8.1.0-alpha2"
+                "drupal/ctools": "8.*",
+                "drupal/token": "8.*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1614,20 +1626,20 @@
             ],
             "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
             "homepage": "https://www.drupal.org/project/pathauto",
-            "time": "2016-04-18 18:44:27"
+            "time": "2016-08-07 10:52:55"
         },
         {
             "name": "drupal/plugin",
-            "version": "8.2.3",
+            "version": "8.2.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/plugin.git",
-                "reference": "83f894739dc404f70e733b8e4fbe35c549ecd27b"
+                "reference": "427871bb79594f7e36e20cc09d55ee9e72b233ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/plugin-8.x-2.3.zip",
-                "reference": "83f894739dc404f70e733b8e4fbe35c549ecd27b",
+                "url": "https://ftp.drupal.org/files/projects/plugin-8.x-2.4.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1652,7 +1664,7 @@
             ],
             "description": "Provides tools that extend Drupal's plugin system.",
             "homepage": "https://www.drupal.org/project/plugin",
-            "time": "2016-07-08 16:59:34"
+            "time": "2016-08-15 14:31:50"
         },
         {
             "name": "drupal/redirect",
@@ -1751,16 +1763,16 @@
         },
         {
             "name": "drupal/token",
-            "version": "8.1.0-beta1",
+            "version": "8.1.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/token",
-                "reference": "1c68e82525fda1bd12021502da81b929b9ae5c02"
+                "reference": "724ccaa7a60f1aa7e8883e82de737115b0f73a3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-beta1.zip",
-                "reference": "1c68e82525fda1bd12021502da81b929b9ae5c02",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-beta2.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1778,33 +1790,35 @@
             ],
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
-            "time": "2016-08-09 07:03:16"
+            "time": "2016-09-20 10:19:14"
         },
         {
             "name": "drush/drush",
-            "version": "8.1.3",
+            "version": "8.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "fec57947d9cc3ae8978bd747cb3d60ec9864e912"
+                "reference": "1cf4b2df22d1940bec1637d56c69ba5634a982f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/fec57947d9cc3ae8978bd747cb3d60ec9864e912",
-                "reference": "fec57947d9cc3ae8978bd747cb3d60ec9864e912",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/1cf4b2df22d1940bec1637d56c69ba5634a982f5",
+                "reference": "1cf4b2df22d1940bec1637d56c69ba5634a982f5",
                 "shasum": ""
             },
             "require": {
-                "consolidation/annotated-command": "~1.0.0-beta6",
-                "consolidation/output-formatters": "~1.0.0-beta5",
+                "consolidation/annotated-command": "~1",
+                "consolidation/output-formatters": "~1",
                 "pear/console_table": "~1.3.0",
                 "php": ">=5.4.5",
                 "psr/log": "~1.0",
                 "psy/psysh": "~0.6",
                 "symfony/console": "~2.7",
+                "symfony/event-dispatcher": "~2.7",
                 "symfony/finder": "~2.7",
                 "symfony/var-dumper": "~2.7",
-                "symfony/yaml": "~2.3"
+                "symfony/yaml": "~2.3",
+                "webmozart/path-util": "~2"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*",
@@ -1818,7 +1832,6 @@
                 "drush",
                 "drush.launcher",
                 "drush.php",
-                "drush.bat",
                 "drush.complete.sh"
             ],
             "type": "library",
@@ -1881,7 +1894,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2016-07-18 22:02:09"
+            "time": "2016-09-25 16:55:26"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -4644,6 +4657,102 @@
                 "templating"
             ],
             "time": "2016-05-30 09:11:59"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "time": "2016-08-09 15:02:57"
+        },
+        {
+            "name": "webmozart/path-util",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/path-util.git",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "webmozart/assert": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\PathUtil\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
+            "time": "2015-12-17 08:42:14"
         },
         {
             "name": "zendframework/zend-diactoros",

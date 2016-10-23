@@ -38,7 +38,8 @@
         "drupal/redirect": "^8",
         "drupal/plugin": "^8",
         "drupal/responsive_menu": "^8",
-        "drupal/stage_file_proxy": "^8"
+        "drupal/stage_file_proxy": "^8",
+        "drupal/twig_xdebug": "^8"
     },
     "require-dev": {
        "behat/mink": "~1.7",

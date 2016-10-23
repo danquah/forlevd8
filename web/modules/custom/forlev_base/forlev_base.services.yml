@@ -1,6 +1,0 @@
-services:
-  forlev_base.twig.ForlevTwigExtension:
-    arguments: ['@renderer']
-    class: Drupal\forlev_base\ForlevTwigExtension
-    tags:
-      - { name: twig.extension }

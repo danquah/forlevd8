@@ -3,7 +3,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-SLEEP_TIME=20
+SLEEP_TIME=50
 
 echoc () {
     GREEN=$(tput setaf 2)
@@ -24,7 +24,7 @@ echoc "*** Starting new containers"
 docker-compose up --remove-orphans -d
 
 # Sleep while containers are starting up then perform a reset
-echoc "*** Waiting ${SLEEP_TIME} seconds for the containers to come up"
+echoc "*** Waiting ${SLEEP_TIME} seconds for the containers to come up and database to be imported"
 sleep $SLEEP_TIME
 
 # Perform the drupal-specific reset

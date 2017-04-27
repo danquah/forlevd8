@@ -1,30 +1,30 @@
 version: "2"
 
 services:
+  # Pure web-server, hands php-requests off to fpm.
+  # Pure web-server, hands php-requests off to fpm.
   web:
-    image: reload/drupal-apache-ssl
+    image: reload/drupal-apache-fpm
     ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      # Map webroot
-      - './web:/var/www/web'
+      - '80'
+    working_dir: /var/www/web
+    volumes_from:
+      - webroot
+    links:
+      - fpm
 
-      - './configuration:/var/www/configuration'
-      - './vendor:/var/www/vendor'
-      # This is required to make the generated community service client available in
-      # the container. composer generates a symlink from /vendor/name/package to
-      # the local path. This makes this symlink work on the container as well.
-      - './docker/docker.settings.php:/var/www/web/sites/default/settings.php'
-      - './docker/docker.settings.local.php:/var/www/web/sites/default/settings.local.php'
-      - './docker/docker.services.yml:/var/www/web/sites/default/services.yml:ro'
-
-      - './docker/docker.development.services.yml:/var/www/web/sites/development.services.yml:ro'
-      - './docker/etc/cron.conf:/etc/cron.d/cron.conf:ro'
-      - './docker/init/prepare-environment.sh:/etc/my_init.d/prepare-environment.sh'
-    working_dir: '/var/www/web'
+  # Instance of the php-image configured to serve fpm-requests.
+  fpm:
+    image: reload/drupal-php7-fpm
+    ports:
+      - '9000'
+    volumes_from:
+      - webroot
     links:
       - db
+    environment:
+      PATH: '/var/www/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+      PHP_SENDMAIL_PATH: /usr/local/bin/mhsendmail --smtp-addr="mailhog:1025"
 
   db:
     image: mariadb:10
@@ -43,6 +43,20 @@ services:
     links:
       - db
     volumes_from:
-      - web
+      - webroot
     working_dir: /var/www/web
     command: version
+
+  # Webroot and volumned paths needs to be accessible from multiple containers so
+  # we set up all paths once and for all via a single volumne-container.
+  webroot:
+    image: tianon/true
+    volumes:
+      - './web:/var/www/web:rw'
+      - './scripts:/var/www/scripts'
+      - './vendor:/var/www/vendor:ro'
+      - './configuration:/var/www/configuration:rw'
+      - './docker/docker.settings.php:/var/www/web/sites/default/settings.php'
+      - './docker/docker.settings.local.php:/var/www/web/sites/default/settings.local.php'
+      - './docker/docker.services.yml:/var/www/web/sites/default/services.yml:ro'
+      - './docker/docker.development.services.yml:/var/www/web/sites/development.services.yml:ro'

@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 IFS=$'\n\t'
+
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SLEEP_TIME=20
 
 echoc () {
-	echo -e "\e[38;5;34m$1\e[0m"
+    GREEN=$(tput setaf 2)
+    RESET=$(tput sgr 0)
+	echo -e "${GREEN}$1${RESET}"
 }
 
 # Preemptive sudo lease - to let you go out and grab a coffee while the script
@@ -13,20 +17,15 @@ sudo echo ""
 
 # Clear all running containers.
 echoc "*** Removing existing containers"
-docker-compose kill && docker-compose rm --all -v -f
+docker-compose kill && docker-compose rm -v -f
 
-# Composer silently kills any valid sudo leases, to avoid elevation-exploits in
-# scripts - we disable this to make sure we only have to give sudo a password
-# once.
-echoc "Composer install'ing"
-COMPOSER_ALLOW_SUPERUSER=1 composer install
-
-# Start up containers in the background and continue imidiately
+# Start up containers in the background and continue immediately
 echoc "*** Starting new containers"
 docker-compose up --remove-orphans -d
 
 # Sleep while containers are starting up then perform a reset
-sleep 25
+echoc "*** Waiting ${SLEEP_TIME} seconds for the containers to come up"
+sleep $SLEEP_TIME
 
 # Perform the drupal-specific reset
 echoc "*** Resetting Drupal"

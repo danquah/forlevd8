@@ -8,7 +8,7 @@ TMPDIR=$(mktemp -d)
 FILE_NAME=100-forlevdk_$(date --iso-8601=seconds).sql.gz
 DESTINATION_DIR="${SCRIPT_DIR}/../docker/db/initdb.d"
 DESTINATION="${DESTINATION_DIR}/${FILE_NAME}"
-TARGET_HOST="ny.flab.dk"
+TARGET_HOST="anne.flab.dk"
 DOCROOT="/home/hostroot/sites/danquah/forlevdk/forlevd8/web"
 
 cleanup() {

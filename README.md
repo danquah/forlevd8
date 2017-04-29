@@ -1,10 +1,10 @@
 # Forlev D8
 
 ## Dev requirements
-* Docker ![Official](https://www.docker.com/community-edition#/download) or eg. ![Dinghy](https://github.com/codekitchen/dinghy)
-* ![Node](https://nodejs.org/en/download/)
-* ![Grunt](https://gruntjs.com/getting-started)
-* ![Composer](https://getcomposer.org/doc/00-intro.md)
+* Docker [Official](https://www.docker.com/community-edition#/download) or eg. [Dinghy](https://github.com/codekitchen/dinghy)
+* [Node](https://nodejs.org/en/download/)
+* [Grunt](https://gruntjs.com/getting-started)
+* [Composer](https://getcomposer.org/doc/00-intro.md)
 
 ## Basic install
 ```bash

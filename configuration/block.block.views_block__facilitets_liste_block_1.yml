@@ -1,0 +1,30 @@
+uuid: 67fa5f3f-cba1-46e6-98bf-28207f463d49
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.facilitets_liste
+  module:
+    - system
+    - views
+  theme:
+    - forlev2016
+id: views_block__facilitets_liste_block_1
+theme: forlev2016
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:facilitets_liste-block_1'
+settings:
+  id: 'views_block:facilitets_liste-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/10
+    negate: false
+    context_mapping: {  }

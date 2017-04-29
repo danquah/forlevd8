@@ -1,0 +1,22 @@
+uuid: b9db159f-c0d7-48c4-9a8b-feea1f91fb48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.facility
+  module:
+    - text
+id: node.facility.body
+field_name: body
+entity_type: node
+bundle: facility
+label: Beskrivelse
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,17 @@
+uuid: 274d24a4-b31a-4031-9958-c7c8e984e3c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Facilitet
+type: facility
+description: 'En side om en af Forlevs bygninger eller faciliteter'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,18 @@
+uuid: 996633a4-d017-4af8-8557-ef5bc9337d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.facility
+id: node.facility.title
+field_name: title
+entity_type: node
+bundle: facility
+label: Titel
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

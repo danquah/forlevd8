@@ -29,7 +29,7 @@
         "drupal/focal_point": "~1.0",
         "drupal/layout_plugin": "~1.0",
         "drupal/linkit": "~4.0",
-        "drupal/page_manager": "~1.0",
+        "drupal/page_manager": "~4.0",
         "drupal/panels": "~3.0",
         "drupal/paragraphs": "~1.0",
         "drupal/pathauto": "~1.0",

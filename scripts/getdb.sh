@@ -5,7 +5,7 @@ IFS=$'\n\t'
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 TMPDIR=$(mktemp -d)
-FILE_NAME=100-forlevdk_$(date --iso-8601=seconds).sql.gz
+FILE_NAME=100-forlevdk.sql.gz
 DESTINATION_DIR="${SCRIPT_DIR}/../docker/db/initdb.d"
 DESTINATION="${DESTINATION_DIR}/${FILE_NAME}"
 TARGET_HOST="forlevdk_login@anne.flab.dk"

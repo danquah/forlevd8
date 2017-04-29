@@ -13,4 +13,4 @@ then
   echo "Aborted"
   exit 1
 fi
-ssh forlevdk_login@anne.flab.dk "cd ${CLONE_DIR}; bash -s" < "${SCRIPT_DIR}/general-deploy.sh"
+ssh -A forlevdk_login@anne.flab.dk "cd ${CLONE_DIR}; bash -s" < "${SCRIPT_DIR}/general-deploy.sh"

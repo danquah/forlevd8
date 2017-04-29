@@ -8,7 +8,7 @@ dependencies:
     - forlev2016
 id: forlevcirclebreadcrumb
 theme: forlev2016
-region: '-1'
+region: header
 weight: -8
 provider: null
 plugin: forlev_breadcrumbs_block

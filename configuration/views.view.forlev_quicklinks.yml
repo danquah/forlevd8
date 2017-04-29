@@ -161,7 +161,10 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:entityqueue.entity_queue.frontpage_quicklinks'
+        - entity_field_info
+        - views_data
   quicklinks_block:
     display_plugin: block
     id: quicklinks_block
@@ -179,4 +182,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:entityqueue.entity_queue.frontpage_quicklinks'
+        - entity_field_info
+        - views_data

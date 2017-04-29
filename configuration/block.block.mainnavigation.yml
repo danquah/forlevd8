@@ -10,7 +10,7 @@ dependencies:
     - forlev2016
 id: mainnavigation
 theme: forlev2016
-region: '-1'
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:main'

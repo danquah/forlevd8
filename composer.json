@@ -19,7 +19,7 @@
         "composer/installers": "^1.0.20",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "cweagans/composer-patches": "~1.0",
-        "drupal/core": "~8.2.0",
+        "drupal/core": "~8.3.0",
         "drush/drush": "~8.0",
         "drupal/console": "~0.10",
         "drupal/admin_toolbar": "~1.0",
@@ -82,8 +82,8 @@
         },
         "patches": {
             "drupal/core": {
-                "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/config-override-warning-2408549-29.patch",
-                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/2457999-63.patch"
+                "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/there_is_no_indication-2408549-60.patch",
+                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch"
             }
         }
 

@@ -1,0 +1,24 @@
+uuid: 408e7494-a47a-4aba-911f-a6aae9bd563d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instructions.field_steps
+    - paragraphs.paragraphs_type.instructions
+  module:
+    - entity_reference_revisions
+id: paragraph.instructions.default
+targetEntityType: paragraph
+bundle: instructions
+mode: default
+content:
+  field_steps:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

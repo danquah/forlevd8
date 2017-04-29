@@ -1,0 +1,39 @@
+uuid: 34befca0-2532-4ef2-b6d3-a7ffea9a5842
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_steps
+    - paragraphs.paragraphs_type.instruction_step
+    - paragraphs.paragraphs_type.instructions
+  module:
+    - entity_reference_revisions
+id: paragraph.instructions.field_steps
+field_name: field_steps
+entity_type: paragraph
+bundle: instructions
+label: Trin
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      instruction_step: instruction_step
+    target_bundles_drag_drop:
+      instruction_step:
+        enabled: true
+        weight: 5
+      image:
+        weight: 6
+        enabled: false
+      instructions:
+        weight: 7
+        enabled: false
+      text:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

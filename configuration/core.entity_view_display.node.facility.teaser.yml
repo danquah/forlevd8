@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.facility.body
-    - field.field.node.facility.field_extra_images
-    - field.field.node.facility.field_image
     - node.type.facility
   module:
     - text
@@ -27,6 +25,4 @@ content:
   links:
     weight: 100
     region: content
-hidden:
-  field_extra_images: true
-  field_image: true
+hidden: {  }

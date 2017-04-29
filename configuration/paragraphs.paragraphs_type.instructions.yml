@@ -1,0 +1,7 @@
+uuid: 61a93840-3335-44dc-9e18-94f7bad2dcb9
+langcode: en
+status: true
+dependencies: {  }
+id: instructions
+label: Instruktioner
+behavior_plugins: {  }

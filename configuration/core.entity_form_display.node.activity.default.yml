@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.activity.body
     - field.field.node.activity.field_estimated_time
     - field.field.node.activity.field_image
+    - field.field.node.activity.field_instructions
     - field.field.node.activity.field_kategori
     - image.style.thumbnail
     - node.type.activity
   module:
     - image
+    - paragraphs
     - path
     - text
 id: node.activity.default
@@ -47,6 +49,18 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_instructions:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_kategori:
     weight: 6

@@ -1,0 +1,19 @@
+uuid: bdea0810-459d-4296-aced-882b8cab87d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_step_title
+    - paragraphs.paragraphs_type.instruction_step
+id: paragraph.instruction_step.field_step_title
+field_name: field_step_title
+entity_type: paragraph
+bundle: instruction_step
+label: 'Trin Titel'
+description: 'Kort titel til det pågældende trin i instruktionen'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

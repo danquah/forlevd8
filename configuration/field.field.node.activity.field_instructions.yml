@@ -1,0 +1,39 @@
+uuid: 319064f7-8dfb-4b5d-8d94-6c1df305ca7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instructions
+    - node.type.activity
+    - paragraphs.paragraphs_type.instructions
+  module:
+    - entity_reference_revisions
+id: node.activity.field_instructions
+field_name: field_instructions
+entity_type: node
+bundle: activity
+label: Instruktioner
+description: 'Instruktioner til aktiviteten. Laves ved at tilføje et antal trin, hver med enten overskrift, beskrivelse, billeder eller en kombination af de tre'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      instructions: instructions
+    target_bundles_drag_drop:
+      instruction_step:
+        weight: 5
+        enabled: false
+      image:
+        weight: 6
+        enabled: false
+      instructions:
+        enabled: true
+        weight: 7
+      text:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

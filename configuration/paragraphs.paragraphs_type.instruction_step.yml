@@ -1,0 +1,7 @@
+uuid: 85df6cc0-8c79-4e2f-ba69-9b92208215b3
+langcode: en
+status: true
+dependencies: {  }
+id: instruction_step
+label: 'Instruktions Trin'
+behavior_plugins: {  }

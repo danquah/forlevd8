@@ -1,0 +1,23 @@
+uuid: 3449a80b-33e2-41ce-88ee-cfd1c05a5eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estimated_time
+    - node.type.activity
+id: node.activity.field_estimated_time
+field_name: field_estimated_time
+entity_type: node
+bundle: activity
+label: Tidsforbrug
+description: 'Et estimat i minutter på hvor lang tid aktiviteten tager. Bliver vist på siden i timer (120 min bliver vist som 2 timer)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: minutter
+field_type: integer

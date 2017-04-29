@@ -1,0 +1,21 @@
+uuid: cb973924-0147-4d8d-a49e-a83e2c0e9f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: event
+label: 'Slut Dato'
+description: 'Slut dato og tidspunkt for det givne arrangement'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

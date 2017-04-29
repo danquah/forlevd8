@@ -1,0 +1,28 @@
+uuid: ccabc953-1c42-4e2a-82b9-95ae3cb59e6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kategori
+    - node.type.activity
+    - taxonomy.vocabulary.activity_categories
+id: node.activity.field_kategori
+field_name: field_kategori
+entity_type: node
+bundle: activity
+label: Kategori
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      activity_categories: activity_categories
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

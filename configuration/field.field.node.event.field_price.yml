@@ -1,0 +1,19 @@
+uuid: d70f5a40-bf0e-49cc-b07e-f465c58e725b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.event
+id: node.event.field_price
+field_name: field_price
+entity_type: node
+bundle: event
+label: Pris
+description: 'Prisen for det givne arrangement. Skrives som tekst, så kan indeholde informationer om pris pr. person, pr. klan, pr. gruppe eller eventuelle rabatter.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

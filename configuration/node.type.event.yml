@@ -1,0 +1,17 @@
+uuid: 548f4742-d94a-4d9f-a4ef-b139edaf5c62
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Arrangement
+type: event
+description: 'En side for en specifik lejr eller et specifiks weekend arrangement der skal vises på forlev.dk (fx P18, MUS 2017, Jubilæums weekend 2018)'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,9 @@
+uuid: beb8b366-5b61-4dc5-a74f-eb19b0243fcb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Aktivetets Kategorier'
+vid: activity_categories
+description: 'Mulige kategorier for aktiviteter'
+hierarchy: 0
+weight: 0

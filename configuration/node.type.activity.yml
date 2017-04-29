@@ -1,0 +1,17 @@
+uuid: abcfd031-519e-4637-b797-370a8bdb2d25
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Aktivitet
+type: activity
+description: 'En side for en aktivitet i Forlevs aktivitetsbase, som hovedsageligt bruges i sommeruger og vedligeholdes af Aktivitets Team'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

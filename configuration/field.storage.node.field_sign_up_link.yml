@@ -1,0 +1,19 @@
+uuid: 9a92681b-bf47-4a6b-b609-a0af8283833f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_sign_up_link
+field_name: field_sign_up_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

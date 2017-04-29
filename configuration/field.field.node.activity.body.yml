@@ -1,0 +1,22 @@
+uuid: 6787119d-32f8-460e-872a-4dfa5506b253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.activity
+  module:
+    - text
+id: node.activity.body
+field_name: body
+entity_type: node
+bundle: activity
+label: Beskrivelse
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,27 @@
+uuid: 84c3a03c-c33d-4986-bf06-08f7422c1b05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdf
+    - node.type.event
+  module:
+    - file
+id: node.event.field_pdf
+field_name: field_pdf
+entity_type: node
+bundle: event
+label: Filer
+description: 'En eller flere filer tilknyttet det givne arrangement'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

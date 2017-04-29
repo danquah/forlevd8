@@ -4,7 +4,7 @@ base:
     theme:
       css/forlev2016.css : {}
 
-forlev2016.responsive_menu.styling:
+responsive_menu_replacement:
   version: 1.x
   css:
     theme:

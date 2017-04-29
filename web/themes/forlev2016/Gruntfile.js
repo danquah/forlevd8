@@ -19,7 +19,7 @@ module.exports = function (grunt) {
           extDot: 'last'
         }],
         options: {
-          includePaths: require('node-neat').includePaths
+          includePaths: require('node-neat').includePaths.concat(require('node-bourbon').includePaths),
         }
       }
     },

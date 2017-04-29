@@ -4,14 +4,20 @@
   "repository": "https://github.com/danquah/forlevd8",
   "version": "0.1.0",
   "license": "MIT",
+  "scripts": {
+    "watch": "grunt",
+    "build": "npm install && burbon install && grunt build"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "latest",
     "grunt-contrib-clean": "^0.7.0",
     "grunt-contrib-jshint": "^0.12.0",
     "grunt-sass": "^1.1.0",
     "grunt-contrib-watch": "^0.6.0",
+    "bourbon": "latest",
     "node-bourbon": "^4.0.0",
-    "node-neat": "latest",
+    "node-neat": "^1.7.0",
     "node-sass": "^3.4.2"
   }
 }

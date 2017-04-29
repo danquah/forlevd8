@@ -39,5 +39,6 @@ then
 fi
 
 mv "${TMP_DESTINATION}" "${DESTINATION}"
+cp "${SCRIPT_DIR}/../docker/db/initdb.d/reset.sql-disabled" "${SCRIPT_DIR}/../docker/db/initdb.d/reset.sql"
 echo ""
 echo "${FILE_NAME} written to docker/db/initdb.d/"

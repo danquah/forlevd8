@@ -18,12 +18,16 @@ targetEntityType: node
 bundle: facility
 mode: teaser
 content:
-  body:
+  field_image:
+    type: image
+    weight: 0
+    region: content
     label: hidden
     type: text_summary_or_trimmed
     weight: 1
     settings:
-      trim_length: 600
+      image_style: circle_image
+      image_link: content
     third_party_settings: {  }
     region: content
   field_image:
@@ -37,8 +41,11 @@ content:
     third_party_settings: {  }
   links:
     weight: 0
+  links:
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_extra_images: true

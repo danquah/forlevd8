@@ -15,7 +15,6 @@
     "grunt-contrib-jshint": "^0.12.0",
     "grunt-sass": "^1.1.0",
     "grunt-contrib-watch": "^0.6.0",
-    "bourbon": "latest",
     "node-bourbon": "^4.0.0",
     "node-neat": "^1.7.0",
     "node-sass": "^3.4.2"

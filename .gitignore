@@ -20,3 +20,4 @@ web/sites/*/settings.php
 # Ignore composer-override
 docker-compose.override.yml
 settings.local.php
+web/libraries

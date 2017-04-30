@@ -28,3 +28,31 @@ function forlev_base_node_links_alter(array &$links, NodeInterface $entity, arra
     unset($links['node']['#links']['node-readmore']);
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function forlev_base_form_alter(&$form, $form_state, $form_id) {
+  // Move the see also field into the edit-forms sidebar (aka the
+  // "advanced" group).
+  // We match node_<nodetype>_edit_form as well as node_<nodetype>_form.
+  if (preg_match('#^node_([_a-z]+)(_edit)?_form$#', $form_id)) {
+
+    // Put the sidedeck field in the sidebar.
+    if (isset($form['field_see_also'])) {
+      $form['see_also_group'] = array(
+        '#type' => 'details',
+        '#title' => t('See also'),
+        '#description' => t(
+          'Content that should be displayed at the bottom of the page.'
+        ),
+        '#group' => 'advanced',
+        '#open' => FALSE,
+        // Push it all the way to the bottom.
+        '#weight' => 1000,
+      );
+
+      $form['field_see_also']['#group'] = 'see_also_group';
+    }
+  }
+}

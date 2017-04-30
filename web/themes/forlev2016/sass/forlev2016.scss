@@ -1,6 +1,7 @@
 @import "variables";
 
 @import "bourbon";
+@import "grid_settings";
 @import "neat";
 
 @import "mixins/breakpoints.mixins";
@@ -16,6 +17,7 @@
 @import "component/menu";
 @import "component/facilities-list";
 @import "component/news-list";
+@import "component/see-also";
 @import "component/site--header--circle";
 
 // Layout imports.

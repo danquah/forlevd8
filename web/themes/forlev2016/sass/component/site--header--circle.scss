@@ -1,29 +1,33 @@
 
-$tablet: new-breakpoint(max-width 768px, 4);
+.quicklinks-list .quicklink {
+  margin: 20px 0;
+  text-align: center;
 
-ul.site--header--quick_links {
+  // One link pr row.
+  @include span-columns(12);
 
-  li {
-    margin: 20px 0;
-    text-align: center;
-    @include omega(4n);
+  @include media($tablet) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($desktop) {
+    @include omega-reset(2n);
+    // How many columns should every element take up.
     @include span-columns(3);
-    @include media($tablet) {
-      @include omega(2n);
-      @include span-columns(2);
+    // Removes gutter and margin on every n'th child and clears.
+    @include omega(4n);
+  }
 
-    }
-    @include media(max-width 450px) {
-      @include span-columns(12);
-    }
-
-
-    span {
-      display: block;
-    }
+  span {
+    display: block;
   }
 }
 
+.quicklink a {
+  text-decoration: none;
+  color: black;
+}
 
 .circle {
   background-position: center center;

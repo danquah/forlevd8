@@ -1,0 +1,15 @@
+.field--name-field-see-also {
+  text-align: center;
+
+  .paragraph {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    // We set a fixed with to contain the text below the image.
+    width: 210px;
+    @include media($tablet) {
+      margin: 20px 30px;
+    }
+
+  }
+}

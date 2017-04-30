@@ -1,0 +1,42 @@
+uuid: 515d92e5-03e5-450c-b118-7505e77dffa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_see_also
+    - node.type.page
+    - paragraphs.paragraphs_type.content_link
+  module:
+    - entity_reference_revisions
+id: node.page.field_see_also
+field_name: field_see_also
+entity_type: node
+bundle: page
+label: 'Se også'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_link: content_link
+    target_bundles_drag_drop:
+      content_link:
+        enabled: true
+        weight: 6
+      image:
+        weight: 7
+        enabled: false
+      instruction_step:
+        weight: 8
+        enabled: false
+      instructions:
+        weight: 9
+        enabled: false
+      text:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,42 @@
+uuid: 098afa97-3d5f-43aa-a4b8-f2c6eeb8229f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_see_also
+    - paragraphs.paragraphs_type.content_link
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.text.field_see_also
+field_name: field_see_also
+entity_type: paragraph
+bundle: text
+label: 'Se også'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_link: content_link
+    target_bundles_drag_drop:
+      content_link:
+        enabled: true
+        weight: 6
+      image:
+        weight: 7
+        enabled: false
+      instruction_step:
+        weight: 8
+        enabled: false
+      instructions:
+        weight: 9
+        enabled: false
+      text:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_image
     - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_see_also
     - image.style.thumbnail
     - node.type.page
   module:
@@ -39,6 +40,19 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_see_also:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   path:

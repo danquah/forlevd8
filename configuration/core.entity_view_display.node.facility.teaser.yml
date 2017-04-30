@@ -5,26 +5,32 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.facility.body
+    - field.field.node.facility.field_extra_images
+    - field.field.node.facility.field_image
+    - image.style.circle_image
     - node.type.facility
   module:
-    - text
+    - image
     - user
 id: node.facility.teaser
 targetEntityType: node
 bundle: facility
 mode: teaser
 content:
-  body:
+  field_image:
+    type: image
+    weight: 0
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      image_style: circle_image
+      image_link: content
     third_party_settings: {  }
-    region: content
   links:
-    weight: 100
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  body: true
   field_extra_images: true
-  field_image: true

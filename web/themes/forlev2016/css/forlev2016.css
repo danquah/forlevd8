@@ -109,6 +109,22 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   color: white;
 }
 
+.view-id-facilitets_liste .node--type-facility.node--view-mode-teaser {
+  float: left;
+  margin: 16px;
+  text-align: center;
+  color: black;
+}
+
+.view-id-facilitets_liste .node--type-facility.node--view-mode-teaser a {
+  color: black;
+  text-decoration: none;
+}
+
+.view-id-facilitets_liste .node--type-facility.node--view-mode-teaser h2 {
+  margin: 0;
+}
+
 a.news-item {
   text-decoration: none;
 }

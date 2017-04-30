@@ -143,12 +143,13 @@ display:
           exposed: false
           expose:
             label: ''
-      title: 'Facilitets liste'
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

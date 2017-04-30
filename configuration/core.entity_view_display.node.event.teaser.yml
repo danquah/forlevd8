@@ -25,4 +25,10 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_end_date: true
+  field_event_type: true
+  field_pdf: true
+  field_price: true
+  field_sign_up_link: true
+  field_start_date: true

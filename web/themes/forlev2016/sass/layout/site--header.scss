@@ -39,7 +39,11 @@
   background-color: $faded-black;
 }
 
-// All links in header should be white!
+// All links in header should be white
 .site--header a {
   color: #fff;
+
+  // But to compensate we add a bit of a drop-shadow to protect from white
+  // areas.
+  text-shadow: 2px 2px 4px black;
 }

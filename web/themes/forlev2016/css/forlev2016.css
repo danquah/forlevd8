@@ -21,7 +21,6 @@ img {
 
 body {
   font-size: 18px;
-  line-height: 1.1111111111em;
   font-family: Arial, sans-serif;
 }
 
@@ -312,6 +311,7 @@ a.news-item .node__content:hover {
 
 .site--header a {
   color: #fff;
+  text-shadow: 2px 2px 4px black;
 }
 
 html {

@@ -11,6 +11,9 @@ echoc () {
 	echo -e "${GREEN}$1${RESET}"
 }
 
+# Start off at the root of the project.
+cd $SCRIPT_DIR/../
+
 # Preemptive sudo lease - to let you go out and grab a coffee while the script
 # runs.
 sudo echo ""
@@ -18,6 +21,23 @@ sudo echo ""
 # Clear all running containers.
 echoc "*** Removing existing containers"
 docker-compose kill && docker-compose rm -v -f
+
+# Composer silently kills any valid sudo leases, to avoid elevation-exploits in
+# scripts - we disable this to make sure we only have to give sudo a password
+# once.
+echoc "*** Composer installing"
+COMPOSER_ALLOW_SUPERUSER=1 composer install
+
+# Build theme assets.
+pushd web/themes/forlev2016
+
+echoc "*** NPM installing"
+npm install
+
+echoc "*** Doing an initial gulp build"
+grunt
+
+popd
 
 # Start up containers in the background and continue immediately
 echoc "*** Starting new containers"

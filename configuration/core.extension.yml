@@ -2,6 +2,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
+  blazy: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -48,6 +49,9 @@ module:
   responsive_menu: 0
   search: 0
   shortcut: 0
+  slick: 0
+  slick_extras: 0
+  slick_views: 0
   stage_file_proxy: 0
   system: 0
   taxonomy: 0

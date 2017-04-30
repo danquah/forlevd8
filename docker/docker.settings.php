@@ -23,5 +23,5 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
   include __DIR__ . '/settings.local.php';
 }
 
-$settings['trusted_host_patterns'] = ['local.docker', 'web.forlevd8.docker', 'localhost'];
+$settings['trusted_host_patterns'] = ['local.docker', 'web.forlevd8.docker', 'localhost', '*.ngrok.io'];
 $settings['install_profile'] = 'standard';

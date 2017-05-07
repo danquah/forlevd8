@@ -1,0 +1,21 @@
+uuid: 9a4ca869-4ad0-4298-9725-517169729a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference
+    - paragraphs.paragraphs_type.block
+  module:
+    - plugin
+id: paragraph.block.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+bundle: block
+label: 'Blok reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: 'plugin:block'

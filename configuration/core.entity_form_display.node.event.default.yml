@@ -6,14 +6,17 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_end_date
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_image
     - field.field.node.event.field_pdf
     - field.field.node.event.field_price
     - field.field.node.event.field_sign_up_link
     - field.field.node.event.field_start_date
+    - image.style.thumbnail
     - node.type.event
   module:
     - datetime
     - file
+    - image
     - link
     - path
     - text
@@ -33,7 +36,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -48,6 +51,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_pdf:
     weight: 13
@@ -80,7 +91,7 @@ content:
     region: content
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -88,14 +99,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 4
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -108,7 +119,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

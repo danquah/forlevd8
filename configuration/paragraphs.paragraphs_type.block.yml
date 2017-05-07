@@ -1,0 +1,7 @@
+uuid: 8af3b186-6933-4b7c-98ea-5c08625da422
+langcode: en
+status: true
+dependencies: {  }
+id: block
+label: Blok
+behavior_plugins: {  }

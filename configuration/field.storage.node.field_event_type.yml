@@ -12,8 +12,8 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: paaske
-      label: Påskekursus
+      value: patrulje
+      label: Patruljekursus
     -
       value: mus
       label: MUS-Lejr
@@ -24,8 +24,8 @@ settings:
       value: sommer
       label: 'Sommer uge'
     -
-      value: efterår
-      label: Efterårskursus
+      value: senior
+      label: Seniorkursus
     -
       value: engangs
       label: Engangsarrangement

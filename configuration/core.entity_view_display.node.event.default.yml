@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_end_date
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_image
     - field.field.node.event.field_pdf
     - field.field.node.event.field_price
     - field.field.node.event.field_sign_up_link
@@ -14,6 +15,7 @@ dependencies:
   module:
     - datetime
     - file
+    - image
     - link
     - options
     - text
@@ -45,6 +47,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_image:
+    weight: 9
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_pdf:
     weight: 8

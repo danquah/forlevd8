@@ -2,7 +2,6 @@ version: "2"
 
 services:
   # Pure web-server, hands php-requests off to fpm.
-  # Pure web-server, hands php-requests off to fpm.
   web:
     image: reload/drupal-apache-fpm
     ports:
@@ -29,7 +28,7 @@ services:
   db:
     image: mariadb:10
     ports:
-      - '3306:3306'
+      - '3306'
     volumes:
       - './docker/db/initdb.d:/docker-entrypoint-initdb.d'
     environment:

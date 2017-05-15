@@ -3,7 +3,9 @@ set -euo pipefail
 IFS=$'\n\t'
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-SLEEP_TIME=50
+SLEEP_TIME=20
+HOST="localhost"
+WEB_CONTAINER="web"
 
 echoc () {
     GREEN=$(tput setaf 2)
@@ -50,6 +52,9 @@ sleep $SLEEP_TIME
 # Perform the drupal-specific reset
 echoc "*** Resetting Drupal"
 "${SCRIPT_DIR}/site-reset.sh"
+
+echoc "*** Requesting ${HOST} in ${WEB_CONTAINER}"
+docker-compose exec ${WEB_CONTAINER} curl -H "Host: ${HOST}" localhost
 
 # Done, bring the background docker-compose logs back into foreground
 echoc "*** Done, watching logs"

@@ -42,3 +42,4 @@ content:
     region: content
 hidden:
   field_link: true
+  langcode: true

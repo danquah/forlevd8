@@ -44,3 +44,4 @@ hidden:
   field_price: true
   field_sign_up_link: true
   field_start_date: true
+  langcode: true

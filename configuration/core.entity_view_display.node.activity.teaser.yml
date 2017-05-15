@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.activity.body
+    - field.field.node.activity.field_estimated_time
+    - field.field.node.activity.field_image
+    - field.field.node.activity.field_instructions
+    - field.field.node.activity.field_kategori
     - node.type.activity
   module:
     - text
@@ -30,3 +34,4 @@ hidden:
   field_image: true
   field_instructions: true
   field_kategori: true
+  langcode: true

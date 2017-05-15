@@ -102,7 +102,8 @@
         "patches": {
             "drupal/core": {
                 "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/there_is_no_indication-2408549-60.patch",
-                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch"
+                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch",
+                "2650434: Clearing cache via UI in translated language resets config translation of field labels to default language": "https://www.drupal.org/files/issues/clearing_cache_via_ui-2650434-128.patch"
             }
         }
 

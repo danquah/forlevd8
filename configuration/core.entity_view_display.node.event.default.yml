@@ -12,12 +12,12 @@ dependencies:
     - field.field.node.event.field_sign_up_link
     - field.field.node.event.field_start_date
     - node.type.event
+    - responsive_image.styles.wide
   module:
     - datetime
     - file
-    - image
     - link
-    - options
+    - responsive_image
     - text
     - user
 id: node.event.default
@@ -28,53 +28,46 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_end_date:
-    weight: 5
-    label: above
+    weight: 4
+    label: inline
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_event_type:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_image:
-    weight: 9
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: wide
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_pdf:
-    weight: 8
-    label: above
+    weight: 7
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: file_default
     region: content
   field_price:
-    weight: 6
-    label: above
+    weight: 2
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_sign_up_link:
-    weight: 7
-    label: above
+    weight: 6
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -85,8 +78,8 @@ content:
     type: link
     region: content
   field_start_date:
-    weight: 4
-    label: above
+    weight: 3
+    label: inline
     settings:
       format_type: medium
       timezone_override: ''
@@ -99,4 +92,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_type: true
   langcode: true

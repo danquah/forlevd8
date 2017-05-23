@@ -19,6 +19,7 @@ services:
       - '9000'
     volumes_from:
       - webroot
+    working_dir: /var/www/web
     links:
       - db
     environment:

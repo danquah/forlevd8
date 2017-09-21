@@ -19,10 +19,13 @@ services:
       - '9000'
     volumes_from:
       - webroot
+    volumes:
+      - 'cache:/composer-cache'
     working_dir: /var/www/web
     links:
       - db
     environment:
+      COMPOSER_CACHE_DIR: '/composer-cache/composer'
       PATH: '/var/www/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
       PHP_SENDMAIL_PATH: /usr/local/bin/mhsendmail --smtp-addr="mailhog:1025"
 
@@ -47,16 +50,31 @@ services:
     working_dir: /var/www/web
     command: version
 
+  npm:
+#    image: node:argon
+    build: docker/npm-image
+    volumes_from:
+      - webroot
+    volumes:
+      - 'cache:/npm-cache'
+    working_dir: /var/www/web
+    environment:
+      PATH: '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+      npm_config_cache: '/npm-cache/node'
+    entrypoint: "/bin/sh -c 'cd /var/www/web/themes/forlev2016 && npm run build && npm run watch'"
+#    user: node
+
   # Webroot and volumned paths needs to be accessible from multiple containers so
   # we set up all paths once and for all via a single volumne-container.
   webroot:
     image: tianon/true
     volumes:
-      - './web:/var/www/web:rw'
-      - './scripts:/var/www/scripts'
-      - './vendor:/var/www/vendor:ro'
-      - './configuration:/var/www/configuration:rw'
+      - './:/var/www'
       - './docker/docker.settings.php:/var/www/web/sites/default/settings.php'
       - './docker/docker.settings.local.php:/var/www/web/sites/default/settings.local.php'
       - './docker/docker.services.yml:/var/www/web/sites/default/services.yml:ro'
       - './docker/docker.development.services.yml:/var/www/web/sites/development.services.yml:ro'
+
+volumes:
+  # NPM cache that survives docker-reset.sh
+  cache:

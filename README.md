@@ -1,21 +1,12 @@
 # Forlev D8
 
 ## Dev requirements
-* Docker [Official](https://www.docker.com/community-edition#/download) or eg. [Dinghy](https://github.com/codekitchen/dinghy)
-* [Node](https://nodejs.org/en/download/)
-* [Grunt](https://gruntjs.com/getting-started)
-* [Composer](https://getcomposer.org/doc/00-intro.md)
-
-## Basic install
-```bash
-composer install
-cd web/themes/forlev2016
-npm install
-grunt
-grunt watch
-```
+* Docker for mac [Official](https://www.docker.com/community-edition#/download) or eg. [Dinghy](https://github.com/codekitchen/dinghy)
+* [Dory](https://github.com/FreedomBen/dory) for *.docker urls (optional, but you want it)
 
 ## Getting a database
+First, have your public-key added to prod by asking Mads.
+Then:
 ```bash
 scripts/getdb.sh
 ```

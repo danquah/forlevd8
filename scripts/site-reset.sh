@@ -14,6 +14,7 @@ find web/sites/default/files \! -user $USER  \! -print0 -name .gitkeep | sudo xa
 # Make sites/default read-only and executable
 sudo chmod 555 web/sites/default
 
+time docker-compose exec fpm sh -c "cd /var/www && composer install "
 time docker-compose exec --user www-data fpm sh -c "\
   cd /var/www/web && \
   echo 'Importing configuration' && \

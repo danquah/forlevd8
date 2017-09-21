@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  # Replace webroot for a docker-synced path.
+  webroot:
+    image: tianon/true
+    volumes:
+      - forlevd8-sync-web:/var/www
+      - './docker/docker.settings.php:/var/www/web/sites/default/settings.php'
+      - './docker/docker.settings.local.php:/var/www/web/sites/default/settings.local.php'
+      - './docker/docker.services.yml:/var/www/web/sites/default/services.yml:ro'
+      - './docker/docker.development.services.yml:/var/www/web/sites/development.services.yml:ro'
+
+volumes:
+  forlevd8-sync-web:
+    external: true

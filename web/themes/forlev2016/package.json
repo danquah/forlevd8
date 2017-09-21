@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "watch": "grunt",
-    "build": "npm install && burbon install && grunt build"
+    "watch": "grunt watch",
+    "build": "npm install && bourbon install && grunt build"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

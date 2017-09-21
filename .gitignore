@@ -21,3 +21,4 @@ web/sites/*/settings.php
 docker-compose.override.yml
 settings.local.php
 web/libraries
+.docker-sync

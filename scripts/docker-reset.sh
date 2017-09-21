@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
+# Removes all containers and starts up a clean environment
+# Invokes site-reset.sh after container startup.
+
 set -euo pipefail
 IFS=$'\n\t'
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# The number of seconds it takes for docker-compose up to get up and running
+# often translates to how long it takes the database-container to come up.
 SLEEP_TIME=20
+# Hostname to send a request to to warm up the cache-cleared site.
 HOST="localhost"
 WEB_CONTAINER="web"
 
@@ -13,6 +19,13 @@ echoc () {
 	echo -e "${GREEN}$1${RESET}"
 }
 
+# Determine if we have a docker-sync config file and docker-sync in path.
+DOCKER_SYNC=
+if [[ $(type -P "docker-sync") && -f "${SCRIPT_DIR}/../docker-sync.yml" ]]; then
+    DOCKER_SYNC=1
+fi
+
+
 # Start off at the root of the project.
 cd $SCRIPT_DIR/../
 
@@ -20,30 +33,23 @@ cd $SCRIPT_DIR/../
 # runs.
 sudo echo ""
 
+if [[ $DOCKER_SYNC ]]; then
+    echoc "*** Performing Initial docker sync"
+    docker-sync start || true
+    docker-sync sync
+fi
+
 # Clear all running containers.
 echoc "*** Removing existing containers"
 docker-compose kill && docker-compose rm -v -f
 
-# Composer silently kills any valid sudo leases, to avoid elevation-exploits in
-# scripts - we disable this to make sure we only have to give sudo a password
-# once.
-echoc "*** Composer installing"
-COMPOSER_ALLOW_SUPERUSER=1 composer install
-
-# Build theme assets.
-pushd web/themes/forlev2016
-
-echoc "*** NPM installing"
-npm install
-
-echoc "*** Doing an initial gulp build"
-grunt
-
-popd
-
-# Start up containers in the background and continue immediately
+# Start up containers in the background and continue imidiately
 echoc "*** Starting new containers"
-docker-compose up --remove-orphans -d
+if [[ $DOCKER_SYNC ]]; then
+    docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --remove-orphans -d
+else
+    docker-compose up --remove-orphans -d
+fi
 
 # Sleep while containers are starting up then perform a reset
 echoc "*** Waiting ${SLEEP_TIME} seconds for the containers to come up and database to be imported"

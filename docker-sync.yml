@@ -3,4 +3,5 @@ version: "2"
 syncs:
   forlevd8-sync-web:
     src: './'
-    sync_excludes: ['.gitignore', '.git/', '.idea/', '.docker-sync/']
+    sync_excludes: ['.gitignore', '.git', '.idea', '.docker-sync']
+    watch_excludes: ['.*/.git', '.*/node_modules', '.*/bower_components', '.*/sass-cache', '.*/.sass-cache', '.*/.sass-cache', '.coffee', '.scss', '.sass', '.gitignore']

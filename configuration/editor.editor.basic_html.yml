@@ -20,6 +20,8 @@ settings:
             - Bold
             - Italic
             - Underline
+            - JustifyCenter
+            - HorizontalRule
         -
           name: Linking
           items:

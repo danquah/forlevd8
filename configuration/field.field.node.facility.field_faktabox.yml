@@ -1,0 +1,21 @@
+uuid: 625365f4-9f8d-49b9-b362-406f72752c9e
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faktabox
+    - node.type.facility
+  module:
+    - text
+id: node.facility.field_faktabox
+field_name: field_faktabox
+entity_type: node
+bundle: facility
+label: Faktabox
+description: 'Et indrammet felt, velegnet til fakta fx. i form af bulletpoints'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

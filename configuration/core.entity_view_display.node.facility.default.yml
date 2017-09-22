@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.facility.body
     - field.field.node.facility.field_extra_images
+    - field.field.node.facility.field_faktabox
     - field.field.node.facility.field_image
     - node.type.facility
   module:
@@ -97,6 +98,13 @@ content:
       box_media_style: ''
     third_party_settings: {  }
     type: slick_image
+    region: content
+  field_faktabox:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_image:
     weight: 102

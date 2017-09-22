@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "556b558288b81d17ec036f6043d546c9",
+    "content-hash": "534b1d57913031cf6cd225d3dece3706",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -1175,16 +1175,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.3.1",
+            "version": "8.3.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "53326f9503e5e9e406fab22e4fbae6ddb706f7be"
+                "url": "https://github.com/drupal/core.git",
+                "reference": "32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/53326f9503e5e9e406fab22e4fbae6ddb706f7be",
-                "reference": "53326f9503e5e9e406fab22e4fbae6ddb706f7be",
+                "url": "https://api.github.com/repos/drupal/core/zipball/32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff",
+                "reference": "32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff",
                 "shasum": ""
             },
             "require": {
@@ -1217,6 +1217,9 @@
                 "twig/twig": "^1.23.1",
                 "zendframework/zend-diactoros": "~1.1",
                 "zendframework/zend-feed": "~2.4"
+            },
+            "conflict": {
+                "drush/drush": "<8.1.10"
             },
             "replace": {
                 "drupal/action": "self.version",
@@ -1335,7 +1338,8 @@
             "extra": {
                 "patches_applied": {
                     "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/there_is_no_indication-2408549-60.patch",
-                    "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch"
+                    "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch",
+                    "2650434: Clearing cache via UI in translated language resets config translation of field labels to default language": "https://www.drupal.org/files/issues/clearing_cache_via_ui-2650434-128.patch"
                 }
             },
             "autoload": {
@@ -1359,7 +1363,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-04-19T16:07:22+00:00"
+            "time": "2017-08-16T17:10:35+00:00"
         },
         {
             "name": "drupal/crop",
@@ -2400,7 +2404,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/slick_extras"
             },
-            "time": "2017-01-19 12:31:26"
+            "time": "2017-01-19T12:31:26+00:00"
         },
         {
             "name": "drupal/slick_views",

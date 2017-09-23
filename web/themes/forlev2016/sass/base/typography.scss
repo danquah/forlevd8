@@ -4,3 +4,14 @@ body {
 
   font-family: Arial, sans-serif;
 }
+
+.main-content {
+  h1 {
+    font-style: italic;
+    font-size: 33px;
+    // Slight extra spacing
+    letter-spacing: 0.05em;
+    // Lighter than bold.
+    font-weight: 500;
+  }
+}

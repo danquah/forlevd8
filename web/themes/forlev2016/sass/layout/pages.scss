@@ -1,14 +1,5 @@
-.layout-container {
-//  @include outer-container();
-}
-
-.layout-content {
-  @include media-xsmall {
-    margin: 15px;
-  }
-}
-
-$max-width: 960px;
-.outer-width-wrapper {
-  @include outer-container();
+.block-page-title-block {
+  margin-top: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid $grey-dark;
 }

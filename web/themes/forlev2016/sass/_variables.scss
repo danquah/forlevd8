@@ -1,9 +1,11 @@
 // Color definitions.
 
+$grey-dark: rgb(186, 186, 186);
 $faded-black: rgba(0, 0, 0, .5);
 $red: rgb(236, 27, 38);
 
 $base-font-size: 16px;
+// use like this: em($spacing-medieum)
 $spacing-small: 10;
 $spacing-medium: 20;
 $spacing-large: 30;

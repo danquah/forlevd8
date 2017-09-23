@@ -9,6 +9,7 @@
 // Base imports.
 @import "base/general-resets";
 @import "base/typography";
+@import "base/color";
 
 // Component imports.
 @import "component/breadcrumb";
@@ -22,6 +23,7 @@
 
 // Layout imports.
 @import "layout/layout-container";
+@import "layout/pages";
 @import "layout/site--header";
 @import "layout/site--footer";
 

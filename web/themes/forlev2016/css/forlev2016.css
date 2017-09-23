@@ -183,6 +183,7 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   margin: 16px 12px;
   text-align: center;
   color: black;
+  width: 200px;
 }
 
 .view-id-facilitets_liste .node--type-facility.node--view-mode-teaser a {

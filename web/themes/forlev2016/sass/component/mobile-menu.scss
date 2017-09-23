@@ -1,40 +1,40 @@
-/* Mobile menu width adjustment */
+// Mobile menu width adjustment
 .mm-menu.mm-offcanvas {
     max-width: none;
     max-width: unset;
 }
 
-/* Removing the top (and bottom?) bar of the menu */
+// Removing the top (and bottom?) bar of the menu
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel:after,
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel:before {
-    content: none;
+  content: none;
 }
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel {
-    padding: 0;
+  padding: 0;
 }
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel.mm-hasnavbar > .mm-navbar {
-    display: none;
+  display: none;
 }
 
-/* Add a bit of padding to menu points */
+// Add a bit of padding to menu points
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel > .links {
-    margin: 0;
+  margin: 0;
 }
 
-/* Add a bit of padding to menu points */
+// Add a bit of padding to menu points
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel > .links > li > a {
-    padding: 12px 0 12px 12px;
+  padding: 12px 0 12px 12px;
 }
 
-/* Enhance menu separators */
+// Enhance menu separators
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview > li:not(.mm-divider):after,
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview > li .mm-next:before {
-	content: '';
-    border-color: rgba(255, 255, 255, .1);
-    left: 0 !important;
+  content: '';
+  border-color: rgba(255, 255, 255, .1);
+  left: 0 !important;
 }
 
-/* Remove menu separators */
+// Remove menu separators
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .links li > a:hover {
-    background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, .1);
 }

@@ -123,13 +123,11 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   color: white;
 }
 
-/* Mobile menu width adjustment */
 .mm-menu.mm-offcanvas {
   max-width: none;
   max-width: unset;
 }
 
-/* Removing the top (and bottom?) bar of the menu */
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel:after,
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel:before {
   content: none;
@@ -143,17 +141,14 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   display: none;
 }
 
-/* Add a bit of padding to menu points */
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel > .links {
   margin: 0;
 }
 
-/* Add a bit of padding to menu points */
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel > .links > li > a {
   padding: 12px 0 12px 12px;
 }
 
-/* Enhance menu separators */
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview > li:not(.mm-divider):after,
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview > li .mm-next:before {
   content: '';
@@ -161,7 +156,6 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   left: 0 !important;
 }
 
-/* Remove menu separators */
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .links li > a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }

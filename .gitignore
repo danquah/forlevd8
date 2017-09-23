@@ -4,6 +4,7 @@ vendor
 web/core
 web/modules/contrib
 web/themes/contrib
+web/themes/node_modules
 web/profiles/contrib
 
 # Ignore Drupal's file directory
@@ -22,3 +23,4 @@ docker-compose.override.yml
 settings.local.php
 web/libraries
 .docker-sync
+web/themes/forlev2016/js/contrib

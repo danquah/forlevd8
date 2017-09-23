@@ -10,7 +10,7 @@
     margin-left: 15px;
     background: url('../images/logo.png') no-repeat center center;
     background-size: 200px;
-    display: block;
+    display: inline-block;
     width: 200px;
     height: 50px;
     // Is hiding of text still done this way?
@@ -21,6 +21,7 @@
     // the containing .faded's 20px padding making up for the alignment. Could
     // be refactored.
     float: left;
+    @include clearfix;
   }
 
   // Actual topmenu specific styles.

@@ -8,9 +8,9 @@ include_css: false
 off_canvas_position: right
 off_canvas_theme: theme-dark
 horizontal_superfish: true
-horizontal_superfish_delay: 300
 horizontal_superfish_speed: 100
 horizontal_superfish_speed_out: 100
+horizontal_superfish_delay: 1200
 horizontal_superfish_hoverintent: true
 hammerjs: true
 breakpoint_css_filepath: 'public://css'

@@ -1,20 +1,19 @@
+#block-horizontalmenu {
+  display: inline-block;
+  margin-left: em($spacing-medium);
+}
+
 
 // This class should be set on either wrapping element or on the ul it self.
 .horizontal-menu ul,
 ul.horizontal-menu {
-  font-size: 0;
   margin: 0;
 
-  &:first-child {
-    margin-left: 230px;
-  }
 
   li {
-    font-size: 16px;
+    // Slightly smaller font size.
+    font-size: em(14);
     display: inline-block;
-    & + li {
-      // margin-left: 14px;
-    }
   }
 
   ul.sub-nav {

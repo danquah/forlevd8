@@ -1,15 +1,22 @@
-.view-id-facilitets_liste{
-  .node--type-facility.node--view-mode-teaser{
-    float:left;
-    margin:16px;
-   text-align: center;
-   color: black;
-   a{
-     color: black;
-     text-decoration: none;
-   }
-   h2{
-     margin: 0;
-   }
+.view-id-facilitets_liste {
+  text-align: center;
+
+  .views-row {
+    display: inline-block;
+  }
+
+  .node--type-facility.node--view-mode-teaser {
+    margin: 16px 12px;
+    text-align: center;
+    color: black;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    h2 {
+    //  Spacing from circle-image down to the header.
+      margin: 0;
+      margin-top: em($spacing-small);
+    }
   }
 }

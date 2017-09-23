@@ -1,6 +1,5 @@
 body {
   font-size: $base-font-size;
-  //line-height: em(20, $base-font-size);
 
   font-family: Arial, sans-serif;
 }
@@ -13,5 +12,13 @@ body {
     letter-spacing: 0.05em;
     // Lighter than bold.
     font-weight: 500;
+  }
+
+  h2 {
+    font-size: 20px;
+    // Slight extra spacing
+    letter-spacing: 0.05em;
+    // Lighter than bold.
+    font-weight: 300;
   }
 }

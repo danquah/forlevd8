@@ -14,11 +14,6 @@ body {
   margin: 0;
 }
 
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
 body {
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -31,7 +26,13 @@ body {
   font-weight: 500;
 }
 
-.layout-container {
+.main-content h2 {
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+body {
   background-color: #fafafa;
 }
 
@@ -118,9 +119,16 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   color: white;
 }
 
+.view-id-facilitets_liste {
+  text-align: center;
+}
+
+.view-id-facilitets_liste .views-row {
+  display: inline-block;
+}
+
 .view-id-facilitets_liste .node--type-facility.node--view-mode-teaser {
-  float: left;
-  margin: 16px;
+  margin: 16px 12px;
   text-align: center;
   color: black;
 }
@@ -132,6 +140,7 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
 
 .view-id-facilitets_liste .node--type-facility.node--view-mode-teaser h2 {
   margin: 0;
+  margin-top: 0.625em;
 }
 
 a.news-item {

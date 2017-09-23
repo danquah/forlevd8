@@ -1,7 +1,14 @@
 body {
   font-size: $base-font-size;
 
-  font-family: Arial, sans-serif;
+  // Force system UI fonts: first special keywords, then font names and most basic fallbacks, and lastly symbol fonts to properly enable emoji and other symbols
+  font-family: -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen-Sans, "Oxygen", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif,
+    EmojiFont, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols !important;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 .main-content {

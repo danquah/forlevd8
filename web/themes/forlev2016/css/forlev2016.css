@@ -20,8 +20,19 @@ img {
 }
 
 body {
-  font-size: 18px;
+  font-size: 16px;
   font-family: Arial, sans-serif;
+}
+
+.main-content h1 {
+  font-style: italic;
+  font-size: 33px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.layout-container {
+  background-color: #fafafa;
 }
 
 .breadcrumb {
@@ -34,20 +45,19 @@ body {
   text-decoration: none;
 }
 
-.horizontal-menu ul,
-ul.horizontal-menu {
-  font-size: 0;
-  margin: 0;
+#block-horizontalmenu {
+  display: inline-block;
+  margin-left: 1.25em;
 }
 
-.horizontal-menu ul:first-child,
-ul.horizontal-menu:first-child {
-  margin-left: 230px;
+.horizontal-menu ul,
+ul.horizontal-menu {
+  margin: 0;
 }
 
 .horizontal-menu ul li,
 ul.horizontal-menu li {
-  font-size: 16px;
+  font-size: 0.875em;
   display: inline-block;
 }
 
@@ -265,6 +275,12 @@ a.news-item .node__content:hover {
   display: table;
 }
 
+.block-page-title-block {
+  margin-top: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #bababa;
+}
+
 .site--header {
   background: url("../images/topbg.jpg") no-repeat center center;
   background-size: cover;
@@ -278,12 +294,18 @@ a.news-item .node__content:hover {
   margin-left: 15px;
   background: url("../images/logo.png") no-repeat center center;
   background-size: 200px;
-  display: block;
+  display: inline-block;
   width: 200px;
   height: 50px;
   overflow: hidden;
   text-indent: -999em;
   float: left;
+}
+
+.site--header .logo::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .site--header .site--header--menu {
@@ -343,7 +365,7 @@ body {
 }
 
 .region-footer {
-  font-size: 0.7777777778em;
+  font-size: 0.875em;
   color: white;
 }
 

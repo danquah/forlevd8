@@ -61,7 +61,6 @@ html.mm-opened .mm-page {
   top: 100%;
   left: 0;
   z-index: 99;
-  padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -70,6 +69,8 @@ html.mm-opened .mm-page {
   list-style: none;
   margin-right: 10px;
   border-top: 1px solid white;
+  margin-top: 3px;
+  padding-top: 3px;
 }
 
 .horizontal-menu li.sfHover > ul,
@@ -90,8 +91,9 @@ ul.sub-nav a:hover {
   content: "• ";
   color: #e44;
   position: absolute;
-  font-size: 1.5em;
-  padding-top: 0.2em;
+  font-size: 1.8em;
+  top: 0;
+  line-height: 120%;
 }
 
 .horizontal-menu > li > li:hover > ul,

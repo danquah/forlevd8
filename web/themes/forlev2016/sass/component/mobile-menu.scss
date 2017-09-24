@@ -4,20 +4,20 @@
     max-width: unset;
 }
 
-// Removing the top (and bottom?) bar of the menu
+// Removing the top (and bottom?) spacer bar of the menu
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel:after,
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel:before {
   content: none;
 }
+// Strip padding from the sides of the menu panels
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-.mm-menu.mm-offcanvas > .mm-panels > .mm-panel.mm-hasnavbar > .mm-navbar {
-  display: none;
-}
-
-// Add a bit of padding to menu points
-.mm-menu.mm-offcanvas > .mm-panels > .mm-panel > .links {
+// The list views has a weird negative margin that messes baaad with positioning; remove it!
+.mm-menu.mm-offcanvas > .mm-panels > .mm-panel > .mm-listview,
+.mm-panels>.mm-panel>.mm-listview:first-child,
+.mm-panels>.mm-panel>.mm-navbar+.mm-listview {
   margin: 0;
 }
 
@@ -27,6 +27,10 @@
 }
 
 // Enhance menu separators
+.mm-panel .mm-navbar {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, .1);
+}
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview > li:not(.mm-divider):after,
 .mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview > li .mm-next:before {
   content: '';
@@ -35,7 +39,7 @@
 }
 
 // Remove menu separators
-.mm-menu.mm-offcanvas > .mm-panels > .mm-panel .links li > a:hover {
+.mm-menu.mm-offcanvas > .mm-panels > .mm-panel .mm-listview li > a:hover {
   background-color: rgba(255, 255, 255, .1);
 }
 

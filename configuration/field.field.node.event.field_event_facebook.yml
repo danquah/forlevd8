@@ -1,0 +1,23 @@
+uuid: a0449317-ccae-431d-b38c-a0d922d5de63
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_facebook
+    - node.type.event
+  module:
+    - link
+id: node.event.field_event_facebook
+field_name: field_event_facebook
+entity_type: node
+bundle: event
+label: 'Facebook event'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

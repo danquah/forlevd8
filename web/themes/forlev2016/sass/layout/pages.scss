@@ -1,5 +1,20 @@
+// Title on top of most pages with a line underneath.
 .block-page-title-block {
+  // Spacing from title up to the menu.
   margin-top: 2em;
-  padding-bottom: 1.5em;
+  // Spacing from title down to line.
+  padding-bottom: 1em;
+  // Spacing from line down to page content.
+  margin-bottom: 1.5em;
   border-bottom: 1px solid $grey-dark;
+}
+
+.layout-content {
+  @include media-xsmall {
+    margin: 15px;
+  }
+}
+$max-width: 960px;
+.outer-width-wrapper {
+  @include outer-container();
 }

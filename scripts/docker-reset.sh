@@ -45,11 +45,16 @@ docker-compose kill && docker-compose rm -v -f
 
 # Start up containers in the background and continue imidiately
 echoc "*** Starting new containers"
+
+COMPOSER_OVERRIDE=
+[ -f "docker-compose.override.yml" ] && COMPOSER_OVERRIDE="-f docker-compose.override.yml"
 if [[ $DOCKER_SYNC ]]; then
-    docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --remove-orphans -d
+    cmd="docker-compose -f docker-compose.yml -f docker-compose-dev.yml ${COMPOSER_OVERRIDE} up --remove-orphans -d"
 else
-    docker-compose up --remove-orphans -d
+    cmd="docker-compose up --remove-orphans -d"
 fi
+eval $cmd
+
 
 # Sleep while containers are starting up then perform a reset
 echoc "*** Waiting ${SLEEP_TIME} seconds for the containers to come up and database to be imported"

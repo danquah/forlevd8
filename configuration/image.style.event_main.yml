@@ -1,0 +1,16 @@
+uuid: 4c3254cb-c961-42e8-89f8-5ea5f6f8c5f9
+langcode: da
+status: true
+dependencies:
+  module:
+    - focal_point
+name: event_main
+label: 'Event Main'
+effects:
+  a36ffb06-cd3c-4e5b-93f6-b2d88f08f80b:
+    uuid: a36ffb06-cd3c-4e5b-93f6-b2d88f08f80b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 300

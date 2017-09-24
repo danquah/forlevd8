@@ -19,5 +19,8 @@
     "node-bourbon": "^4.0.0",
     "node-neat": "^1.7.0",
     "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "object-fit-images": "^3.2.3"
   }
 }

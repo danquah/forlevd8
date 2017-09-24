@@ -5,21 +5,46 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_contact
+    - field.field.node.event.field_event_facebook
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
     - field.field.node.event.field_pdf
     - field.field.node.event.field_price
+    - field.field.node.event.field_see_also
     - field.field.node.event.field_sign_up_link
     - field.field.node.event.field_start_date
+    - field.field.node.event.field_tilmelding_aben
+    - image.style.event_main
     - node.type.event
-    - responsive_image.styles.wide
   module:
     - datetime
+    - entity_reference_revisions
+    - field_group
     - file
+    - image
     - link
-    - responsive_image
     - text
     - user
+third_party_settings:
+  field_group:
+    group_event_meta:
+      children:
+        - field_start_date
+        - field_end_date
+        - field_price
+        - field_event_contact
+        - field_event_facebook
+        - field_pdf
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        label: 'Det vigtige'
+        description: ''
+        id: ''
+        classes: event__meta--container
+      label: 'Det vigtige'
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -28,12 +53,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_end_date:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       format_type: medium
@@ -41,32 +66,15 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_image:
-    weight: 1
-    label: hidden
-    settings:
-      responsive_image_style: wide
-      image_link: ''
-    third_party_settings: {  }
-    type: responsive_image
-    region: content
-  field_pdf:
+  field_event_contact:
     weight: 7
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: file_default
+    type: email_mailto
     region: content
-  field_price:
-    weight: 2
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_sign_up_link:
-    weight: 6
+  field_event_facebook:
+    weight: 8
     label: inline
     settings:
       trim_length: 80
@@ -77,8 +85,53 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: event_main
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_pdf:
+    weight: 9
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_price:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_see_also:
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_sign_up_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
   field_start_date:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       format_type: medium
@@ -86,11 +139,17 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  links:
-    weight: 0
+  field_tilmelding_aben:
+    type: boolean
+    weight: 4
     region: content
-    settings: {  }
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
 hidden:
   field_event_type: true
   langcode: true
+  links: true

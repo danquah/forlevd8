@@ -1,0 +1,16 @@
+uuid: 98feb4a8-9a77-4ade-8654-f8dca134d9da
+langcode: da
+status: true
+dependencies:
+  module:
+    - focal_point
+name: facebook
+label: Facebook
+effects:
+  d9971154-f336-48c7-acc1-277fd86d1278:
+    uuid: d9971154-f336-48c7-acc1-277fd86d1278
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 840

@@ -1,0 +1,44 @@
+uuid: 716c4c41-17af-414a-ada8-3f818643ad32
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_see_also
+    - node.type.event
+  module:
+    - entity_reference_revisions
+id: node.event.field_see_also
+field_name: field_see_also
+entity_type: node
+bundle: event
+label: 'Se også'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      block:
+        weight: 7
+        enabled: false
+      content_link:
+        weight: 8
+        enabled: false
+      image:
+        weight: 9
+        enabled: false
+      instruction_step:
+        weight: 10
+        enabled: false
+      instructions:
+        weight: 11
+        enabled: false
+      text:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -12,12 +12,12 @@ field_name: field_sign_up_link
 entity_type: node
 bundle: event
 label: Tilmeldingslink
-description: 'Link til en eventuel tilmelding til det givne arrangement'
+description: 'Link til en eventuel tilmelding til det givne arrangement.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 1
+  title: 0
 field_type: link

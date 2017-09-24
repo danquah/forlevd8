@@ -11,7 +11,7 @@ id: node.event.field_start_date
 field_name: field_start_date
 entity_type: node
 bundle: event
-label: 'Start Dato'
+label: Start
 description: 'Start dato og tidspunkt for det givne arrangment'
 required: true
 translatable: false

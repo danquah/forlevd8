@@ -11,7 +11,7 @@ id: node.event.field_end_date
 field_name: field_end_date
 entity_type: node
 bundle: event
-label: 'Slut Dato'
+label: Slut
 description: 'Slut dato og tidspunkt for det givne arrangement'
 required: true
 translatable: false

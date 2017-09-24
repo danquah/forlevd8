@@ -10,6 +10,13 @@ html {
   box-sizing: inherit;
 }
 
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
 body {
   margin: 0;
 }
@@ -48,6 +55,15 @@ body {
 
 .breadcrumb a {
   text-decoration: none;
+}
+
+.full-width-image-container img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  font-family: "object-fit: contain";
+  width: 100%;
+  display: block;
+  height: auto;
 }
 
 #block-horizontalmenu {
@@ -353,8 +369,117 @@ a.news-item .node__content:hover {
 
 .block-page-title-block {
   margin-top: 2em;
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
+  margin-bottom: 1.5em;
   border-bottom: 1px solid #bababa;
+}
+
+@media (min-width: 600px) {
+  .layout-content {
+    margin: 15px;
+  }
+}
+
+.outer-width-wrapper {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.outer-width-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.forlev-event .event__image, .forlev-event .event__meta, .forlev-event .event__signup, .forlev-event .event__body {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+}
+
+.forlev-event .event__image:last-child, .forlev-event .event__meta:last-child, .forlev-event .event__signup:last-child, .forlev-event .event__body:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .forlev-event .event__meta {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 40.2913699012%;
+  }
+  .forlev-event .event__meta:last-child {
+    margin-right: 0;
+  }
+  .forlev-event .event__image {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 57.3509785009%;
+  }
+  .forlev-event .event__image:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .forlev-event .event__meta {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 40.2913699012%;
+  }
+  .forlev-event .event__meta:last-child {
+    margin-right: 0;
+  }
+  .forlev-event .event__image {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 57.3509785009%;
+  }
+  .forlev-event .event__image:last-child {
+    margin-right: 0;
+  }
+}
+
+.forlev-event .event__signup {
+  margin-top: 0.625em;
+}
+
+.forlev-event .event__signup__status {
+  margin: 0.625em 0;
+  display: inline-block;
+  width: 100%;
+  padding: 0.625em 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.forlev-event .event__signup__status.event__signup__status--open {
+  background-color: #73d45e;
+}
+
+.forlev-event .event__signup__status.event__signup__status--closed {
+  background-color: #d47271;
+}
+
+.forlev-event .event__meta fieldset {
+  margin-top: 0;
+}
+
+.forlev-event .event__meta--container .field {
+  margin-top: 0.5em;
+}
+
+.forlev-event .event__image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site--header {

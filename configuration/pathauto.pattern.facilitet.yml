@@ -1,0 +1,22 @@
+uuid: e72bc0ff-112a-41c6-a449-e88c6f6d6cf4
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: facilitet
+label: Facilitet
+type: 'canonical_entities:node'
+pattern: 'facilitet/[node:title]'
+selection_criteria:
+  75716eeb-f803-4c69-b4fb-9cf903f8de0d:
+    id: node_type
+    bundles:
+      facility: facility
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 75716eeb-f803-4c69-b4fb-9cf903f8de0d
+selection_logic: and
+weight: -5
+relationships: {  }

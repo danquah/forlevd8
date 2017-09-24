@@ -1,0 +1,22 @@
+uuid: 3fb93d81-5bd7-43bb-8bea-ba16402c7f32
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: arrangement
+label: Arrangement
+type: 'canonical_entities:node'
+pattern: 'arrangement/[node:title]'
+selection_criteria:
+  3b774798-7e5c-4944-ae97-485897c748ba:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3b774798-7e5c-4944-ae97-485897c748ba
+selection_logic: and
+weight: -5
+relationships: {  }

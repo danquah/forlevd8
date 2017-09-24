@@ -1,0 +1,19 @@
+uuid: 2ef73ee2-4c90-4f48-b90f-0fd8780c89c7
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_signup_text
+    - node.type.event
+id: node.event.field_signup_text
+field_name: field_signup_text
+entity_type: node
+bundle: event
+label: Tilmeldingstekst
+description: 'Skiv en tekst her der skal bruges i stedet for et link'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

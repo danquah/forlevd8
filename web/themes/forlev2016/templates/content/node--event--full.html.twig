@@ -96,13 +96,21 @@
     </div>
 
     <div>
-      {%  if signup_url  %}
+      {%  if signup_url or signup_text %}
         <div class="event__signup">
             {% if signup_open %}
-              <a class="event__signup__status event__signup__status--open" href="{{ signup_url }}" rel="bookmark">
-                Tilmeldingen er åben! klik her for at komme igang.
-              </a>
-            {%  else %}
+              {% if signup_url %}
+                <a class="event__signup__status event__signup__status--open" href="{{ signup_url }}" rel="bookmark">
+                    {{ signup_text ? signup_text : 'Tilmeldingen er åben! klik her for at komme igang.' }}
+                </a>
+              {%  else %}
+                <div class="event__signup__status event__signup__status--open">
+                  {{ signup_text }}
+                </div>
+              {% endif %}
+
+            {% else %}
+            {# Signup is closed #}
                 <div class="event__signup__status event__signup__status--closed">
                   Der er lukket for tilmelding.
                 </div>

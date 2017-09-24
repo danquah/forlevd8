@@ -28,11 +28,20 @@ function forlev2016_preprocess_node(&$variables) {
 
   // Fix variables on event before twig.
   if ($type === 'event') {
+    // See if we can pickup a text to use.
+    $link_text = NULL;
+    if ($node->field_signup_text->first()) {
+      $link_text = $node->field_signup_text->first()->value;
+    }
     // If we have a signup-link use it.
+    $url = NULL;
     if ($node->field_sign_up_link->first()) {
       $url = $node->field_sign_up_link->first()->getUrl();
-      $variables['signup_url'] = $url->toString();
+      $url = $url->toString();
     }
+
+    $variables['signup_url'] = $url;
+    $variables['signup_text'] = $link_text;
 
     // Add an indication on whether signup is open.
     if ($variables['node']->get('field_tilmelding_aben')->value) {

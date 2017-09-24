@@ -9,3 +9,9 @@ responsive_menu_replacement:
   css:
     theme:
       css/responsive_menu.css: {}
+object-fit:
+  version: 0.1
+  footer: true
+  js:
+    js/contrib/ofi.min.js : {}
+    js/custom/object-fit.js : {}

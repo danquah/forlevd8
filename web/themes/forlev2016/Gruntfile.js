@@ -35,6 +35,15 @@ module.exports = function (grunt) {
       files: ['Gruntfile.js', 'js/custom/*.js']
     },
 
+    copy: {
+      files: {
+        cwd: 'node_modules/object-fit-images/dist/',  // set working folder / root to copy
+        src: '**.js',           // copy all files and subfolders
+        dest: 'js/contrib/',    // destination folder
+        expand: true           // required when using cwd
+      }
+    },
+
     watch: {
       // atBegin ensures that this task is run before watching starts.
       init: {
@@ -62,7 +71,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+
 
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('build', ['clean', 'sass', 'jshint']);
+  grunt.registerTask('build', ['clean', 'sass', 'jshint', 'copy']);
 };

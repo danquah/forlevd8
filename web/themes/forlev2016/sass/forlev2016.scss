@@ -5,6 +5,7 @@
 @import "neat";
 
 @import "mixins/breakpoints.mixins";
+@import "mixins/object-fit.mixins";
 
 // Base imports.
 @import "base/general-resets";
@@ -13,6 +14,7 @@
 
 // Component imports.
 @import "component/breadcrumb";
+@import "component/full-width-image";
 @import "component/horizontal-menu";
 @import "component/inline-image";
 @import "component/menu";

@@ -1,0 +1,63 @@
+.forlev-event {
+  // Grid setup.
+  .event__image, .event__meta, .event__signup, .event__body {
+    @include span-columns(12);
+  }
+
+  @include media($tablet) {
+    .event__meta {
+      @include span-columns(5);
+    }
+    .event__image {
+      @include span-columns(7);
+    }
+  }
+  @include media($desktop) {
+    .event__meta {
+      @include span-columns(5);
+    }
+    .event__image {
+      @include span-columns(7);
+    }
+  }
+
+  .event__signup {
+    margin-top: em($spacing-small);
+  }
+
+  .event__signup__status {
+    margin: em($spacing-small) 0;
+    display: inline-block;
+    width: 100%;
+
+    padding: em($spacing-small) 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+
+    &.event__signup__status--open {
+      background-color: rgb(115, 212, 94);
+    }
+    &.event__signup__status--closed {
+      background-color: rgb(212, 114, 113);
+    }
+  }
+
+  // Styling
+  .event__meta fieldset {
+    margin-top: 0;
+  }
+
+  .event__meta--container .field {
+    margin-top: 0.5em;
+  }
+  .event__image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}

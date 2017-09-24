@@ -160,6 +160,16 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+@media (min-width: 550px) {
+  html.mm-right.mm-opening .mm-slideout {
+    -webkit-transform: translate3d(-440px, 0, 0);
+    transform: translate3d(-440px, 0, 0);
+  }
+  .mm-menu.mm-offcanvas {
+    max-width: 440px;
+  }
+}
+
 @media (min-width: 960px) {
   html.mm-right.mm-opening .mm-slideout {
     -webkit-transform: translate3d(0, 0, 0);
@@ -167,7 +177,7 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   }
   .mm-menu.mm-offcanvas {
     max-width: 0;
-    display: none;
+    display: none !important;
   }
 }
 

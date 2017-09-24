@@ -39,6 +39,17 @@
   background-color: rgba(255, 255, 255, .1);
 }
 
+// Fix the menu sizing on medium/tablet size screens (between 550px and 960px wide)
+@media (min-width: 550px) {
+  html.mm-right.mm-opening .mm-slideout {
+    -webkit-transform: translate3d(-440px, 0, 0);
+    transform: translate3d(-440px, 0, 0);
+  }
+  .mm-menu.mm-offcanvas {
+    max-width: 440px;
+  }
+}
+
 // Make sure the menu is NOT shown on screens where the top menu takes over (960+px)
 @media (min-width: 960px) {
   html.mm-right.mm-opening .mm-slideout {
@@ -47,6 +58,6 @@
   }
   .mm-menu.mm-offcanvas {
     max-width: 0;
-    display: none;
+    display: none !important;
   }
 }

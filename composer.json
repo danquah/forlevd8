@@ -35,7 +35,7 @@
         "cweagans/composer-patches": "~1.0",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/admin_toolbar": "^1.20",
-        "drupal/console": "^0.11",
+        "drupal/console": "~1.0",
         "drupal/core": "^8.3.0",
         "drupal/ctools": "^3.0",
         "drupal/entity_reference_revisions": "^1.3",

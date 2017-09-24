@@ -8,18 +8,37 @@ use Drupal\entityqueue\Entity\EntityQueue;
  * @param $variables
  */
 function forlev2016_preprocess_node(&$variables) {
+  $type = isset($variables['node']) ? $variables['node']->gettype() : NULL;
   if (isset($variables['node'])) {
     /**
      * @var \Drupal\node\Entity\Node $node
      */
     $node = $variables['node'];
 
+    // Extract url for quicklinks and news so that we can use it in a wrapping
+    // anchor-tag.
     if (in_array($node->getType(), ['quicklink', 'news'])) {
       /** @var Url $url */
       if (!empty($node->field_link->first())) {
         $url = $node->field_link->first()->getUrl();
         $variables['destination_url'] = $url->toString();
       }
+    }
+  }
+
+  // Fix variables on event before twig.
+  if ($type === 'event') {
+    // If we have a signup-link use it.
+    if ($node->field_sign_up_link->first()) {
+      $url = $node->field_sign_up_link->first()->getUrl();
+      $variables['signup_url'] = $url->toString();
+    }
+
+    // Add an indication on whether signup is open.
+    if ($variables['node']->get('field_tilmelding_aben')->value) {
+      $variables['signup_open'] = TRUE;
+    } else {
+      $variables['signup_open'] = FALSE;
     }
   }
 }

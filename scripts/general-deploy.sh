@@ -36,10 +36,13 @@ cd ..
 git pull
 
 # Update dependencies.
+echo "Composer installing"
 composer install
 
-# Enter the web-root so that we can use drush.
-cd web
+# build assets
+echo "NPM installing"
+cd web/themes/forlev2016
+npm install
 
 # Import configuration from latest revision - overwrite the current state.
 drush cim --preview=diff -y

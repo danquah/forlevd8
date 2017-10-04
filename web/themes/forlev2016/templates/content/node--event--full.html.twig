@@ -96,7 +96,8 @@
     </div>
 
     <div>
-      {%  if signup_url or signup_text %}
+      {# Display the bar if we have something to show and we have'nt passed start #}
+      {%  if not start_passed and (signup_url or signup_text) %}
         <div class="event__signup">
             {% if signup_open %}
               {% if signup_url %}

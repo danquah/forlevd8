@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Url;
 use Drupal\entityqueue\Entity\EntityQueue;
 
@@ -49,6 +50,14 @@ function forlev2016_preprocess_node(&$variables) {
     } else {
       $variables['signup_open'] = FALSE;
     }
+
+    // Get the start date object.
+    /** @var \Drupal\Core\Datetime\DrupalDateTime $start_date */
+    $start_date = $node->get('field_start_date')->date;
+    // Compare it with today.
+    $diff = $start_date->diff(new DrupalDateTime());
+    // If the difference is positive (invert = 0) we've passed start.
+    $variables['start_passed'] = $diff->invert == 0;
   }
 }
 

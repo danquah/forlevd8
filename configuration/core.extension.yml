@@ -63,6 +63,7 @@ module:
   slick_extras: 0
   slick_views: 0
   stage_file_proxy: 0
+  syslog: 0
   system: 0
   taxonomy: 0
   text: 0

@@ -1,6 +1,6 @@
 .forlev-event {
   // Grid setup.
-  .event__image, .event__meta, .event__signup, .event__body {
+  .event__image, .event__meta, .event__signup, .event__body, .event__gallery {
     @include span-columns(12);
   }
 
@@ -57,6 +57,33 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+  .event__gallery {
+    margin-bottom: em($spacing-medium);
+  }
+  .event__gallery .media--image {
+    height: 300px;
+    @include media($tablet) {
+      height: 350px;
+    }
+    @include media($desktop) {
+      height: 400px;
+    }
+
+    position: relative;
+    img {
+      //display: block;
+      //width: auto;
+      //height: 100%;
+      width: auto;
+      max-height: 100%;
+      position: absolute;
+      margin:auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 

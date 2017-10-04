@@ -123,6 +123,11 @@
       <div class="event__body">
         {{ content.body }}
       </div>
+      {% if content.field_extra_images %}
+      <div class="event__gallery">
+        {{ content.field_extra_images }}
+      </div>
+      {% endif %}
     </div>
   </div>
 </article>

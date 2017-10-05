@@ -21,6 +21,7 @@ time docker-compose exec --user www-data fpm sh -c "\
   drush cim --preview=diff -y && \
   echo 'Updating database' && \
   drush updb -y && \
+  drush -y entup && \
   echo 'Clearing cache' && \
   drush cr
   "

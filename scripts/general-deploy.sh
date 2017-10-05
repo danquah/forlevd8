@@ -48,7 +48,9 @@ npm install
 drush cim --preview=diff -y
 
 # Perform any updates required by updated modules.
-drush updb
+drush updb -y
+
+drush -y entup
 
 # Clear cache.
 drush cr

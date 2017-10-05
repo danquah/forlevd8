@@ -41,15 +41,6 @@ services:
       MYSQL_USER: db
       MYSQL_PASSWORD: db
 
-  drush:
-    image: drush/drush:8-php5-alpine
-    links:
-      - db
-    volumes_from:
-      - webroot
-    working_dir: /var/www/web
-    command: version
-
   npm:
 #    image: node:argon
     build: docker/npm-image
@@ -72,8 +63,8 @@ services:
       - './:/var/www'
       - './docker/docker.settings.php:/var/www/web/sites/default/settings.php'
       - './docker/docker.settings.local.php:/var/www/web/sites/default/settings.local.php'
-      - './docker/docker.services.yml:/var/www/web/sites/default/services.yml:ro'
-      - './docker/docker.development.services.yml:/var/www/web/sites/development.services.yml:ro'
+      - './docker/docker.services.yml:/var/www/web/sites/default/services.yml'
+      - './docker/docker.development.services.yml:/var/www/web/sites/development.services.yml'
 
 volumes:
   # NPM cache that survives docker-reset.sh

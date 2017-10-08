@@ -1,0 +1,28 @@
+uuid: 30b5b75b-11bb-40bf-8447-81b19bee1cee
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: facilities
+label: Faciliteter
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      facility: facility
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+    auto_entityqueue:
+      auto_add: 1
+      insert_front: 0
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

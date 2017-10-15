@@ -65,7 +65,7 @@ echoc "*** Resetting Drupal"
 "${SCRIPT_DIR}/site-reset.sh"
 
 echoc "*** Requesting ${HOST} in ${WEB_CONTAINER}"
-docker-compose exec ${WEB_CONTAINER} curl -H "Host: ${HOST}" localhost
+docker-compose exec ${WEB_CONTAINER} curl --silent --output /dev/null -H "Host: ${HOST}" localhost
 
 # Done, bring the background docker-compose logs back into foreground
 echoc "*** Done, watching logs"

@@ -11,9 +11,9 @@ dependencies:
     - options
     - user
 id: events
-label: Arrangementer
+label: 'Kommende arrangementer footers'
 module: views
-description: ''
+description: 'Liste af views der som blokke vises på f.eks. den generelle seniorkursusside'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -57,6 +57,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: quicklink
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -147,187 +151,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_end_date_value:
-          id: field_end_date_value
-          table: node__field_end_date
-          field: field_end_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '>'
-          value:
-            min: ''
-            max: ''
-            value: yesterday
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
-        field_event_type_value:
-          id: field_event_type_value
-          table: node__field_event_type
-          field: field_event_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            junior: junior
-          group: 1
-          exposed: false
-          expose:
-            operator_id: field_event_type_value_op
-            label: 'Arrangementstype (field_event_type)'
-            description: ''
-            use_operator: false
-            operator: field_event_type_value_op
-            identifier: field_event_type_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      sorts:
-        field_start_date_value:
-          id: field_start_date_value
-          table: node__field_start_date
-          field: field_start_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          plugin_id: datetime
-      title: 'Kommende arrangementer'
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-      use_ajax: true
-      css_class: circle-image-list
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: 'Patruljekursus (påske)'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            event: event
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-        field_end_date_value:
-          id: field_end_date_value
-          table: node__field_end_date
-          field: field_end_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '>'
-          value:
-            min: ''
-            max: ''
-            value: yesterday
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
         field_event_type_value:
           id: field_event_type_value
           table: node__field_event_type
@@ -369,54 +192,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: MUS
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            event: event
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-        field_end_date_value:
-          id: field_end_date_value
-          table: node__field_end_date
-          field: field_end_date_value
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -424,7 +203,7 @@ display:
           value:
             min: ''
             max: ''
-            value: yesterday
+            value: today
             type: offset
           group: 1
           exposed: false
@@ -453,6 +232,207 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
+      sorts:
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
+      title: 'Kommende arrangementer'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2>Kommende arrangementer</h2>'
+            format: basic_html
+          plugin_id: text
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      use_ajax: true
+      css_class: circle-image-view
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  jun9orfighten_footer_block:
+    display_plugin: block
+    id: jun9orfighten_footer_block
+    display_title: 'Ju9orfighten footer liste'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: 'Block til at vise i bunden af en specifik kursus type side'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_event_type_value:
+          id: field_event_type_value
+          table: node__field_event_type
+          field: field_event_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            junior: junior
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_event_type_value_op
+            label: 'Arrangementstype (field_event_type)'
+            description: ''
+            use_operator: false
+            operator: field_event_type_value_op
+            identifier: field_event_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  mus_footer_block:
+    display_plugin: block
+    id: mus_footer_block
+    display_title: 'MUS footer liste'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: 'Block til at vise i bunden af en specifik kursus type side'
+      defaults:
+        filters: false
+        filter_groups: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
         field_event_type_value:
           id: field_event_type_value
           table: node__field_event_type
@@ -494,70 +474,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_3:
-    display_plugin: block
-    id: block_3
-    display_title: Ju9orfighten
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_4:
-    display_plugin: block
-    id: block_4
-    display_title: Sommeruger
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            event: event
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-        field_end_date_value:
-          id: field_end_date_value
-          table: node__field_end_date
-          field: field_end_date_value
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -565,7 +485,7 @@ display:
           value:
             min: ''
             max: ''
-            value: yesterday
+            value: today
             type: offset
           group: 1
           exposed: false
@@ -594,50 +514,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
-        field_event_type_value:
-          id: field_event_type_value
-          table: node__field_event_type
-          field: field_event_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            sommer: sommer
-          group: 1
-          exposed: false
-          expose:
-            operator_id: field_event_type_value_op
-            label: 'Arrangementstype (field_event_type)'
-            description: ''
-            use_operator: false
-            operator: field_event_type_value_op
-            identifier: field_event_type_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      defaults:
-        filters: false
-        filter_groups: false
       filter_groups:
         operator: AND
         groups:
@@ -650,14 +526,36 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_5:
+  patruljekursus_footer_block:
     display_plugin: block
-    id: block_5
-    display_title: 'Seniorkursus (efterår)'
+    id: patruljekursus_footer_block
+    display_title: 'Patruljekursus (påske) footer liste'
     position: 1
     display_options:
       display_extenders: {  }
-      display_description: ''
+      display_description: 'Block til at vise i bunden af en specifik kursus type side'
+      defaults:
+        filters: true
+        filter_groups: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  seniorkursus_footer_block:
+    display_plugin: block
+    id: seniorkursus_footer_block
+    display_title: 'Seniorkursus (efterår) footer liste'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: 'Block til at vise i bunden af en specifik kursus type side'
+      defaults:
+        filters: false
+        filter_groups: false
       filters:
         status:
           value: '1'
@@ -679,46 +577,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_end_date_value:
-          id: field_end_date_value
-          table: node__field_end_date
-          field: field_end_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '>'
-          value:
-            min: ''
-            max: ''
-            value: yesterday
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
         field_event_type_value:
           id: field_event_type_value
           table: node__field_event_type
@@ -760,9 +618,171 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  sommeruge_footer_block:
+    display_plugin: block
+    id: sommeruge_footer_block
+    display_title: 'Sommeruger footer liste'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: 'Block til at vise i bunden af en specifik kursus type side'
       defaults:
         filters: false
         filter_groups: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_event_type_value:
+          id: field_event_type_value
+          table: node__field_event_type
+          field: field_event_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            sommer: sommer
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_event_type_value_op
+            label: 'Arrangementstype (field_event_type)'
+            description: ''
+            use_operator: false
+            operator: field_event_type_value_op
+            identifier: field_event_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
       filter_groups:
         operator: AND
         groups:

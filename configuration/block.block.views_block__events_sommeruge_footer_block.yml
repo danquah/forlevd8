@@ -1,30 +1,30 @@
-uuid: aaeb0946-bc55-423a-8191-979fc265c257
-langcode: en
+uuid: aa5c4fe0-fef6-49e5-b37e-08aeb4543655
+langcode: da
 status: true
 dependencies:
   config:
-    - views.view.aktivity_list
+    - views.view.events
   module:
     - system
     - views
   theme:
     - forlev2016
-id: views_block__aktivity_list_block_1
+id: views_block__events_sommeruge_footer_block
 theme: forlev2016
 region: content
-weight: -8
+weight: -3
 provider: null
-plugin: 'views_block:aktivity_list-block_1'
+plugin: 'views_block:events-sommeruge_footer_block'
 settings:
-  id: 'views_block:aktivity_list-block_1'
+  id: 'views_block:events-sommeruge_footer_block'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /node/5
+    pages: /node/4
     negate: false
     context_mapping: {  }

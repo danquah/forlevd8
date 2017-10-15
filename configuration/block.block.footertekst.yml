@@ -11,7 +11,7 @@ dependencies:
 id: footertekst
 theme: forlev2016
 region: footer
-weight: -10
+weight: -14
 provider: null
 plugin: 'block_content:39079d67-40fd-49e4-aac5-ca279c8830eb'
 settings:

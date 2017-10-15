@@ -111,7 +111,7 @@
                 "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch"
             },
             "drupal/responsive_menu": {
-                "2914411: Fix menu": "https://www.drupal.org/files/issues/responsive_menu-fix_after_dp840_toolbar_improvement-2914411-2.patch"
+                "2914411: Fix menu": "https://www.drupal.org/files/issues/remove-BodyVisualView_override-2914411-10.patch"
             }
         }
 

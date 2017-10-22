@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "df5de25e6fd48b9d87f8fec880027a77",
+    "content-hash": "9a05c36d7e7b2e23466cede61dbd80bb",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -1221,6 +1221,53 @@
             "homepage": "https://www.drupal.org/project/adminimal_theme",
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_theme"
+            }
+        },
+        {
+            "name": "drupal/advanced_text_formatter",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/advanced_text_formatter",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/advanced_text_formatter-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "35e0154440ba7836dda70b8627f156872da75302"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1445163539",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "thmnhat",
+                    "homepage": "https://www.drupal.org/user/998946"
+                }
+            ],
+            "description": "Provides an additional formatter for text field, text area and text format.",
+            "homepage": "https://www.drupal.org/project/advanced_text_formatter",
+            "support": {
+                "source": "http://cgit.drupalcode.org/advanced_text_formatter"
             }
         },
         {
@@ -3037,7 +3084,7 @@
                     }
                 },
                 "patches_applied": {
-                    "2914411: Fix menu": "https://www.drupal.org/files/issues/responsive_menu-fix_after_dp840_toolbar_improvement-2914411-2.patch"
+                    "2914411: Fix menu": "https://www.drupal.org/files/issues/remove-BodyVisualView_override-2914411-10.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

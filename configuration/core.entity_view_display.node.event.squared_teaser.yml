@@ -1,0 +1,71 @@
+uuid: c9e6f37f-ae40-41d1-a9f5-934cfd368d2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.squared_teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_contact
+    - field.field.node.event.field_event_facebook
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_extra_images
+    - field.field.node.event.field_image
+    - field.field.node.event.field_pdf
+    - field.field.node.event.field_price
+    - field.field.node.event.field_see_also
+    - field.field.node.event.field_sign_up_link
+    - field.field.node.event.field_signup_text
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_tilmelding_aben
+    - image.style.news_listing
+    - node.type.event
+  module:
+    - advanced_text_formatter
+    - image
+    - user
+id: node.event.squared_teaser
+targetEntityType: node
+bundle: event
+mode: squared_teaser
+content:
+  body:
+    label: hidden
+    type: advanced_text
+    weight: 1
+    settings:
+      trim_length: '400'
+      ellipsis: '1'
+      word_boundary: '1'
+      filter: php
+      format: plain_text
+      allowed_html: {  }
+      use_summary: 0
+      token_replace: 0
+      autop: 0
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: news_listing
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_end_date: true
+  field_event_contact: true
+  field_event_facebook: true
+  field_event_type: true
+  field_extra_images: true
+  field_pdf: true
+  field_price: true
+  field_see_also: true
+  field_sign_up_link: true
+  field_signup_text: true
+  field_start_date: true
+  field_tilmelding_aben: true
+  langcode: true
+  links: true

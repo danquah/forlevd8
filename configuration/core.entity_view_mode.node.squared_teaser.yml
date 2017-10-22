@@ -1,0 +1,10 @@
+uuid: b84b76f3-5529-4b04-be79-5d1ddb3c739c
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: node.squared_teaser
+label: 'Squared Teaser'
+targetEntityType: node
+cache: true

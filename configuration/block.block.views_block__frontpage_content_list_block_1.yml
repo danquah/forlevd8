@@ -1,4 +1,4 @@
-uuid: 0a38dd1e-29a3-461b-9f38-f6cf75f831c1
+uuid: 2740d6b6-4492-4697-a7ab-3062277b31ba
 langcode: da
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - forlev2016
-id: views_block__frontpage_content_list_news_block
+id: views_block__frontpage_content_list_block_1
 theme: forlev2016
 region: content
-weight: -11
+weight: -10
 provider: null
-plugin: 'views_block:frontpage_content_list-news_block'
+plugin: 'views_block:frontpage_content_list-block_1'
 settings:
-  id: 'views_block:frontpage_content_list-news_block'
+  id: 'views_block:frontpage_content_list-block_1'
   label: ''
   provider: views
   label_display: '0'

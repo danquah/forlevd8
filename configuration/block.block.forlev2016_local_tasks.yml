@@ -9,7 +9,7 @@ _core:
 id: forlev2016_local_tasks
 theme: forlev2016
 region: content
-weight: -11
+weight: -12
 provider: null
 plugin: local_tasks_block
 settings:

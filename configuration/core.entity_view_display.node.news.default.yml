@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_image
     - field.field.node.news.field_link
+    - field.field.node.news.field_presentation_date
     - node.type.news
   module:
     - image
@@ -44,6 +45,16 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_presentation_date:
+    weight: 105
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    type: timestamp
     region: content
   links:
     weight: 100

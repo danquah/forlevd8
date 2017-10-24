@@ -1,0 +1,18 @@
+uuid: 8e11a2bb-5a69-4db7-81fa-0eab688221a2
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_presentation_date
+field_name: field_presentation_date
+entity_type: node
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

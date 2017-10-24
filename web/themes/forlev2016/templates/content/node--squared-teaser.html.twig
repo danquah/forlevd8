@@ -82,11 +82,11 @@
 %}
 {{ attach_library('classy/node') }}
 {% if node.field_link.uri %}
-<a href="{{ destination_url }}" rel="bookmark" class="squared-list-item">
+  <a href="{{ destination_url }}" rel="bookmark" class="squared-list-item">
 {% elseif not node.field_link %}
-{# Wrap the node  in its own url if it does not have a link field #}
-<a href="{{ url }}" rel="bookmark" class="squared-list-item">
-  {% else %}
+  {# Wrap the node  in its own url if it does not have a link field #}
+  <a href="{{ url }}" rel="bookmark" class="squared-list-item">
+{% else %}
 <div class="squared-list-item">
 {% endif %}
   <article{{ attributes.addClass(classes) }}>
@@ -103,6 +103,8 @@
             {% if node.field_start_date.value | date("j. M Y") != node.field_end_date.value | date("j. M Y") %}
               - {{ node.field_end_date.value | date("j. M Y") }}
                  {% endif %}
+          {% elseif node.bundle == 'news' and node.field_presentation_date.value %}
+            {{ node.field_presentation_date.value | date("j. M Y") }}
           {% else %}
             {{ node.createdtime | date("j. M Y") }}
           {% endif %}
@@ -112,7 +114,7 @@
       </p>
   </div>
   </article>
-{% if node.field_link.uri %}
+{% if node.field_link.uri or not node.field_link %}
 </a>
 {% else %}
 </div>

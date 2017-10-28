@@ -60,17 +60,3 @@ function forlev_base_form_alter(&$form, $form_state, $form_id) {
   }
 }
 
-
-/**
- * Implements hooks_view_query_alter().
- */
-function forlev_base_views_query_alter(ViewExecutable $view, Sql $query) {
-  if ($view->id() === 'frontpage_content_list') {
-    // Sort the list by multiple optional fields.
-    $query->addField('node_field_data', 'created');
-    $query->addField('node__field_presentation_date', 'field_presentation_date_value', 'field_presentation_date_value');
-    $query->addField('node__field_start_date', 'field_start_date_value', 'field_start_date_value');
-    $query->addOrderBy(NULL, 'COALESCE(field_presentation_date_value, UNIX_TIMESTAMP(field_start_date_value), created)', 'DESC');
-  }
-}
-

@@ -16,7 +16,7 @@ $config_directories = array(
 
 $settings['hash_salt'] = 'hardcodedsaltshouldneverbeusedoutsidedocker';
 $settings['update_free_access'] = FALSE;
-$settings['container_yamls'][] = __DIR__ . '/services.yml';
+$settings['container_yamls'][] = __DIR__ . '/development.services.yml';
 
 
 if (file_exists(__DIR__ . '/settings.local.php')) {

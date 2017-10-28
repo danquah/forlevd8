@@ -205,8 +205,13 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited {
   text-align: center;
 }
 
+.view-id-facilitets_liste .view-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .view-id-facilitets_liste .views-row {
-  display: inline-block;
+  display: flex;
 }
 
 .view-id-facilitets_liste .node--type-facility.node--view-mode-teaser {

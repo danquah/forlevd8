@@ -1,8 +1,12 @@
 .view-id-facilitets_liste {
   text-align: center;
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .views-row {
-    display: inline-block;
+    display: flex;
   }
 
   .node--type-facility.node--view-mode-teaser {

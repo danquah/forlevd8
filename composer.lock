@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a05c36d7e7b2e23466cede61dbd80bb",
+    "content-hash": "de8baac2b22e2fa861226e1c583c6b34",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -3055,20 +3055,20 @@
         },
         {
             "name": "drupal/responsive_menu",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/responsive_menu",
-                "reference": "8.x-2.4"
+                "reference": "8.x-2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/responsive_menu-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "a463506457f1f7053d55318574b13352b70c27c5"
+                "url": "https://ftp.drupal.org/files/projects/responsive_menu-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "f78b25a242a04fb2a9fa004415ccc1af3c1140f8"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8.4"
             },
             "type": "drupal-module",
             "extra": {
@@ -3076,15 +3076,12 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1478545739",
+                    "version": "8.x-2.5",
+                    "datestamp": "1507722544",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "2914411: Fix menu": "https://www.drupal.org/files/issues/remove-BodyVisualView_override-2914411-10.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

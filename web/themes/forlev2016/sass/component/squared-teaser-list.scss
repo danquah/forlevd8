@@ -1,4 +1,5 @@
 a.squared-list-item {
+
   & .node__content:hover {
     background: #eeeeee;
   }
@@ -6,12 +7,49 @@ a.squared-list-item {
   text-decoration: none;
 }
 
+// Setup breakpoints.
 .squared-list-item {
-  img {
-    width: auto;
+  .squared-list-item--image {
+    @include span-columns(6);
+    @include media($tablet) {
+      @include span-columns(3);
+    }
+    float: left;
+  }
 
-    float:left;
-    margin: 0 15px 0 0;
+  .squared-list-item--aside {
+    // Reintroduce the clearfix at a higher level to make sore the next element
+    // will not tangle with us.
+    @include clearfix;
+
+    // The body text field has an clearfix, get rid of it so that we can place
+    // something closely after it.
+    .clearfix:after {
+      clear: none;
+    }
+  }
+}
+
+.event__signup--listing {
+  display: inline-block;
+  @include span-columns(12);
+  @include media($desktop) {
+    @include span-columns(9);
+  }
+}
+
+// Minimize the margin of the signup status
+.squared-list-item {
+  .event__signup__status {
+    margin: 0;
+  }
+
+}
+.squared-list-item {
+  // Have the image expand to 100% of the container and setup a rounded border.
+  img {
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
     border-radius: 5%;
     border: 5px solid rgba(200, 200, 200, .5);
@@ -19,11 +57,15 @@ a.squared-list-item {
 
   // Move the headline and date-field close together.
   h2 {
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: em(4);
     color: $red;
+    font-size: em(18);
+    font-weight: 500;
   }
   .date-field {
     margin-top: 0;
+    font-size: em(14);
   }
 
   // The list is wrapped in an a-tag, we don't want everything underlined.

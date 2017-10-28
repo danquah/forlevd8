@@ -20,71 +20,71 @@
       @include span-columns(7);
     }
   }
-
-  .event__signup {
-    margin-top: em($spacing-small);
-  }
-
-  .event__signup__status {
-    margin: em($spacing-small) 0;
-    display: inline-block;
-    width: 100%;
-
-    padding: em($spacing-small) 0;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 500;
-    color: black;
-
-    &.event__signup__status--open {
-      background-color: rgb(115, 212, 94);
-    }
-    &.event__signup__status--closed {
-      background-color: rgb(212, 114, 113);
-    }
-  }
-
-  // Styling
-  .event__meta fieldset {
-    margin-top: 0;
-  }
-
-  .event__meta--container .field {
-    margin-top: 0.5em;
-  }
-  .event__image {
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-  .event__gallery {
-    margin-bottom: em($spacing-medium);
-  }
-  .event__gallery .media--image {
-    height: 300px;
-    @include media($tablet) {
-      height: 350px;
-    }
-    @include media($desktop) {
-      height: 400px;
-    }
-
-    position: relative;
-    img {
-      //display: block;
-      //width: auto;
-      //height: 100%;
-      width: auto;
-      max-height: 100%;
-      position: absolute;
-      margin:auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-
 }
+
+.event__signup {
+  margin-top: em($spacing-small);
+}
+
+.event__signup__status {
+  margin: em($spacing-small) 0;
+  display: inline-block;
+  width: 100%;
+
+  padding: em($spacing-small) 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+
+  &.event__signup__status--open {
+    background-color: rgb(115, 212, 94);
+  }
+  &.event__signup__status--closed {
+    background-color: rgb(212, 114, 113);
+  }
+}
+
+// Styling
+.event__meta fieldset {
+  margin-top: 0;
+}
+
+.event__meta--container .field {
+  margin-top: 0.5em;
+}
+.event__image {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.event__gallery {
+  margin-bottom: em($spacing-medium);
+}
+.event__gallery .media--image {
+  height: 300px;
+  @include media($tablet) {
+    height: 350px;
+  }
+  @include media($desktop) {
+    height: 400px;
+  }
+
+  position: relative;
+  img {
+    //display: block;
+    //width: auto;
+    //height: 100%;
+    width: auto;
+    max-height: 100%;
+    position: absolute;
+    margin:auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+

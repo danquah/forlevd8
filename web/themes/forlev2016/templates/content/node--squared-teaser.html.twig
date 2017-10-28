@@ -91,28 +91,40 @@
 {% endif %}
   <article{{ attributes.addClass(classes) }}>
     <div{{ content_attributes.addClass('node__content') }}>
-      {{ content.field_image }}
-      {{ title_prefix }}
-      <h2{{ title_attributes }}>
-        {{ label }}
-      </h2>
-      {{ title_suffix }}
-      <p class="date-field">
-          {% if node.bundle == 'event' %}
-              {{ node.field_start_date.value | date("j. M Y") }}
-            {% if node.field_start_date.value | date("j. M Y") != node.field_end_date.value | date("j. M Y") %}
-              - {{ node.field_end_date.value | date("j. M Y") }}
-                 {% endif %}
-          {% elseif node.bundle == 'news' and node.field_presentation_date.value %}
-            {{ node.field_presentation_date.value | date("j. M Y") }}
-          {% else %}
-            {{ node.createdtime | date("j. M Y") }}
-          {% endif %}
-      </p>
-      <p>
-        {{ content.body }}
-      </p>
-  </div>
+      <div class="squared-list-item--image">
+        {{ content.field_image }}
+      </div>
+      <div class="squared-list-item--aside">
+        {{ title_prefix }}
+        <h2{{ title_attributes }}>
+          {{ label }}
+        </h2>
+        {{ title_suffix }}
+        <p class="date-field">
+            {% if node.bundle == 'event' %}
+                {{ node.field_start_date.value | date("j. M Y") }}
+              {% if node.field_start_date.value | date("j. M Y") != node.field_end_date.value | date("j. M Y") %}
+                - {{ node.field_end_date.value | date("j. M Y") }}
+                   {% endif %}
+            {% elseif node.bundle == 'news' and node.field_presentation_date.value %}
+              {{ node.field_presentation_date.value | date("j. M Y") }}
+            {% else %}
+              {{ node.createdtime | date("j. M Y") }}
+            {% endif %}
+        </p>
+        <p>
+            {{ content.body }}
+        </p>
+        {# Display the bar if we have something to show and we have'nt passed start #}
+        {%  if not start_passed and (signup_url or signup_text) %}
+          <div class="event__signup event__signup--listing">
+              {% if signup_open %}
+                <div class="event__signup__status event__signup__status--open">Tilmeldingen er åben</div>
+              {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
   </article>
 {% if node.field_link.uri or not node.field_link %}
 </a>

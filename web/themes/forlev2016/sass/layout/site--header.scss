@@ -1,11 +1,3 @@
-// Temporary fix of menu.
-body.toolbar-fixed {
-  padding-top: 39px;
-  &.toolbar-tray-open {
-    padding-top: 78px;
-  }
-}
-
 body.toolbar-tray-open {
   padding-top: 39px;
 }

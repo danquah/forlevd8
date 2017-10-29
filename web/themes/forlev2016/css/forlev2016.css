@@ -579,14 +579,6 @@ a.squared-list-item .node__content:hover {
   right: 0;
 }
 
-body.toolbar-fixed {
-  padding-top: 39px;
-}
-
-body.toolbar-fixed.toolbar-tray-open {
-  padding-top: 78px;
-}
-
 body.toolbar-tray-open {
   padding-top: 39px;
 }

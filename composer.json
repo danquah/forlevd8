@@ -51,7 +51,7 @@
         "drupal/pathauto": "^1.0",
         "drupal/plugin": "^2.5",
         "drupal/redirect": "^1.0",
-        "drupal/responsive_menu": "^2.4",
+        "drupal/responsive_menu": "2.x-dev",
         "drupal/slick_extras": "^1.6",
         "drupal/slick_views": "^1.0",
         "drupal/stage_file_proxy": "^1.0",

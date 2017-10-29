@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfb5b4b8ead1fd5d59ebd33519c61053",
+    "content-hash": "0ab141dd40b289cdf0ad40299234677d",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -3055,17 +3055,11 @@
         },
         {
             "name": "drupal/responsive_menu",
-            "version": "2.5.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/responsive_menu",
-                "reference": "8.x-2.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/responsive_menu-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "f78b25a242a04fb2a9fa004415ccc1af3c1140f8"
+                "reference": "1fb6b24ef59934c959b48485da466655334c4f23"
             },
             "require": {
                 "drupal/core": "^8.4"
@@ -3076,11 +3070,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1507722544",
+                    "version": "8.x-2.5+1-dev",
+                    "datestamp": "1508146444",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -7852,7 +7846,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/responsive_menu": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

@@ -1,0 +1,9 @@
+settings:
+  confirmation_message: 'Din besked er blevet sendt.'
+handlers:
+  email_confirmation:
+    label: E-mail-bekræftelse
+    settings:
+      from_name: standard
+  email_notification:
+    label: E-mail-notifikation

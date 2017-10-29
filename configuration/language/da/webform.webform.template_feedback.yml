@@ -1,0 +1,10 @@
+handlers:
+  email_confirmation:
+    label: E-mail-bekræftelse
+    settings:
+      from_name: standard
+      subject: standard
+  email_notification:
+    label: E-mail-notifikation
+    settings:
+      subject: standard

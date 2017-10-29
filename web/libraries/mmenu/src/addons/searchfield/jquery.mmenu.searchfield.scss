@@ -2,7 +2,7 @@
 	jQuery.mmenu searchfield addon CSS
 */
 
-@import "../../css/_imp/import";
+@import "../../scss/import";
 
 $mm_searchfieldHeight: $mm_navbarHeight - $mm_padding - 4 !default;
 
@@ -23,7 +23,7 @@ $mm_searchfieldHeight: $mm_navbarHeight - $mm_padding - 4 !default;
 		border: none !important;
 		outline: none !important;
 		box-shadow: none !important;
-		border-radius: $mm_searchfieldHeight;
+		border-radius: 4px;
 		font: inherit;
 		font-size: $mm_fontSize;
 		line-height: $mm_searchfieldHeight;
@@ -65,7 +65,7 @@ $mm_searchfieldHeight: $mm_navbarHeight - $mm_padding - 4 !default;
 		{
 			padding-top: $mm_navbarHeight * 2;
 			
-			.mm-search
+			> .mm-search
 			{
 				top: $mm_navbarHeight;
 			}
@@ -95,11 +95,6 @@ li.mm-nosubresults > a.mm-next
 	{
 		padding-right: $mm_padding;
 	}
-}
-
-.mm-panels > .mm-resultspanel:not( .mm-opened )
-{
-	transform: translate3d( 0, 0, 0 );
 }
 
 

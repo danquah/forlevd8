@@ -1,5 +1,5 @@
 /*	
- * jQuery mmenu {ADDON} addon
+ * jQuery mmenu {ADDON} add-on
  * mmenu.frebsite.nl
  *
  * Copyright (c) Fred Heusschen
@@ -7,8 +7,8 @@
 
 (function( $ ) {
 
-	var _PLUGIN_ = 'mmenu',
-		_ADDON_  = '{ADDON}';
+	const _PLUGIN_ = 'mmenu';
+	const _ADDON_  = '{ADDON}';
 
 
 	$[ _PLUGIN_ ].addons[ _ADDON_ ] = {
@@ -22,16 +22,26 @@
 
 			glbl = $[ _PLUGIN_ ].glbl;
 
-			//	Extend shortcut options
-			//	Extend shortcut configuration
-			//	...
+			//	Extend shorthand options
+			if ( typeof opts != 'object' )
+			{
+				opts = {};
+			}
+			opts = this.opts[ _ADDON_ ] = $.extend( true, {}, $[ _PLUGIN_ ].defaults[ _ADDON_ ], opts );
+
+			//	Extend shorthand configuration
+			if ( typeof conf != 'object' )
+			{
+				conf = {};
+			}
+			conf = this.conf[ _ADDON_ ] = $.extend( true, {}, $[ _PLUGIN_ ].configuration[ _ADDON_ ], conf );
 
 			//	Add methods to api
 //			this._api = $.merge( this._api, [ 'fn1', 'fn2' ] );
 
 			//	Bind functions to update
-//			this.bind( 'update', function() {} );
-//			this.bind( 'init', function() {} );
+//			this.bind( 'updateListview', function() {} );
+//			this.bind( 'initPanels', function() {} );
 //			this.bind( 'initPage', function() {} );
 
 		},

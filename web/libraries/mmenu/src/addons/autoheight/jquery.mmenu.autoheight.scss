@@ -2,33 +2,30 @@
 	jQuery.mmenu autoHeight addon CSS
 */
 
-@import "../../css/_imp/import";
+@import "../../scss/import";
 
 
 .mm-menu
 {
 	&.mm-autoheight
 	{
-		&.mm-bottom,
-		&.mm-top
+		transition: none $mm_transitionDuration $mm_transitionFunction;
+		transition-property: transform, height;
+
+		&:not( .mm-offcanvas )
 		{
-			max-height: percentage( $mm_menuHeight );
-
-			&.mm-fullscreen
-			{
-				max-height: 100%;
-			}
+			position: relative;
 		}
-
 	}
 
 	&.mm-measureheight
 	{
-		.mm-panel
+		.mm-panel:not(.mm-vertical),
+		.mm-panel.mm-vertical.mm-opened
 		{
 			display: block !important;
 		}
-		 > .mm-panels > .mm-panel
+		.mm-panels > .mm-panel
 		{
 			bottom: auto !important;
 			height: auto !important;

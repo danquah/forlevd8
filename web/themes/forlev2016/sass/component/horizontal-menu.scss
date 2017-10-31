@@ -1,27 +1,28 @@
-#block-horizontalmenu {
-  display: inline-block;
-  margin-left: em($spacing-medium);
-}
-
-
-// This class should be set on either wrapping element or on the ul it self.
-.horizontal-menu ul,
-ul.horizontal-menu {
-  margin: 0;
-
-
-  li {
-    // Slightly smaller font size.
-    font-size: em(14);
+// Style the "desktop" menu.
+@media (min-width: 960px) {
+  #block-horizontalmenu {
     display: inline-block;
+    margin-left: em($spacing-medium);
   }
 
-  ul.sub-nav {
+  // This class should be set on either wrapping element or on the ul it self.
+  .horizontal-menu ul,
+  ul.horizontal-menu {
+    margin: 0;
+
+
     li {
-      margin-left: 10px;
+      // Slightly smaller font size.
+      font-size: em(14);
+      display: inline-block;
     }
+
+    ul.sub-nav {
+      li {
+        margin-left: 10px;
+      }
+    }
+
   }
-
 }
-
 

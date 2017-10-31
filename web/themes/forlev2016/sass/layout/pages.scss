@@ -18,3 +18,13 @@ $max-width: 960px;
 .outer-width-wrapper {
   @include outer-container();
 }
+
+
+// Add a bit of margin to the outer content-area to prevent it from going all
+// the way to the edge.
+.main-content {
+  margin: 0 5px;
+  @include media($desktop) {
+    margin: 0;
+  }
+}

@@ -66,25 +66,24 @@ body {
   height: auto;
 }
 
-#block-horizontalmenu {
-  display: inline-block;
-  margin-left: 1.25em;
-}
-
-.horizontal-menu ul,
-ul.horizontal-menu {
-  margin: 0;
-}
-
-.horizontal-menu ul li,
-ul.horizontal-menu li {
-  font-size: 0.875em;
-  display: inline-block;
-}
-
-.horizontal-menu ul ul.sub-nav li,
-ul.horizontal-menu ul.sub-nav li {
-  margin-left: 10px;
+@media (min-width: 960px) {
+  #block-horizontalmenu {
+    display: inline-block;
+    margin-left: 1.25em;
+  }
+  .horizontal-menu ul,
+  ul.horizontal-menu {
+    margin: 0;
+  }
+  .horizontal-menu ul li,
+  ul.horizontal-menu li {
+    font-size: 0.875em;
+    display: inline-block;
+  }
+  .horizontal-menu ul ul.sub-nav li,
+  ul.horizontal-menu ul.sub-nav li {
+    margin-left: 10px;
+  }
 }
 
 .inline-image {
@@ -460,6 +459,16 @@ a.squared-list-item .node__content:hover {
   clear: both;
   content: "";
   display: table;
+}
+
+.main-content {
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content {
+    margin: 0;
+  }
 }
 
 .forlev-event .event__image, .forlev-event .event__meta, .forlev-event .event__signup, .forlev-event .event__body, .forlev-event .event__gallery {

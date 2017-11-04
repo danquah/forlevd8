@@ -21,6 +21,5 @@ web/sites/*/settings.php
 # Ignore composer-override
 docker-compose.override.yml
 settings.local.php
-web/libraries
 .docker-sync
 web/themes/forlev2016/js/contrib

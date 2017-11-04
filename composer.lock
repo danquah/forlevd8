@@ -3059,7 +3059,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/responsive_menu",
-                "reference": "1fb6b24ef59934c959b48485da466655334c4f23"
+                "reference": "772933f725b6750ab0abef696bc1b71645538a68"
             },
             "require": {
                 "drupal/core": "^8.4"
@@ -3070,8 +3070,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.5+1-dev",
-                    "datestamp": "1508146444",
+                    "version": "8.x-2.5+4-dev",
+                    "datestamp": "1508146745",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3094,7 +3094,8 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/responsive_menu",
                 "issues": "https://drupal.org/project/issues/responsive_menu"
-            }
+            },
+            "time": "2017-10-31T08:52:17+00:00"
         },
         {
             "name": "drupal/slick",

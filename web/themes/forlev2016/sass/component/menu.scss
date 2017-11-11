@@ -1,8 +1,10 @@
 // When a link is in a menu it should look more like this.
-ul.horizontal-menu a{
-  &, &:visited {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
+ul.horizontal-menu {
+  a, a.is-active {
+    &, &:visited {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
   }
 }

@@ -1,7 +1,11 @@
 // Paragraph that contains an image.
-
 .inline-image {
   text-align: center;
+  img {
+    // Set a max for the image-size and keep it in aspect.
+    @include object-fit(contain);
+    max-height: 400px;
+  }
 
   @include span-columns(12);
   @include media-small {

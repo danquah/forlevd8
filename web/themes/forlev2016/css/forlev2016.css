@@ -94,6 +94,13 @@ body {
   width: 100%;
 }
 
+.inline-image img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  font-family: "object-fit: contain";
+  max-height: 400px;
+}
+
 .inline-image:last-child {
   margin-right: 0;
 }
@@ -132,7 +139,7 @@ body {
   }
 }
 
-ul.horizontal-menu a, ul.horizontal-menu a:visited {
+ul.horizontal-menu a, ul.horizontal-menu a:visited, ul.horizontal-menu a.is-active, ul.horizontal-menu a.is-active:visited {
   text-decoration: none;
   font-weight: bold;
   color: white;

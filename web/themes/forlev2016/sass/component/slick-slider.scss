@@ -1,0 +1,33 @@
+// Hardcode the hight of the slider throughout the styling to make it easier
+// for slick to stay about the same size.
+.slick {
+  height: 350px;
+  .slick__slide {
+    height: 350px;
+    width: 100%;
+    img {
+      // Set a max for the image-size and keep it in aspect.
+      height: 350px;
+      width: 100%;
+      @include object-fit(contain);
+    }
+  }
+
+  // Set the color of the arrows
+  .slick-arrow::before {
+    color: $red;
+    transition: opacity .2s ease-out;
+    opacity: 0.0;
+
+    // Only show the arrows pr. default on non-mobile devices.
+    @include media($desktop) {
+      opacity: 0.2;
+    }
+  }
+
+  &:hover {
+    .slick-arrow::before {
+      opacity: 1;
+    }
+  }
+}

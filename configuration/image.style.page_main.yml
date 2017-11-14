@@ -1,0 +1,16 @@
+uuid: 52f5ffdc-4376-42f0-832a-5e2e8d11c121
+langcode: da
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_main
+label: 'Page main'
+effects:
+  f2f84010-7a31-4ec5-bb59-3fedbe70c720:
+    uuid: f2f84010-7a31-4ec5-bb59-3fedbe70c720
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 950
+      height: 400

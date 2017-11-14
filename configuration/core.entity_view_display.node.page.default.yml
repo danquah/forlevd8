@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.page.field_image
     - field.field.node.page.field_paragraphs
     - field.field.node.page.field_see_also
-    - image.style.large
+    - image.style.page_main
     - node.type.page
   module:
     - entity_reference_revisions
@@ -21,7 +21,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: large
+      image_style: page_main
       image_link: ''
     third_party_settings: {  }
     type: image

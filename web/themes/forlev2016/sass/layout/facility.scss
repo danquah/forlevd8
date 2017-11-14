@@ -1,0 +1,24 @@
+.body__main_content{
+
+  @include span-columns(12);
+
+  @include media($tablet) {
+    @include span-columns(6);
+  }
+
+  @include media($desktop) {
+    @include span-columns(4);
+  }
+}
+.body__secondary_content{
+	@include span-columns(12);
+
+
+  @include media($tablet) {
+    @include span-columns(6);
+  }
+
+  @include media($desktop) {
+    @include span-columns(8);
+  }
+}

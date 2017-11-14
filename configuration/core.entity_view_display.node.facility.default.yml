@@ -30,9 +30,9 @@ content:
     label: above
     settings:
       style: ''
-      optionset: default
+      optionset: forlev
       optionset_thumbnail: ''
-      skin: ''
+      skin: classic
       skin_thumbnail: ''
       image_style: max_650x650
       thumbnail_style: ''

@@ -5,7 +5,7 @@ dependencies: {  }
 open: null
 close: null
 uid: 1
-template: true
+template: false
 id: patruljekursus_2018
 title: 'Tilmelding til Patruljekursus 2018'
 description: ''

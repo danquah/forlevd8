@@ -1,0 +1,24 @@
+uuid: d6ef91ab-cbac-4ab5-a5fb-e236b3f23063
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.galleri.field_gallery_images
+    - paragraphs.paragraphs_type.galleri
+  module:
+    - image
+id: paragraph.galleri.default
+targetEntityType: paragraph
+bundle: galleri
+mode: default
+content:
+  field_gallery_images:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

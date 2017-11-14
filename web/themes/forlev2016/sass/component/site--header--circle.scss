@@ -2,13 +2,10 @@
   margin: 20px 0;
   text-align: center;
 
-  // One link pr row.
-  @include span-columns(12);
-
-  @include media($tablet) {
-    @include span-columns(6);
-    @include omega(2n);
-  }
+  // Two circle-links pr. row.
+  @include span-columns(6);
+  // Clear all gutters.
+  @include omega;
 
   @include media($desktop) {
     @include omega-reset(2n);
@@ -28,10 +25,33 @@
   color: black;
 }
 
+.quicklink .field--name-title {
+  margin: auto;
+
+  // Reduce width of title on mobile.
+  width: 150px;
+
+  @include media($tablet) {
+    // Set the title to the width of the circle image (see below) and then some.
+    // We're working with some space so no harm in letting it have some extra.
+    width: 220px;
+
+  }
+}
+
 .circle {
   background-position: center center;
-  width: 200px;
-  height: 200px;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+
+  @include media($tablet) {
+    // Increase the circle-size on desktop/tablet.
+    width: 200px;
+    height: 200px;
+
+  }
+
   display: inline-block;
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, .5);

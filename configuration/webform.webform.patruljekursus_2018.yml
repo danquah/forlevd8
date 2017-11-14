@@ -1,16 +1,16 @@
 uuid: 2fb63bc0-0459-4a01-8bd2-aee5c37e57e8
 langcode: da
-status: open
+status: closed
 dependencies: {  }
 open: null
 close: null
 uid: 1
-template: false
+template: true
 id: patruljekursus_2018
-title: Patruljekursus
+title: 'Tilmelding til Patruljekursus 2018'
 description: ''
 category: Patruljekursus
-elements: "navn:\n  '#type': textfield\n  '#title': Navn\n"
+elements: "intro:\n  '#type': processed_text\n  '#text': \"<p><strong>Tilmelding til patruljekursus</strong>&nbsp;Alle felter skal udfyldes, før tilmelding kan sendes afsted. Både kontaktperson og økonomisk ansvarlig modtager herefter en mail, der skal bekræftes før tilmeldingen er registreret (via link i mailen). Tilmeldingen er først gældende, når det samlede beløb for deltagere (820kr pr. person) er betalt.&nbsp;Vi bekræfter jeres tilmelding senest 14 dage efter pengene er modtaget.</p>\\n\\n<p>Hele kursusafgiften betales samlet forud til Forlevs konto reg. nr. 5016&nbsp;kontonr. 1254052 (Jyske Bank).&nbsp;<strong>Betalingen skal mærkes tydeligt med patruljenavn og gruppe.</strong>&nbsp;Ved afbud&nbsp;senere end sidste tilmeldingsfrist refunderes kursus afgiftens ikke.&nbsp;&nbsp;Din tilmelding skal være os i hænde senest fredag d. 1. marts.&nbsp;</p>\\n\\n<p>Vær opmærksom på, at en registreret tilmelding ikke garanterer plads på kurset. Jeres deltagelse er først bekræftet, når I har modtaget en mail herom. I vil efterfølgende modtage et deltagerbrev, som indeholder praktiske informationer om kurset. Da vi tidligere har haft overtegnede kurser, kan vi kun garantere en plads til de første 300 tilmeldte kursister.</p>\\n\\n<p><strong>Alle</strong>&nbsp;tilmeldte skal være fyldt 12 år og må ikke være ældre end 16 år ved kursets start.&nbsp;Alle deltagere skal deltage i hele kursus perioden fra start til slut.</p>\\n\"\n  '#format': basic_html\npatrulje:\n  '#type': fieldset\n  '#title': Patrulje\n  patruljenavn:\n    '#type': textfield\n    '#title': Patruljenavn\n    '#required': true\n  gruppe:\n    '#type': textfield\n    '#title': Gruppe\n    '#required': true\n  korps:\n    '#type': webform_select_other\n    '#title': Korps\n    '#options':\n      dds: 'Det Danske Spejderkrops'\n      kfum: 'KFUM Spejderne'\n      andet: Andet\n      intet: Intet\n  antal_deltagere:\n    '#type': number\n    '#title': 'Antal deltagere'\n    '#required': true\n    '#min': '1'\nkontaktperson:\n  '#type': fieldset\n  '#title': Kontaktperson\n  intro_kontaktperson:\n    '#type': processed_text\n    '#text': \"<p>Kontaktpersonen benyttes hvis der er problemer eller lignende med jeres tilmelding.</p>\\n\"\n    '#format': basic_html\n  kontakt_funktion:\n    '#type': textfield\n    '#title': 'Evt. funktion'\n  kontakt_navn:\n    '#type': textfield\n    '#title': Navn\n    '#required': true\n  kontakt_postnummer:\n    '#type': textfield\n    '#title': Postnummer\n    '#required': true\n  kontakt_by:\n    '#type': textfield\n    '#title': By\n    '#required': true\n  kontakt_tlf:\n    '#type': textfield\n    '#title': Telefonnummer\n    '#required': true\n  kontakt_email:\n    '#type': webform_email_confirm\n    '#title': Email\n    '#required': true\noekonomisk:\n  '#type': fieldset\n  '#title': 'Økonomisk ansvarlig / fakturaperson'\n  intro_oekoperson:\n    '#type': processed_text\n    '#text': \"<p>Den økonomiansvarlige skal være myndig og indestår for patruljens tilmelding og betaling. Den økonomiansvarlige står ved bekræftelse af nedenstående inde for at have læst og være indforstået med de praktiske oplysninger.</p>\\n\"\n    '#format': basic_html\n  oeko_funktion:\n    '#type': textfield\n    '#title': Funktion\n    '#required': true\n  oeko_navn:\n    '#type': textfield\n    '#title': Navn\n    '#required': true\n  oeko_postnummer:\n    '#type': textfield\n    '#title': Postnummer\n    '#required': true\n  oeko_by:\n    '#type': textfield\n    '#title': By\n    '#required': true\n  oeko_tlf:\n    '#type': textfield\n    '#title': Telefonnummer\n    '#required': true\n  oeko_email:\n    '#type': webform_email_confirm\n    '#title': Email\n    '#required': true\n"
 css: ''
 javascript: ''
 settings:
@@ -59,8 +59,8 @@ settings:
   draft_saved_message: ''
   draft_loaded_message: ''
   confirmation_type: page
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: 'Din tilmelding er modtaget'
+  confirmation_message: "<p><strong>DIN TILMELDING ER F&Oslash;RST GYLDIG, N&Aring;R DU HAR GJORT TO TING: &nbsp;</strong></p>\r\n\r\n<ol>\r\n\t<li>KLIK P&Aring; LINKET&nbsp;<br />\r\n\tB&aring;de kontaktperson og den &oslash;konomiansvarlige har modtaget en mail med et link. I skal begge klikke p&aring; linket for at bekr&aelig;fte, at I har modtaget og l&aelig;st mailen.</li>\r\n\t<li>OVERF&Oslash;R BETALING<br />\r\n\tIndbetal 820 kr. pr deltager til reg. nr. 5016&nbsp;og konto nr. 1254052&nbsp;(Jyske Bank). Du vil modtage besked, n&aring;r vi har godkendt din betaling. Dette kan tage op til 14 dage. Husk at tilmeldingen f&oslash;rst er gyldig, n&aring;r vi har modtaget jeres betaling og bekr&aelig;ftet jeres tilmelding.</li>\r\n</ol>\r\n\r\n<p>Bem&aelig;rk: Mailen kan v&aelig;re modtaget i dit spam-filter.</p>\r\n\r\n<p>Op til 14 dage efter pengene er modtaget vil vi kontakte kontaktpersonen og bekr&aelig;fte tilmeldingen.</p>"
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -112,4 +112,35 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  ll_mail:
+    id: email
+    label: 'LL mail'
+    handler_id: ll_mail
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: patruljekursus@forlev.dk
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: mads@danquah.dk
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: 'TIlmelding til patruljekursus'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

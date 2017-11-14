@@ -358,29 +358,12 @@ a.squared-list-item .node__content:hover {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 100%;
+  width: 48.821174201%;
+  margin-right: 0;
 }
 
 .quicklinks-list .quicklink:last-child {
   margin-right: 0;
-}
-
-@media screen and (min-width: 480px) {
-  .quicklinks-list .quicklink {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 48.821174201%;
-  }
-  .quicklinks-list .quicklink:last-child {
-    margin-right: 0;
-  }
-  .quicklinks-list .quicklink:nth-child(2n) {
-    margin-right: 0;
-  }
-  .quicklinks-list .quicklink:nth-child(2n+1) {
-    clear: left;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -416,13 +399,32 @@ a.squared-list-item .node__content:hover {
   color: black;
 }
 
+.quicklink .field--name-title {
+  margin: auto;
+  width: 150px;
+}
+
+@media screen and (min-width: 480px) {
+  .quicklink .field--name-title {
+    width: 220px;
+  }
+}
+
 .circle {
   background-position: center center;
-  width: 200px;
-  height: 200px;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
   display: inline-block;
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 480px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (min-width: 600px) {

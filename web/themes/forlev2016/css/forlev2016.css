@@ -86,6 +86,12 @@ body {
   }
 }
 
+.field--name-field-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .inline-image {
   text-align: center;
   float: left;
@@ -801,6 +807,10 @@ body {
   .body__secondary_content:last-child {
     margin-right: 0;
   }
+}
+
+.content__meta--container .field {
+  margin-top: 0.5em;
 }
 
 /*# sourceMappingURL=forlev2016.css.map */

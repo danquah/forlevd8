@@ -9,10 +9,25 @@ dependencies:
     - field.field.node.facility.field_image
     - node.type.facility
   module:
+    - field_group
     - image
     - slick
     - text
     - user
+third_party_settings:
+  field_group:
+    group_faktaboks:
+      children:
+        - field_faktabox
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        label: ''
+        description: ''
+        id: ''
+        classes: content__meta--container
+      label: ''
 id: node.facility.default
 targetEntityType: node
 bundle: facility
@@ -21,12 +36,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_extra_images:
-    weight: 103
+    weight: 3
     label: above
     settings:
       style: ''
@@ -100,14 +115,14 @@ content:
     type: slick_image
     region: content
   field_faktabox:
-    weight: 104
-    label: above
+    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_image:
-    weight: 102
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -116,7 +131,7 @@ content:
     type: image
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

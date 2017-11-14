@@ -41,15 +41,14 @@
 
 .circle {
   background-position: center center;
-  background-size: cover;
-  width: 150px;
-  height: 150px;
+  background-size: 110%;
+  width: 120px;
+  height: 120px;
 
   @include media($tablet) {
     // Increase the circle-size on desktop/tablet.
     width: 200px;
     height: 200px;
-
   }
 
   display: inline-block;

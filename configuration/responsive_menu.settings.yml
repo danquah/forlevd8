@@ -12,7 +12,7 @@ horizontal_superfish_speed: 100
 horizontal_superfish_speed_out: 100
 horizontal_superfish_delay: 1200
 horizontal_superfish_hoverintent: true
-hammerjs: true
+hammerjs: false
 breakpoint_css_filepath: 'public://css'
 _core:
   default_config_hash: DgAWl_7_B39CsIvJyK3vxn2mj8fNSQZSQyVRiTlGdrg

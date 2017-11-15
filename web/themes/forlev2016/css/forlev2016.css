@@ -31,16 +31,28 @@ body {
 }
 
 .main-content h1 {
+  font-size: 28px;
   font-style: italic;
-  font-size: 33px;
-  letter-spacing: 0.05em;
   font-weight: 500;
 }
 
+@media screen and (min-width: 480px) {
+  .main-content h1 {
+    font-size: 33px;
+    letter-spacing: 0.05em;
+  }
+}
+
 .main-content h2 {
-  font-size: 20px;
-  letter-spacing: 0.05em;
+  font-size: 16px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 480px) {
+  .main-content h2 {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
 }
 
 body {
@@ -220,6 +232,8 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited, ul.horizontal-menu a.is-acti
 .view-id-facilitets_liste .view-content {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 .view-id-facilitets_liste .views-row {
@@ -230,7 +244,13 @@ ul.horizontal-menu a, ul.horizontal-menu a:visited, ul.horizontal-menu a.is-acti
   margin: 16px 12px;
   text-align: center;
   color: black;
-  width: 200px;
+  width: 120px;
+}
+
+@media screen and (min-width: 480px) {
+  .view-id-facilitets_liste .node--type-facility.node--view-mode-teaser {
+    width: 200px;
+  }
 }
 
 .view-id-facilitets_liste .node--type-facility.node--view-mode-teaser a {

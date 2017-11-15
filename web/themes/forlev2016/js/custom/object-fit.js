@@ -6,6 +6,5 @@
  */
 
 (function ($, Drupal) {
-  var images = $('.full-width-image-container img');
-//  objectFitImages(images);
+  objectFitImages();
 })(jQuery, Drupal);

@@ -2,6 +2,11 @@
 // for slick to stay about the same size.
 .slick {
   height: 350px;
+  max-width: 620px;
+
+  // Center in case we have space around the slider.
+  margin-left: auto;
+  margin-right: auto;
   .slick__slide {
     height: 350px;
     width: 100%;

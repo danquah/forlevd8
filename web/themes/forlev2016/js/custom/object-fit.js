@@ -7,4 +7,7 @@
 
 (function ($, Drupal) {
   objectFitImages();
+  $('.slick').on('lazyLoaded', function(event, slick, image, imageSource){
+    objectFitImages();
+  });
 })(jQuery, Drupal);

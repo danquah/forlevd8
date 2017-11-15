@@ -3,18 +3,28 @@
   .view-content {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
   }
 
   .views-row {
     display: flex;
   }
 
+
   .node--type-facility.node--view-mode-teaser {
     margin: 16px 12px;
     text-align: center;
     color: black;
-    width: 200px;
 
+    // Reduce width of title on mobile.
+    width: 120px;
+
+    @include media($tablet) {
+      // Set the title to the width of the circle image (see below) and then some.
+      // We're working with some space so no harm in letting it have some extra.
+      width: 200px;
+    }
     a {
       color: black;
       text-decoration: none;

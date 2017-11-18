@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d48467039f5dd391477bde7ac8342545",
+    "content-hash": "650af969ff3e2e0716062b157543fd73",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -1846,7 +1846,8 @@
             "type": "drupal-core",
             "extra": {
                 "patches_applied": {
-                    "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/there_is_no_indication-2408549-60.patch"
+                    "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/there_is_no_indication-2408549-60.patch",
+                    "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/2457999-138.patch"
                 }
             },
             "autoload": {

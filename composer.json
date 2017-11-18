@@ -111,7 +111,7 @@
         "patches": {
             "drupal/core": {
                 "2408549: Notify about overridden configuration": "https://www.drupal.org/files/issues/there_is_no_indication-2408549-60.patch",
-                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/cannot_use_relationship-2457999-123.patch"
+                "2457999: Make it possible to render relationships in views": "https://www.drupal.org/files/issues/2457999-138.patch"
             }
         }
 

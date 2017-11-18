@@ -66,7 +66,8 @@
         "drupal/adminimal_admin_toolbar": "^1.5",
         "drupal/auto_entityqueue": "^1.0",
         "drupal/advanced_text_formatter": "^1.0",
-        "drupal/webform": "^5.0"
+        "drupal/webform": "^5.0",
+        "drupal/google_analytics": "^2.2"
     },
     "require-dev": {
        "behat/mink": "~1.7",

@@ -1,9 +1,12 @@
+uuid: 41f0d9a3-ea81-435e-b678-db4ea23e8926
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: DNL-UkKjYodik2RDOhp_a5jIcx120WI4wtmhHo1Zj94
 open: null
 close: null
 uid: null
@@ -150,6 +153,3 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-uuid: 41f0d9a3-ea81-435e-b678-db4ea23e8926
-_core:
-  default_config_hash: DNL-UkKjYodik2RDOhp_a5jIcx120WI4wtmhHo1Zj94

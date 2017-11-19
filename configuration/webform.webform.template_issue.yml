@@ -1,9 +1,12 @@
+uuid: 9bc4176a-49f1-4e91-94b9-21a3acb75bb6
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: sY92PO4FTAHwkJupwv089HY8rJhbMBmfMIlZ5jBG8bI
 open: null
 close: null
 uid: null
@@ -119,6 +122,3 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: 9bc4176a-49f1-4e91-94b9-21a3acb75bb6
-_core:
-  default_config_hash: sY92PO4FTAHwkJupwv089HY8rJhbMBmfMIlZ5jBG8bI

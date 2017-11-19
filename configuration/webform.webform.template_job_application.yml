@@ -1,12 +1,9 @@
-uuid: 5d3b8945-a991-40e2-b639-5b990cd2841a
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
-_core:
-  default_config_hash: V83n9yQUo-e0bxUfOqA8TQ6wI7hI6Y10fpInblBPArI
 open: null
 close: null
 uid: null
@@ -20,6 +17,7 @@ css: ''
 javascript: ''
 settings:
   ajax: false
+  ajax_scroll_top: form
   page: true
   page_submit_path: ''
   page_confirm_path: ''
@@ -49,8 +47,9 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_start_label: ''
-  wizard_complete: true
-  wizard_complete_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -82,6 +81,8 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
+  wizard_comfirmation: true
+  wizard_comfirmation_label: ''
 access:
   create:
     roles:
@@ -149,3 +150,6 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+uuid: 5d3b8945-a991-40e2-b639-5b990cd2841a
+_core:
+  default_config_hash: V83n9yQUo-e0bxUfOqA8TQ6wI7hI6Y10fpInblBPArI

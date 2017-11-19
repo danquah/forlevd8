@@ -10,7 +10,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.facility
   module:
-    - image
+    - focal_point
     - path
     - text
 id: node.facility.default
@@ -38,8 +38,10 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   field_faktabox:
     weight: 34
@@ -54,8 +56,10 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   langcode:
     type: language_select

@@ -67,7 +67,8 @@
         "drupal/auto_entityqueue": "^1.0",
         "drupal/advanced_text_formatter": "^1.0",
         "drupal/webform": "^5.0",
-        "drupal/google_analytics": "^2.2"
+        "drupal/google_analytics": "^2.2",
+        "drupal/honeypot": "^1.27"
     },
     "require-dev": {
        "behat/mink": "~1.7",

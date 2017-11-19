@@ -1,0 +1,146 @@
+uuid: c81497e1-07db-4aa5-bfa5-48ecafa8cdbd
+langcode: da
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: tilmelding_til_jubilaeum_2018
+title: 'Tilmelding til Jubilæum 2018'
+description: ''
+category: Sommeruge
+elements: "intro:\n  '#type': processed_text\n  '#text': |\n    <p><strong>Tilmelding til Forlevs 50 års jubilæum!</strong>&nbsp;Alle felter skal udfyldes, før tilmelding kan sendes afsted. Tilmeldingen er først gældende, når det samlede beløb for deltagere (910kr pr. person) er indbetalt.</p>\n    \n    <p>Det er fra lørdag d. 4- lørdag d. 11 august 2018, at du skal sætte kryds i kalenderen. Prisen for hele ugen, Individuelle priser for dele af ugen kan aftales. Hvad I udover overnatning, Jubilæums T-shirt, aktiviteter og fællesdag får for denne pris kan I se i ugeprogrammet.&nbsp;Bemærk at prisen stiger med 50 kr. pr. 1. januar og igen pr. 1. marts. I kan godt tilpasse antallet af deltagere efter tilmelding, ved at sende os en mail.</p>\n  '#format': basic_html\nkontakt_information:\n  '#type': fieldset\n  '#title': 'Kontakt information'\n  kontakt_navn:\n    '#type': textfield\n    '#title': Navn\n  kontakt_telefonnummer:\n    '#type': textfield\n    '#title': Telefonnummer\n    '#default_value': 'Telefonnummer på kontaktperson'\n  kontakt_e_mail:\n    '#type': webform_email_confirm\n    '#title': E-mail\n    '#default_value': 'E-mail til kontaktperson'\n    '#confirm__title': 'Bekræft e-mail'\n    '#confirm__placeholder': 'Bekræft e-mail'\nenheds_information:\n  '#type': fieldset\n  '#title': 'Enheds information'\n  enhed_navn:\n    '#type': textfield\n    '#title': 'Enheds navn'\n    '#default_value': 'Navn på gruppen, klanen eller familien i tilmelder'\n  enheds_type:\n    '#type': select\n    '#title': 'Enheds type'\n    '#default_value': 'Deltager i som gruppe, klan eller som lagmand?'\n    '#options':\n      gruppe: Gruppe\n      klan: Klan\n      lagmand: 'Tidligere lagmand'\n  antal_ledere_voksne:\n    '#type': number\n    '#title': 'Antal ledere/voksne'\n    '#default_value': '1'\n  antal_spejdere_born:\n    '#type': number\n    '#title': 'Antal spejdere/børn'\n    '#default_value': '0'\nkommentarer:\n  '#type': fieldset\n  '#title': Kommentarer\n  '#description': 'Er der andet vi skal vide eller i har lyst til at knytte til jeres tilmelding? (Allergier, s&aelig;rlige behov, jubil&aelig;ums lyk&oslash;nskninger)'\n  kommentar:\n    '#type': textfield\n    '#title': Kommentar\n    '#title_display': invisible"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  deltager_e_mail:
+    id: email
+    label: 'Deltager e-mail'
+    handler_id: deltager_e_mail
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:kontakt_e_mail:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: Jubilaeum@forlev.dk
+      from_options: {  }
+      from_name: Lejrlederne
+      subject: 'Tilmelding til Jubilæums uge modtaget'
+      body: 'K&aelig;re&nbsp;'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

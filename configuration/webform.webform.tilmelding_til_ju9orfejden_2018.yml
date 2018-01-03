@@ -1,0 +1,148 @@
+uuid: 19dc1a71-cd07-4330-a04a-cadfb629d8fb
+langcode: da
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: tilmelding_til_ju9orfejden_2018
+title: 'Tilmelding til Ju9orfejden 2018'
+description: ''
+category: Ju9orfejden
+elements: "intro:\n  '#type': processed_text\n  '#text': \"<p>Alle felter skal udfyldes, før tilmeldingen kan sendes afsted. Kontaktpersonen modtager herefter en mail, der skal bekræftes før tilmeldingen er registreret (via link i mailen). Tilmeldingen er først endeligt gældende, når det samlede beløb for deltagerne (250 kr. pr. person) er indbetalt.</p>\\n<p>Din tilmelding og betaling skal være os i hænde senest torsdag d. 12. april 2018.</p>\\n<p>Vær opmærksom på, at vi kører efter først til mølle princippet og har et begrænset antal pladser. Det er derfor vigtigt, at få sendt den fulde tilmelding (tilmelding og betaling) afsted hurtigst muligt.</p>\\n<p>Deltagerbreve udsendes ca. 14 dage efter sidste tilmeldingsfrist. Brevet indeholder nærmere praktiske informationer om kurset.</p>\\n<p>Yderligere detaljer om ju9orfejden kan findes i pjecen, der kan hentes <a href=\\\"https://forlev.dk/sites/default/files/2017-11/Juniorfighten_2018.pdf\\\">her</a></p>\\n\"\n  '#format': basic_html\ngruppe:\n  '#type': fieldset\n  '#title': Gruppe\n  gruppenavn:\n    '#type': textfield\n    '#title': Gruppenavn\n    '#title_display': before\n    '#required': true\n  korps:\n    '#type': webform_select_other\n    '#title': Korps\n    '#options':\n      dds: 'Det Danske Spejderkrops'\n      kfum: 'KFUM Spejderne'\n      andet: Andet\n      intet: Intet\n    '#other__placeholder': 'Indtast andet...'\n    '#required': true\n  antal_ledere:\n    '#type': number\n    '#title': 'Antal ledere'\n    '#required': true\n    '#min': '1'\n    '#description': 'Deltager-betalingen er 250kr pr person.'\n  antal_juniorer:\n    '#type': number\n    '#title': 'Antal juniorer'\n    '#required': true\n    '#min': '1'\n    '#description': 'Deltager-betalingen er 250kr pr person.'\nkontaktperson:\n  '#type': fieldset\n  '#title': 'Kontaktperson og økonomisk ansvarlig (en juniorleder)'\n  kontakt_navn:\n    '#type': textfield\n    '#title': Navn\n    '#required': true\n  kontakt_adress:\n    '#type': textfield\n    '#title': Adresse\n    '#required': true\n  kontakt_postnummer:\n    '#type': textfield\n    '#title': Postnummer\n    '#required': true\n  kontakt_by:\n    '#type': textfield\n    '#title': By\n    '#required': true\n  kontakt_tlf:\n    '#type': textfield\n    '#title': Telefonnummer\n    '#required': true\n  kontakt_email:\n    '#type': webform_email_confirm\n    '#title': Email\n    '#required': true\nbemaerkninger:\n  '#type': textarea\n  '#title': Bemærkninger\n  '#required': true\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: tilmelding/j18
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: url_message
+  confirmation_title: 'Vi har modtaget din tilmelding'
+  confirmation_message: "Vi har modtaget din tilmelding og sendt en kopi til e-mail adressen du angav.<br />\r\n<br />\r\nDu skal nu inds&aelig;tte indbetalingen for de ledere og juniorer du har indbetalt. L&aelig;s detaljerne her p&aring; arrangementssiden."
+  confirmation_url: /j18
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  deltager_e_mail:
+    id: email
+    label: 'Deltager e-mail'
+    handler_id: deltager_e_mail
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:kontakt_email:raw]'
+      to_options: {  }
+      cc_mail: mads@danquah.dk
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: ju9orfejden@forlev.dk
+      from_options: {  }
+      from_name: Lejrlederne
+      subject: 'Tilmelding til Ju9orfejden uge modtaget'
+      body: "K&aelig;re&nbsp;[webform_submission:values:kontakt_navn:value]<br />\n<br />\nVi har modtaget din tilmelding og du skal nu inds&aelig;tte betaling for de&nbsp;[webform_submission:values:antal_ledere:value] ledere og&nbsp;[webform_submission:values:antal_juniorer:value] juniorer f&oslash;r din tilmelding er g&aelig;ldende. L&aelig;s mere p&aring; forlev.dk/j18<br />\n<br />\n<strong>Oplyste detaljer:</strong><br />\n[webform_submission:values]<br />\n&nbsp;"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

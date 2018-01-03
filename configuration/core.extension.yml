@@ -42,6 +42,7 @@ module:
   link: 0
   linkit: 0
   locale: 0
+  mailsystem: 0
   menu_breadcrumb: 0
   menu_ui: 0
   metatag: 0
@@ -62,6 +63,7 @@ module:
   responsive_image: 0
   responsive_menu: 0
   search: 0
+  sendgrid_integration: 0
   shortcut: 0
   slick: 0
   slick_extras: 0

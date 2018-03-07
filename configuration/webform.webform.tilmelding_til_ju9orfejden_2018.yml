@@ -145,9 +145,9 @@ handlers:
         - completed
       to_mail: '[webform_submission:values:kontakt_email:raw]'
       to_options: {  }
-      cc_mail: mads@danquah.dk
+      cc_mail: ''
       cc_options: {  }
-      bcc_mail: ''
+      bcc_mail: 'mads@danquah.dk,ju9orfejden@forlev.dk'
       bcc_options: {  }
       from_mail: ju9orfejden@forlev.dk
       from_options: {  }

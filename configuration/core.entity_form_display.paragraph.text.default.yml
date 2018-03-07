@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_body
-    - field.field.paragraph.text.field_see_also
     - paragraphs.paragraphs_type.text
   module:
-    - paragraphs
     - text
 id: paragraph.text.default
 targetEntityType: paragraph
@@ -21,18 +19,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_see_also:
-    type: entity_reference_paragraphs
-    weight: 1
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
     region: content
 hidden:
   created: true

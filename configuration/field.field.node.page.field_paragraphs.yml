@@ -19,5 +19,29 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
-  handler_settings: {  }
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      text:
+        weight: -15
+        enabled: false
+      image:
+        weight: -14
+        enabled: false
+      galleri:
+        weight: -13
+        enabled: false
+      content_link:
+        weight: -12
+        enabled: false
+      block:
+        weight: -11
+        enabled: false
+      instructions:
+        weight: -10
+        enabled: false
+      instruction_step:
+        weight: -9
+        enabled: false
 field_type: entity_reference_revisions

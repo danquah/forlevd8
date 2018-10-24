@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.facility.body
     - field.field.node.facility.field_extra_images
+    - field.field.node.facility.field_faktabox
     - field.field.node.facility.field_image
     - image.style.circle_image
     - node.type.facility
@@ -29,7 +30,10 @@ content:
   links:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
   field_extra_images: true
+  field_faktabox: true
   langcode: true
